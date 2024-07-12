@@ -1,10 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./Components/Header";
-
+"use client"
 export default function Home() {
   return (
-   <>
-    <Header />
-    </>
+    <div className="container">
+      <h1 className="text-4xl">Welcome to Paincure.AI</h1>
+    </div>
   );
 }
