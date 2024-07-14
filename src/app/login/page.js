@@ -6,7 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+      <div className="w-full max-w-md p-8 ">
         <h2 className="text-3xl font-bold mb-3 text-center">Log in to your account</h2>
         <h6 className='text-md text-center mb-6'>Please enter your details</h6>
         <Form>
@@ -34,7 +34,7 @@ const Login = () => {
           </Button>
 
           <div className="text-center mt-4">
-            <a href="#" className="text-sm text-blue-600 hover:underline">Don't have an account? Sign up</a>
+          <p className="text-sm">Don't have an account? Sign up</p>
           </div>
         </Form>
       </div>
