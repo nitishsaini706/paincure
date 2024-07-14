@@ -2,6 +2,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {  Button } from 'react-bootstrap';
+
 const Signup = () =>{
     return(
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
