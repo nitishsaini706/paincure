@@ -32,35 +32,94 @@ export default function Home() {
         <Row>
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="" />
+            <Image src='/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
-                <Card.Title>Feature 1</Card.Title>
-                <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+                <Card.Title>Back Pain</Card.Title>
+                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="" />
+            <Image src='/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
-                <Card.Title>Feature 2</Card.Title>
-                <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+                <Card.Title>Neck Pain</Card.Title>
+                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4} className=''>
+            <Card>
+            <Image src='/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
+              <Card.Body>
+                <Card.Title>Wrist and Hand Pain</Card.Title>
+                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+        <Row className='mt-5'>
+          <Col md={4}>
+            <Card>
+            <Image src='/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
+              <Card.Body>
+                <Card.Title>Knee and Hip Pain</Card.Title>
+                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="" />
+            <Image src='/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
-                <Card.Title>Feature 3</Card.Title>
-                <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.</Card.Text>
+                <Card.Title>Yoga</Card.Title>
+                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4}>
+            <Card>
+            <Image src='/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
+              <Card.Body>
+                <Card.Title>Weight Loss & Gain Workout</Card.Title>
+                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
     </section>
-    <section id="about" className="py-5 bg-light">
+    <section>
+    <Container className="py-5">
+      <h1 className="text-center text-3xl mb-5">How it works?</h1>
+      <Row className="align-items-center">
+        <Col md={4}>
+          <Image src="/work.png" width={500} height={500} />
+        </Col>
+        <Col md={8}>
+          <div className="steps">
+            <div className="step mb-4">
+              <h3 className='mb-3'>1. Access</h3>
+              <p>Tell us about your pain. Share your symptoms, and our AI will analyze them to understand your condition better.</p>
+            </div>
+            <div className="step mb-4">
+              <h3 className='mb-3'>2. Connect</h3>
+              <p>Get expert guidance. We'll connect you with top healthcare professionals who specialize in treating your specific pain.</p>
+            </div>
+            <div className="step mb-4">
+              <h3 className='mb-3'>3. Engage</h3>
+              <p>Personalized care. Receive a tailored treatment plan, including customized exercise routines and online consultations.</p>
+            </div>
+            <div className="step">
+              <h3 className='mb-3'>4. Track</h3>
+              <p>Track your progress. Monitor your improvements and celebrate your milestones with detailed progress reports.</p>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+    </section>
+    {/* <section id="about" className="py-5 bg-light">
       <Container>
         <Row>
           <Col md={6}>
@@ -72,10 +131,10 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-    </section>
+    </section> */}
     <section id="testimonials" className="py-5">
       <Container>
-        <h2 className="text-center mb-4">Testimonials</h2>
+        <h2 className="text-center mb-4 text-3xl">Testimonials</h2>
         <Carousel>
           <Carousel.Item>
             <Row className="justify-content-center">
@@ -102,20 +161,38 @@ export default function Home() {
     </section>
     <section id="faq" className="py-5 bg-light">
       <Container>
-        <h2 className="text-center mb-4">FAQ</h2>
+        <h2 className="text-center mb-4 text-3xl">FAQ</h2>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
-            <Accordion.Header>Question 1</Accordion.Header>
+            <Accordion.Header>How do I report my pain symptoms?</Accordion.Header>
             <Accordion.Body>
-              Answer to question 1.
+            Simply log in to your Paincure.ai account and fill out our user-friendly questionnaire. Our AI will analyze your responses and provide personalized recommendations.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Question 2</Accordion.Header>
+            <Accordion.Header>What type of online consultations can I access with healthcare experts through Paincure.ai?</Accordion.Header>
             <Accordion.Body>
-              Answer to question 2.
+              Answer
             </Accordion.Body>
           </Accordion.Item>
+          <Accordion.Item eventKey='2'>
+              <Accordion.Header>How can I track my progress and improvements using the Paincure.ai platform?</Accordion.Header>
+              <Accordion.Body>
+              Answer
+            </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>Can I access Paincure.ai's services from any device, or is there a specific app I need to use?</Accordion.Header>
+              <Accordion.Body>
+              Answer
+            </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='4'>
+              <Accordion.Header>Is there a cost associated with using the Paincure.ai services, or are they provided to employees at no charge?</Accordion.Header>
+              <Accordion.Body>
+              Answer
+            </Accordion.Body>
+            </Accordion.Item>
         </Accordion>
       </Container>
     </section>
