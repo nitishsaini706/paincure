@@ -132,27 +132,30 @@ export default function Home() {
         </Row>
       </Container>
     </section> */}
-    <section id="testimonials" className="py-5">
-      <Container>
-        <h2 className="text-center mb-4 text-3xl">Testimonials</h2>
-        <Carousel>
+    <section id="testimonials" className="py-5 ">
+      <Container className='border-2 p-3'>
+        <h2 className="text-center mb-12 text-3xl ">Testimonials</h2>
+        <Carousel >
           <Carousel.Item>
             <Row className="justify-content-center">
-              <Col md={8}>
+              <Col md={8} className='d-flex h-[300px]'>
                 <blockquote className="blockquote">
-                  <p className="mb-0">"Great service!"</p>
-                  <footer className="blockquote-footer">John Doe</footer>
+                  <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
+                  <footer className="blockquote-footer mt-2">John Doe</footer>
                 </blockquote>
+              <Image width={400} height={1000} src="/testimonial1.png"/>
               </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="justify-content-center">
-              <Col md={8}>
+              <Col md={8} className='d-flex h-[300px] justify-between'>
                 <blockquote className="blockquote">
                   <p className="mb-0">"Amazing results!"</p>
                   <footer className="blockquote-footer">Jane Smith</footer>
                 </blockquote>
+                <Image width={400} height={1000} src="/testimonial2.png"/>
+
               </Col>
             </Row>
           </Carousel.Item>
@@ -195,6 +198,39 @@ export default function Home() {
             </Accordion.Item>
         </Accordion>
       </Container>
+    </section>
+    <section id="team" className="py-5">
+    <Container className="py-5">
+      <h1 className="text-center text-3xl mb-5">For You And Your Team</h1>
+      <Row>
+        <Col md={6}>
+          <div className="p-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-400 text-white h-[350px]">
+            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-25'>FOR CORPORATES</h3>
+            <h2 className='mt-3 text-3xl w-[501px]'>Enhance Employee Wellness And Boost Productivity</h2>
+            <div className='mt-3 h-[1px] bg-white w-50'></div>
+            <ul className="list-unstyled">
+              <li className='mt-2'>Reduce Absenteeism</li>
+              <li className='mt-2'>Increase Productivity</li>
+              <li className='mt-2'>Promote Employee Satisfaction</li>
+            </ul>
+            <Button variant="light" className="mt-3 w-100 p-2 rounded-xl">Request a Demo</Button>
+          </div>
+        </Col>
+        <Col md={6}>
+          <div className="p-4 rounded-lg bg-gray-200 h-[350px]">
+            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-25'>FOR EMPLOYEES</h3>
+            <h2 className='mt-3 text-3xl w-[501px]'>Alleviate Pain And Improve Your Work Experiences</h2>
+            <div className='mt-3 h-[1px] bg-black w-50'></div>
+            <ul className="list-unstyled">
+              <li className='mt-2'>Personalized Pain Relief</li>
+              <li className='mt-2'>Access Expert Care</li>
+              <li className='mt-2'>Improve Daily Comfort</li>
+            </ul>
+            <Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">Get started</Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
     </section>
     <section id="blog" className="py-5 bg-light">
       <Container>
