@@ -90,6 +90,36 @@ export default function Home() {
         </Row>
       </Container>
     </section>
+    <section>
+    <Container className="py-5">
+      <h1 className="text-center text-3xl mb-5">How it works?</h1>
+      <Row className="align-items-center">
+        <Col md={4}>
+          <Image src="/work.png" width={500} height={500} />
+        </Col>
+        <Col md={8}>
+          <div className="steps">
+            <div className="step mb-4">
+              <h3 className='mb-3'>1. Access</h3>
+              <p>Tell us about your pain. Share your symptoms, and our AI will analyze them to understand your condition better.</p>
+            </div>
+            <div className="step mb-4">
+              <h3 className='mb-3'>2. Connect</h3>
+              <p>Get expert guidance. We'll connect you with top healthcare professionals who specialize in treating your specific pain.</p>
+            </div>
+            <div className="step mb-4">
+              <h3 className='mb-3'>3. Engage</h3>
+              <p>Personalized care. Receive a tailored treatment plan, including customized exercise routines and online consultations.</p>
+            </div>
+            <div className="step">
+              <h3 className='mb-3'>4. Track</h3>
+              <p>Track your progress. Monitor your improvements and celebrate your milestones with detailed progress reports.</p>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+    </section>
     {/* <section id="about" className="py-5 bg-light">
       <Container>
         <Row>
@@ -168,29 +198,37 @@ export default function Home() {
       </Container>
     </section>
     <section id="team" className="py-5">
-      <Container>
-        <h2 className="text-center text-3xl mb-4">For You And Your Team</h2>
-        <Row>
-          <Col md={6}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>FOR CORPORATES</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={6}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 3</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+    <Container className="py-5">
+      <h1 className="text-center text-3xl mb-5">For You And Your Team</h1>
+      <Row>
+        <Col md={6}>
+          <div className="p-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-400 text-white h-[350px]">
+            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-25'>FOR CORPORATES</h3>
+            <h2 className='mt-3 text-3xl w-[501px]'>Enhance Employee Wellness And Boost Productivity</h2>
+            <div className='mt-3 h-[1px] bg-white w-50'></div>
+            <ul className="list-unstyled">
+              <li className='mt-2'>Reduce Absenteeism</li>
+              <li className='mt-2'>Increase Productivity</li>
+              <li className='mt-2'>Promote Employee Satisfaction</li>
+            </ul>
+            <Button variant="light" className="mt-3 w-100 p-2 rounded-xl">Request a Demo</Button>
+          </div>
+        </Col>
+        <Col md={6}>
+          <div className="p-4 rounded-lg bg-gray-200 h-[350px]">
+            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-25'>FOR EMPLOYEES</h3>
+            <h2 className='mt-3 text-3xl w-[501px]'>Alleviate Pain And Improve Your Work Experiences</h2>
+            <div className='mt-3 h-[1px] bg-black w-50'></div>
+            <ul className="list-unstyled">
+              <li className='mt-2'>Personalized Pain Relief</li>
+              <li className='mt-2'>Access Expert Care</li>
+              <li className='mt-2'>Improve Daily Comfort</li>
+            </ul>
+            <Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">Get started</Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
     </section>
     <section id="blog" className="py-5 bg-light">
       <Container>
