@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-bootstrap';
 import Header from '../components/Header';
 
-
 export default function Home() {
   return (
     <div className="container mt-2 rounded-3xl">
@@ -120,121 +119,40 @@ export default function Home() {
         </Accordion>
       </Container>
     </section>
-    <section id="team" className="py-5">
-      <Container>
-        <h2 className="text-center mb-4">Our Team</h2>
-        <Row>
-          <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 1</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 2</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 3</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-    <section id="team" className="py-5">
-      <Container>
-        <h2 className="text-center mb-4">Our Team</h2>
-        <Row>
-          <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 1</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 2</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
-              <Card.Body>
-                <Card.Title>Team Member 3</Card.Title>
-                <Card.Text>Short bio or description of the team member.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </section>
     <section id="blog" className="py-5 bg-light">
       <Container>
-        <h2 className="text-center mb-4">Our Blog</h2>
+        <h2 className="text-center mb-4 text-3xl ">Our Blogs</h2>
         <Row>
           <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
+            <Card className='p-4'>
+              <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Blog Post 1</Card.Title>
-                <Card.Text>Short summary of the blog post.</Card.Text>
+                <Card.Title>Revolutionizing Workplace Wellness with Paincure.ai</Card.Title>
+                <Card.Text>Discover how Paincure.ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
+            <Card className='p-4'>
+              <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Blog Post 2</Card.Title>
-                <Card.Text>Short summary of the blog post.</Card.Text>
+                <Card.Title>Personalized Pain Management with Paincure.ai</Card.Title>
+                <Card.Text>Learn how Paincure.ai provides personalized pain management solutions to help employees .</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="" />
+            <Card className='p-4'>
+              <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Blog Post 3</Card.Title>
-                <Card.Text>Short summary of the blog post.</Card.Text>
+                <Card.Title>The Benefits of Hydration for Weight Loss</Card.Title>
+                <Card.Text>Discover how staying hydrated can support your weight loss goals and improve overall health.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
     </section>
-    <footer className="bg-dark text-white py-4">
-      <Container>
-        <Row>
-          <Col md={6}>
-            <p>&copy; 2024 paincure.ai. All rights reserved.</p>
-          </Col>
-          <Col md={6} className="text-md-end">
-            <a href="#home" className="text-white mx-2">Privacy Policy</a>
-            <a href="#home" className="text-white mx-2">Terms of Service</a>
-          </Col>
-        </Row>
-      </Container>
-    </footer>
     </div>
   );
 }
