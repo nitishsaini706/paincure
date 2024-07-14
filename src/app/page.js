@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-bootstrap';
 import Header from './components/Header';
 
@@ -22,7 +23,7 @@ export default function Home() {
             </div>
           </Col>
           <Col md={6}>
-            <img src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl w-[464px] ml-16" />
+            <Image src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl w-[464px] ml-16" />
           </Col>
         </Row>
       </Container>
@@ -68,7 +69,7 @@ export default function Home() {
             <p>Information about the company, mission, and vision.</p>
           </Col>
           <Col md={6}>
-            <img src="" alt="About us" className="img-fluid" />
+            <Image src="" alt="About us" className="img-fluid" />
           </Col>
         </Row>
       </Container>

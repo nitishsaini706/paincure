@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Image from 'next/image';
 import { Container, Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 
 export default function Header({ bg="white", color="black" }) {
@@ -7,7 +8,7 @@ export default function Header({ bg="white", color="black" }) {
 <Navbar expand="lg" bg={bg === 'white' ? bg : ''} className={bg === 'white' ? 'bg-opacity-75 border-b border-black' : ''} style={{ background: bg === 'white' ? '' : '#3D4966' }}>
 <Container >
         <Navbar.Brand href="#home" className='ml-24 d-flex items-center'>
-          <img id='img' src="/logo.png" alt="logo" style={{ height: "20px" }} />
+        <Image id='img' src="/logo.png" alt="logo" style={{ height: "20px" }} />
           <p className={`text-${color} ml-1`}>paincure.AI</p>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
