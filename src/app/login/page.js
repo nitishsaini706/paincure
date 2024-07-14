@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button } from 'react-bootstrap';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Login = () => {
   return (
@@ -26,7 +27,7 @@ const Login = () => {
           </div>
 
           <Button variant="primary" type="submit" className="w-full mt-4">
-            Sign in
+            Login
           </Button>
 
           <Button variant="outline-primary" type="button" className="w-full mt-2">
@@ -35,7 +36,7 @@ const Login = () => {
           </Button>
 
           <div className="text-center mt-4">
-          <p className="text-sm">Don't have an account? Sign up</p>
+          <p className="text-sm">Don't have an account?<Link href='/signup' passHref>Sign up</Link> </p>
           </div>
         </Form>
       </div>

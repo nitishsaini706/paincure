@@ -3,6 +3,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Image from 'next/image';
+import Link from 'next/link';
 export default function individual() {
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -61,12 +63,12 @@ export default function individual() {
                     </Button>
 
                     <Button variant="outline-primary" type="button" className="w-full mt-2">
-                        <img src="/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" />
+                    <Image src="/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" width={4} height={4} />
                         Sign in with Google
                     </Button>
 
                     <div className="text-center mt-4">
-                        <p className="text-sm">Already have an account? Login</p>
+                        <p className="text-sm">Already have an account? <Link href='/login' passHref>Login</Link></p>
                     </div>
                 </Form>
             </div>
