@@ -2,6 +2,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button } from 'react-bootstrap';
+import Image from 'next/image';
 
 const Login = () => {
   return (
@@ -29,7 +30,7 @@ const Login = () => {
           </Button>
 
           <Button variant="outline-primary" type="button" className="w-full mt-2">
-          <img src="/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" />
+          <Image src="/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" width={4} height={4} />
             Sign in with Google
           </Button>
 

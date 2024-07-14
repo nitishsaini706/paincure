@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-bootstrap';
-import Header from './components/Header';
+import Header from '../components/Header';
 
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
             </div>
           </Col>
           <Col md={6}>
-            <Image src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl w-[464px] ml-16" />
+            <Image src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl w-[464px] ml-16"width={464} height={10} />
           </Col>
         </Row>
       </Container>
