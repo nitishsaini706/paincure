@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <section className="bg-[#3D4966] text-white  lg:py-20">
+        <section className="bg-[#3D4966] text-white ">
             <Container style={{ padding: "45px 45px 25px 45px" }} >
 
                 <Row className="mb-6 " style={{ display: "flex", flexDirection: "column", marginBottom: "35px" }}>
@@ -21,7 +21,7 @@ const Footer = () => {
 
                         <Col md={3} >
                             <h5 className="text-lg font-bold mb-4">Services</h5>
-                            <div className='lg:d-flex'>
+                            <div className='lg:flex'>
                                 <div style={{marginRight:"90px"}}>
                                     <ul className="list-none space-y-2 text-sm">
 
