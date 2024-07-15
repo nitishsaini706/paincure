@@ -138,7 +138,7 @@ export default function Home() {
         <Carousel >
           <Carousel.Item>
             <Row className="justify-content-center">
-              <Col md={8} className='lg:d-flex h-[300px]'>
+              <Col md={8} className='lg:flex h-[300px]'>
                 <blockquote className="blockquote">
                   <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
                   <footer className="blockquote-footer mt-2">John Doe</footer>
@@ -149,7 +149,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <Row className="justify-content-center">
-              <Col md={8} className='lg:d-flex h-[300px] justify-between'>
+              <Col md={8} className='lg:flex h-[300px] justify-between'>
                 <blockquote className="blockquote">
                   <p className="mb-3">"Amazing results!"</p>
                   <footer className="blockquote-footer">Jane Smith</footer>
