@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
     extend: {
@@ -14,6 +15,16 @@ module.exports = {
         "pain":"#3D4966"
       }
     },
+    screens:{
+      ...{
+        xs: "0px",
+        mb: "350px",
+        sm: "600px",
+        md: "900px",
+        lg: "1280px",
+        xl: "1920px",
+      },
+    }
   },
   plugins: [],
 };

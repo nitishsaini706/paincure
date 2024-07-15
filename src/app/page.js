@@ -8,21 +8,21 @@ export default function Home() {
     <div className="container mt-2 rounded-3xl">
        <section className="hero-section  rounded-3xl pb-16 " style={{ backgroundColor: '#3D4966' }}>
       <Header bg="black" color="white"/>
-      <Container className='mt-11 ml-5 py-13'>
+      <Container className='mt-11 lg:ml-5 py-13 md:ml-2'>
         <Row className="align-items-center ">
-          <Col md={6}>
-            <h1 className="text-white mb-3 w-[682px] h-[168px] font-dm-sans font-bold text-[68px] leading-[130%] tracking-[-0.02em]">Banish Workplace ,
+          <Col md={6} className='md:mb-2 sm:mb-2'>
+            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[68px] lg:leading-[130%] tracking-[-0.02em] md:text-[30px] sm:text-[30px]">Banish Workplace ,
             Pain with Paincure.ai</h1>
-            <p className='	text-white mb-3'> 
+            <p className='	text-white mb-3 md:text-md sm:text-sm'> 
               Introducing Paincure.ai, the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
             </p>
-            <div className='d-flex justify-start items-center w-[544px] h-[64px] gap-[40px] '>
-              <Button  className="me-2 border-0 text-black rounded-2xl bg-white w-[162px]">Sign Up</Button>
-              <Button className="me-2 border-1 border-white rounded-2xl text-white w-[162px] bg-[#3D4966]">Learn More</Button>
+            <div className='d-flex justify-start items-center lg:w-[544px] lg:h-[64px] lg:gap-[40px] md:gap-[20px]  md:w-[200px] '>
+              <Button  className="me-2 border-0 text-black rounded-2xl bg-white lg:w-[162px] md:w-[60px]">Sign Up</Button>
+              <Button className="me-2 border-1 border-white rounded-2xl text-white lg:w-[162px] bg-[#3D4966] md:w-[60px]">Learn More</Button>
             </div>
           </Col>
-          <Col md={6}>
-            <Image src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl w-[464px] ml-16"width={464} height={10} />
+          <Col md={6} >
+            <Image src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl lg:w-[464px] lg:ml-16 md:ml-2 md:w-[200px] mt-8 " width={460} height={10} />
           </Col>
         </Row>
       </Container>
@@ -31,7 +31,7 @@ export default function Home() {
       <Container>
         <Row>
           <Col md={4}>
-            <Card>
+            <Card >
             <Image src='/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
@@ -94,24 +94,24 @@ export default function Home() {
       <h1 className="text-center text-3xl mb-5">How it works?</h1>
       <Row className="align-items-center">
         <Col md={4}>
-          <Image src="/work.png" width={500} height={500} />
+          <Image src="/work.png" className='mb-6' width={500} height={500} />
         </Col>
         <Col md={8}>
           <div className="steps">
             <div className="step mb-4">
-              <h3 className='mb-3'>1. Access</h3>
+              <h3 className='mb-3 font-bold'>1. Access</h3>
               <p>Tell us about your pain. Share your symptoms, and our AI will analyze them to understand your condition better.</p>
             </div>
             <div className="step mb-4">
-              <h3 className='mb-3'>2. Connect</h3>
+              <h3 className='mb-3 font-bold'>2. Connect</h3>
               <p>Get expert guidance. We'll connect you with top healthcare professionals who specialize in treating your specific pain.</p>
             </div>
             <div className="step mb-4">
-              <h3 className='mb-3'>3. Engage</h3>
+              <h3 className='mb-3 font-bold'>3. Engage</h3>
               <p>Personalized care. Receive a tailored treatment plan, including customized exercise routines and online consultations.</p>
             </div>
             <div className="step">
-              <h3 className='mb-3'>4. Track</h3>
+              <h3 className='mb-3 font-bold'>4. Track</h3>
               <p>Track your progress. Monitor your improvements and celebrate your milestones with detailed progress reports.</p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function Home() {
         <Carousel >
           <Carousel.Item>
             <Row className="justify-content-center">
-              <Col md={8} className='d-flex h-[300px]'>
+              <Col md={8} className='lg:d-flex h-[300px]'>
                 <blockquote className="blockquote">
                   <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
                   <footer className="blockquote-footer mt-2">John Doe</footer>
@@ -149,9 +149,9 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <Row className="justify-content-center">
-              <Col md={8} className='d-flex h-[300px] justify-between'>
+              <Col md={8} className='lg:d-flex h-[300px] justify-between'>
                 <blockquote className="blockquote">
-                  <p className="mb-0">"Amazing results!"</p>
+                  <p className="mb-3">"Amazing results!"</p>
                   <footer className="blockquote-footer">Jane Smith</footer>
                 </blockquote>
                 <Image width={400} height={1000} src="/testimonial2.png"/>
@@ -205,8 +205,8 @@ export default function Home() {
       <Row>
         <Col md={6}>
           <div className="p-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-400 text-white h-[350px]">
-            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-25'>FOR CORPORATES</h3>
-            <h2 className='mt-3 text-3xl w-[501px]'>Enhance Employee Wellness And Boost Productivity</h2>
+            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-[120px]'>FOR CORPORATES</h3>
+            <h2 className='mt-3 lg:text-3xl lg:w-[501px] md:text-xl mb:text-xl'>Enhance Employee Wellness And Boost Productivity</h2>
             <div className='mt-3 h-[1px] bg-white w-50'></div>
             <ul className="list-unstyled">
               <li className='mt-2'>Reduce Absenteeism</li>
@@ -218,8 +218,8 @@ export default function Home() {
         </Col>
         <Col md={6}>
           <div className="p-4 rounded-lg bg-gray-200 h-[350px]">
-            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-25'>FOR EMPLOYEES</h3>
-            <h2 className='mt-3 text-3xl w-[501px]'>Alleviate Pain And Improve Your Work Experiences</h2>
+            <h3 className='rounded-xl bg-gray-100 text-black p-1 text-center w-[120px]'>FOR EMPLOYEES</h3>
+            <h2 className='mt-3 lg:text-3xl lg:w-[501px] mb:text-xl'>Alleviate Pain And Improve Your Work Experiences</h2>
             <div className='mt-3 h-[1px] bg-black w-50'></div>
             <ul className="list-unstyled">
               <li className='mt-2'>Personalized Pain Relief</li>
