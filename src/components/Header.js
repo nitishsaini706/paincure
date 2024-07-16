@@ -16,7 +16,7 @@ export default function Header({ bg = "white", color = "black" }) {
   };
 
   return (
-    <nav className={`sticky top-0 z-9999999 lg:ml-20 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] px-4 pt-4 pb-2 ${bg === 'white' ? ' border-b border-black bg-white' : 'bg-[#3D4966]'} ${color === 'black' ? 'text-black' : 'text-white'}`}>
+    <nav className={` lg:ml-20 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] px-4 pt-4 pb-2 ${bg === 'white' ? ' border-b border-black bg-white' : 'bg-[#3D4966]'} ${color === 'black' ? 'text-black' : 'text-white'}`}>
       <div className="lg:container lg:flex lg:justify-between">
         <div className="flex lg:items-center justify-between">
           
@@ -59,10 +59,10 @@ export default function Header({ bg = "white", color = "black" }) {
                 </div>
               )}
             </div>
-            <Link href="/">
+            <Link href="/about">
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mx-2`}>About Us</p>
               </Link>
-              <Link href="/">
+              <Link href="/blogs">
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mx-2`}>Blogs</p>
               </Link>
           </div>
