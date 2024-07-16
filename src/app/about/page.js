@@ -21,9 +21,9 @@ export default function About() {
           <div className='mt-3 h-[1px] bg-black w-full'></div>
         </div>
         <div className='mt-3'>
-          <p> We believe that every person deserves access to effective, personalized solutions for relieving physical discomfort. 
+          <p>We believe that every person deserves access to effective, personalized solutions for relieving physical discomfort. 
             That's why we've assembled a team of certified healthcare professionals, including physiotherapists, orthopedists, and yoga instructors, 
-            to create tailored treatment plans just for you. </p>
+            to create tailored treatment plans just for you.</p>
         </div>
       </div>
       </Row>
@@ -32,11 +32,11 @@ export default function About() {
                 <Card className='border-0 p-0'>
                   <Card.Body>
                     <Card.Title className='text-3xl'>Our Mission and Vision</Card.Title>
-                    <Card.Text>
                     <div className='mt-3 h-[1px] bg-gray-400 w-full'></div>
-                      <p className='mt-3'>We envision a future where pain is no longer a barrier to productivity and job satisfaction. </p>
-                      <p className='mt-3'>By harnessing the power of AI and leveraging the expertise of healthcare professionals, we're paving the way for a healthier, more comfortable, and more productive lifestyle.</p>
-                      </Card.Text>
+                  
+                      <Card.Text className='mt-3'>We envision a future where pain is no longer a barrier to productivity and job satisfaction. </Card.Text>
+                      <Card.Text className='mt-3'>By harnessing the power of AI and leveraging the expertise of healthcare professionals, we're paving the way for a healthier, more comfortable, and more productive lifestyle.</Card.Text>
+                      
                   </Card.Body>
                 </Card>
               </Col>
