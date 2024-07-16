@@ -20,9 +20,11 @@ export default function Header({ bg = "white", color = "black" }) {
       <div className="lg:container lg:flex lg:justify-between">
         <div className="flex lg:items-center justify-between">
           
-            <a className="flex items-center">
+            <a className="flex items-center" href="/">
+              
               <Image id="img" src="/logo.png" alt="logo" width={20} height={20} className="mr-2" />
               <p className={`ml-2 mb-1`}>paincure.AI</p>
+             
             </a>
           
         <div className="lg:hidden">
@@ -33,21 +35,21 @@ export default function Header({ bg = "white", color = "black" }) {
           </button>
         </div>
         </div>
-        <div className={`w-full block lg:flex lg:items-center lg:ml-[200px] lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`w-full block lg:flex lg:items-center lg:ml-[180px] lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="text-sm lg:flex-grow">
             <Link href="/">
               <p className={`block mt-4 lg:inline-block lg:mt-0 mx-2`}>Home</p>
             </Link>
             
             <div className="lg:relative lg:inline-block text-left">
-              <button onClick={toggleService} className={`inline-flex justify-center lg:w-full rounded-md lg:px-4 mb:pl-2  py-2 text-sm font-medium ${color === 'black' ? 'text-black' : 'text-white'} bg-${bg === 'white' ? 'white' : 'gray-700'} hover:bg-opacity-75`}>
+              <p onClick={toggleService} className={`block cursor-pointer mb:mt-2 lg:inline-block lg:mt-0 mx-2 ${color === 'black' ? 'text-black' : 'text-white'} bg-${bg === 'white' ? 'white' : 'gray-700'} hover:bg-opacity-75`}>
                 Services
-              </button>
+              </p>
               {isServiceOpen && (
-                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="lg:origin-top-right lg:absolute mb:left-5 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
-                  <Link href="/">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Action</p>
+                  <Link href="/services/neck-service">
+                      <p className="block px-4 py-2 text-sm text-gray-700">Neck Service</p>
                       </Link>
                       <Link href="/">
                       <p className="block px-4 py-2 text-sm text-gray-700">Another action</p>
