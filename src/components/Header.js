@@ -16,7 +16,7 @@ export default function Header({ bg = "white", color = "black" }) {
   };
 
   return (
-    <nav className={`lg:ml-20 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] px-4 pt-4 pb-2 ${bg === 'white' ? 'bg-opacity-75 border-b border-black' : 'bg-[#3D4966]'} ${color === 'black' ? 'text-black' : 'text-white'}`}>
+    <nav className={`sticky top-0 z-9999999 lg:ml-20 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] px-4 pt-4 pb-2 ${bg === 'white' ? ' border-b border-black bg-white' : 'bg-[#3D4966]'} ${color === 'black' ? 'text-black' : 'text-white'}`}>
       <div className="lg:container lg:flex lg:justify-between">
         <div className="flex lg:items-center justify-between">
           

@@ -27,6 +27,44 @@ export default function Home() {
         </Row>
       </Container>
     </section>
+       <section id="info" className="py-5">
+       <Container className="text-center my-5 border-1  p-3">
+      <h1 className='lg:text-3xl mb-2 font-bold mb:text-2xl'>Experience the Future of Pain Management</h1>
+      <p className='mb:text-sm'>At Paincure.ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
+      <Row className="mt-[50px]">
+        <Col md={4}>
+          <Card className='lg:h-[130px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Boost productivity</Card.Title>
+              <Card.Text>
+                Healthier individuals perform more efficiently.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className='lg:h-[130px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Decrease absenteeism</Card.Title>
+              <Card.Text>
+                Effective pain management leads to fewer sick days.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className='lg:h-[130px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Early Risk Prevention</Card.Title>
+              <Card.Text>
+              Immidate healthcare care expert availability
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+    </section>
        <section id="features" className="py-5">
       <Container>
         <Row>
@@ -96,23 +134,42 @@ export default function Home() {
         <Col md={4}>
           <Image src="/work.png" className='mb-6' width={500} height={500} />
         </Col>
-        <Col md={8}>
+        <Col md={8} className="text-center">
           <div className="steps">
             <div className="step mb-4">
-              <h3 className='mb-3 font-bold'>1. Access</h3>
-              <p>Tell us about your pain. Share your symptoms, and our AI will analyze them to understand your condition better.</p>
+              <Card className="mb-3">
+                <Card.Body>
+                  <h3 className='mb-3 font-bold '> Access</h3>
+                  <p>Tell us about your pain. Share your symptoms, and our AI will analyze them to understand your condition better.</p>
+                </Card.Body>
+              </Card>
+              <div className="arrow"></div>
             </div>
             <div className="step mb-4">
-              <h3 className='mb-3 font-bold'>2. Connect</h3>
-              <p>Get expert guidance. We'll connect you with top healthcare professionals who specialize in treating your specific pain.</p>
+              <Card className="mb-3">
+                <Card.Body>
+                  <h3 className='mb-3 font-bold'> Connect</h3>
+                  <p>Get expert guidance. We'll connect you with top healthcare professionals who specialize in treating your specific pain.</p>
+                </Card.Body>
+              </Card>
+              <div className="arrow"></div>
             </div>
             <div className="step mb-4">
-              <h3 className='mb-3 font-bold'>3. Engage</h3>
-              <p>Personalized care. Receive a tailored treatment plan, including customized exercise routines and online consultations.</p>
+              <Card className="mb-3">
+                <Card.Body>
+                  <h3 className='mb-3 font-bold'> Engage</h3>
+                  <p>Personalized care. Receive a tailored treatment plan, including customized exercise routines and online consultations.</p>
+                </Card.Body>
+              </Card>
+              <div className="arrow"></div>
             </div>
             <div className="step">
-              <h3 className='mb-3 font-bold'>4. Track</h3>
-              <p>Track your progress. Monitor your improvements and celebrate your milestones with detailed progress reports.</p>
+              <Card className="mb-3">
+                <Card.Body>
+                  <h3 className='mb-3 font-bold'> Track</h3>
+                  <p>Track your progress. Monitor your improvements and celebrate your milestones with detailed progress reports.</p>
+                </Card.Body>
+              </Card>
             </div>
           </div>
         </Col>
@@ -132,29 +189,29 @@ export default function Home() {
         </Row>
       </Container>
     </section> */}
-    <section id="testimonials" className="py-5 ">
+    <section id="testimonials" className="py-5">
       <Container className='border-2 p-3'>
         <h2 className="text-center mb-12 text-3xl ">Testimonials</h2>
-        <Carousel >
-          <Carousel.Item>
+        <Carousel variant="dark">
+          <Carousel.Item interval={500}>
             <Row className="justify-content-center">
-              <Col md={8} className='lg:flex h-[300px]'>
+              <Col md={8} className='lg:flex lg:h-[300px] justify-between'>
                 <blockquote className="blockquote">
                   <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
                   <footer className="blockquote-footer mt-2">John Doe</footer>
                 </blockquote>
-              <Image width={400} height={1000} src="/testimonial1.png"/>
+              <Image className="rounded-2xl border-2  border-black" width={400} height={1000} src="/testimonial1.png"/>
               </Col>
             </Row>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={500}>
             <Row className="justify-content-center">
-              <Col md={8} className='lg:flex h-[300px] justify-between'>
+              <Col md={8} className='lg:flex lg:h-[300px] justify-between'>
                 <blockquote className="blockquote">
-                  <p className="mb-3">"Amazing results!"</p>
-                  <footer className="blockquote-footer">Jane Smith</footer>
+                  <p className="mb-2 mr-10">"Amazing results! Employee productivity has skyrocketed, and absenteeism rates have plummeted."</p>
+                  <footer className="blockquote-footer mt-2">Jane Smith</footer>
                 </blockquote>
-                <Image width={400} height={1000} src="/testimonial2.png"/>
+                <Image className="rounded-2xl border-2  border-black" width={400} height={1000} src="/testimonial2.png"/>
 
               </Col>
             </Row>
