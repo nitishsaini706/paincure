@@ -11,7 +11,7 @@ export default function Home() {
       <Container className='mt-11 lg:ml-5 py-13 md:ml-2'>
         <Row className="align-items-center ">
           <Col md={6} className='md:mb-2 sm:mb-2'>
-            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[68px] lg:leading-[130%] tracking-[-0.02em] md:text-[30px] sm:text-[30px]">Banish Workplace ,
+            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[68px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px]">Banish Workplace ,
             Pain with Paincure.ai</h1>
             <p className='	text-white mb-3 md:text-md sm:text-sm'> 
               Introducing Paincure.ai, the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
