@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Banner from '../../components/Banner';
-import { Container, Row, Col, Card,Form } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import Image from 'next/image';
 export default function About() {
   return (
@@ -120,8 +120,11 @@ export default function About() {
                         </Form.Group>
                         <Form.Group controlId="formBasicLastName" className='mt-3'>
                             <Form.Label>How can we help you?</Form.Label>
-                            <Form.Control type="text" placeholder="" />
+                            <Form.Control type="textbox" as="textarea" rows={3} placeholder="" />
                         </Form.Group>
+                        <Button variant="primary" type="submit" className="w-full mt-4">
+                        Submit
+                    </Button>
                         </Form>
       </div>
       </div>
