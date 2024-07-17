@@ -51,11 +51,14 @@ export default function Header({ bg = "white", color = "black" }) {
                   <Link href="/services/neck-service">
                       <p className="block px-4 py-2 text-sm text-gray-700">Neck Service</p>
                       </Link>
-                      <Link href="/">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Another action</p>
+                      <Link href="/services/wrist-service">
+                      <p className="block px-4 py-2 text-sm text-gray-700">Wrist Service</p>
                       </Link>
-                      <Link href="/">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Something</p>
+                      <Link href="/services/lower-back-service">
+                      <p className="block px-4 py-2 text-sm text-gray-700">Lower Back Service</p>
+                      </Link>
+                      <Link href="/services/knee-service">
+                      <p className="block px-4 py-2 text-sm text-gray-700">Knee Service</p>
                       </Link>
                   </div>
                 </div>
@@ -66,6 +69,9 @@ export default function Header({ bg = "white", color = "black" }) {
               </Link>
               <Link href="/blogs">
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mx-2`}>Blogs</p>
+              </Link>
+              <Link href="/pricing">
+              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mx-2`}>Pricing</p>
               </Link>
           </div>
           <div className="flex items-center mb:mt-4 mb:pb-2 lg:ml-[200px]">

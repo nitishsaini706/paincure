@@ -1,7 +1,7 @@
 "use client"
 
 import Banner from '../../components/Banner';
-import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 
 export default function Blogs(){

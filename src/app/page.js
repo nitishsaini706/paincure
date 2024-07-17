@@ -33,32 +33,46 @@ export default function Home() {
       <p className='mb:text-sm'>At Paincure.ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
       <Row className="mt-[50px]">
         <Col md={4}>
-          <Card className='lg:h-[130px] mb:mb-3'>
+          <Card className='lg:h-[80px]  mb:mb-3'>
             <Card.Body>
               <Card.Title>Boost productivity</Card.Title>
-              <Card.Text>
-                Healthier individuals perform more efficiently.
-              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[130px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3'>
             <Card.Body>
               <Card.Title>Decrease absenteeism</Card.Title>
-              <Card.Text>
-                Effective pain management leads to fewer sick days.
-              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[130px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3'>
             <Card.Body>
               <Card.Title>Early Risk Prevention</Card.Title>
-              <Card.Text>
-              Immidate healthcare care expert availability
-              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row >
+        <Col md={4}>
+          <Card className='lg:h-[80px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Reduce Sick Leave Costs</Card.Title>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className='lg:h-[80px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Early Risk Prevention</Card.Title>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className='lg:h-[80px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Immidate healthcare care expert availability</Card.Title>
             </Card.Body>
           </Card>
         </Col>
