@@ -5,10 +5,10 @@ import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div className="container mt-2 rounded-3xl">
-       <section className="hero-section  rounded-3xl pb-16 " style={{ backgroundColor: '#3D4966' }}>
+    <div className=" container mt-2 rounded-3xl ">
       <Header bg="black" color="white"/>
-      <Container className='mt-11 lg:ml-5 py-13 md:ml-2'>
+       <section  className=" pb-16 " style={{ backgroundColor: '#3D4966',borderRadius: "0 0 30px 30px" }}>
+      <Container className=' lg:ml-5 py-13 md:ml-2'>
         <Row className="align-items-center ">
           <Col md={6} className='md:mb-2 sm:mb-2'>
             <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[68px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px]">Banish Workplace ,
@@ -33,32 +33,46 @@ export default function Home() {
       <p className='mb:text-sm'>At Paincure.ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
       <Row className="mt-[50px]">
         <Col md={4}>
-          <Card className='lg:h-[130px] mb:mb-3'>
+          <Card className='lg:h-[80px]  mb:mb-3'>
             <Card.Body>
               <Card.Title>Boost productivity</Card.Title>
-              <Card.Text>
-                Healthier individuals perform more efficiently.
-              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[130px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3'>
             <Card.Body>
               <Card.Title>Decrease absenteeism</Card.Title>
-              <Card.Text>
-                Effective pain management leads to fewer sick days.
-              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[130px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3'>
             <Card.Body>
               <Card.Title>Early Risk Prevention</Card.Title>
-              <Card.Text>
-              Immidate healthcare care expert availability
-              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      <Row >
+        <Col md={4}>
+          <Card className='lg:h-[80px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Reduce Sick Leave Costs</Card.Title>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className='lg:h-[80px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Early Risk Prevention</Card.Title>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card className='lg:h-[80px] mb:mb-3'>
+            <Card.Body>
+              <Card.Title>Immidate healthcare care expert availability</Card.Title>
             </Card.Body>
           </Card>
         </Col>
@@ -190,35 +204,39 @@ export default function Home() {
       </Container>
     </section> */}
     <section id="testimonials" className="py-5">
-      <Container className='border-2 p-3'>
-        <h2 className="text-center mb-12 text-3xl ">Testimonials</h2>
-        <Carousel variant="dark">
-          <Carousel.Item interval={500}>
-            <Row className="justify-content-center">
-              <Col md={8} className='lg:flex lg:h-[300px] justify-between'>
-                <blockquote className="blockquote">
-                  <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
-                  <footer className="blockquote-footer mt-2">John Doe</footer>
-                </blockquote>
-              <Image className="rounded-2xl border-2  border-black" width={400} height={1000} src="/testimonial1.png"/>
-              </Col>
-            </Row>
-          </Carousel.Item>
-          <Carousel.Item interval={500}>
-            <Row className="justify-content-center">
-              <Col md={8} className='lg:flex lg:h-[300px] justify-between'>
-                <blockquote className="blockquote">
-                  <p className="mb-2 mr-10">"Amazing results! Employee productivity has skyrocketed, and absenteeism rates have plummeted."</p>
-                  <footer className="blockquote-footer mt-2">Jane Smith</footer>
-                </blockquote>
-                <Image className="rounded-2xl border-2  border-black" width={400} height={1000} src="/testimonial2.png"/>
+  <Container className='border-2 p-3'>
+    <h2 className="text-center mb-12 text-3xl">Testimonials</h2>
+    <Carousel variant="dark">
+      <Carousel.Item interval={500}>
+        <Row className="justify-content-center">
+          <Col md={8} className='lg:flex lg:h-[300px] justify-between mb:h-[600px]'>
+            <blockquote className="blockquote lg:h-[300px] flex flex-col justify-center">
+              <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
+              <footer className="blockquote-footer mt-2">John Doe</footer>
+            </blockquote>
+            <div className="lg:h-[300px] flex items-center">
+              <Image className="rounded-full border-2 border-black " src="/testimonial1.png" width={400} height={1000}/>
+            </div>
+          </Col>
+        </Row>
+      </Carousel.Item>
+      <Carousel.Item interval={500}>
+        <Row className="justify-content-center">
+          <Col md={8} className='lg:flex lg:h-[300px] justify-between mb:h-[600px]'>
+            <blockquote className="blockquote lg:h-[300px] flex flex-col justify-center">
+              <p className="mb-2 mr-10">"Amazing results! Employee productivity has skyrocketed, and absenteeism rates have plummeted."</p>
+              <footer className="blockquote-footer mt-2">Jane Smith</footer>
+            </blockquote>
+            <div className="lg:h-[300px] flex items-center">
+              <Image className="rounded-full border-2 border-black " src="/testimonial2.png" width={400} height={1000}/>
+            </div>
+          </Col>
+        </Row>
+      </Carousel.Item>
+    </Carousel>
+  </Container>
+</section>
 
-              </Col>
-            </Row>
-          </Carousel.Item>
-        </Carousel>
-      </Container>
-    </section>
     <section id="faq" className="py-5 bg-light">
       <Container>
         <h2 className="text-center mb-4 text-3xl">FAQ</h2>

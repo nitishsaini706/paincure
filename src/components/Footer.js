@@ -23,17 +23,17 @@ const Footer = () => {
                             <h5 className="text-lg font-bold mb-4">Services</h5>
                             <div className='lg:flex'>
                                 <div style={{marginRight:"90px"}}>
-                                    <ul className="list-none space-y-2 text-sm">
+                                    <ul className="list-none space-y-2 text-sm cursor-pointer">
 
-                                        <li>Back Pain</li>
-                                        <li>Neck & Shoulder Pain</li>
-                                        <li>Yoga</li>
+                                        <li ><a href="/services/lower-back-service">Back Pain</a></li>
+                                        <li ><a href="/services/neck-service">Neck & Shoulder Pain</a></li>
+                                        <li><a>Yoga</a></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <ul className="list-none space-y-2 text-sm">
-                                        <li>Knee & Hip pain</li>
-                                        <li>Wrist & Hand Pain</li>
+                                    <ul className="list-none space-y-2 text-sm cursor-pointer">
+                                        <li ><a href="/services/knee-service">Knee & Hip pain</a></li>
+                                        <li ><a href="/services/wrist-service">Wrist & Hand Pain</a></li>
                                         <li>Weight Loss & Gain Workout</li>
                                     </ul>
                                 </div>
@@ -44,9 +44,9 @@ const Footer = () => {
                             <h5 className="text-lg font-bold mb-4 ">Other Pages</h5>
                             <ul className="list-none space-y-2 text-sm">
                                 <li><a href="/" className="text-white hover:underline">Home</a></li>
-                                <li><a href="#services" className="text-white hover:underline">Services</a></li>
-                                <li><a href="#about" className="text-white hover:underline">About Us</a></li>
-                                <li><a href="#blogs" className="text-white hover:underline">Blogs</a></li>
+                                <li><a href="/about" className="text-white hover:underline">About Us</a></li>
+                                <li><a href="/blogs" className="text-white hover:underline">Blogs</a></li>
+                                <li><a href="/pricing" className="text-white hover:underline">Pricing</a></li>
                             </ul>
                         </Col>
                     </div>
