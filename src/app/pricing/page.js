@@ -16,25 +16,25 @@ export default function Pricing() {
   const pricingData = isCompany
     ? [
         {
-          icon: "/path/to/in-clinic-icon.png",
+          icon: "/neckpain.png",
           title: "IN-CLINIC PT",
           description: "Co-Pays For One Month Of Sessions",
           price: isyearly ? "$500+" : "$300+",
         },
         {
-          icon: "/path/to/pain-meds-icon.png",
+          icon: "/kneepain.png",
           title: "PAIN MEDS",
           description: "MD Visit And One Month Of Meds",
           price: isyearly ? "$300+" : "$200",
         },
         {
-          icon: "/path/to/chiropractic-icon.png",
+          icon: "/backpain.png",
           title: "CHIROPRACTIC",
           description: "X-Rays And One Month Of Sessions",
           price: isyearly ? "$600+" : "$350",
         },
         {
-          icon: "/path/to/surgery-icon.png",
+          icon: "/handpain.png",
           title: "Surgery",
           description: "$6,000 - 70,000 Per Surgery",
           price: isyearly ? "$6,000+" :"$4500",
@@ -42,25 +42,25 @@ export default function Pricing() {
       ]
     : [
         {
-          icon: "/path/to/in-clinic-icon.png",
+          icon: "/neckpain.png",
           title: "IN-CLINIC PT",
           description: "Co-Pays For One Month Of Sessions",
           price: isyearly ? "$360+" :"$220+",
         },
         {
-          icon: "/path/to/pain-meds-icon.png",
+          icon: "/kneepain.png",
           title: "PAIN MEDS",
           description: "MD Visit And One Month Of Meds",
           price: isyearly ? "$150+" : "$35+",
         },
         {
-          icon: "/path/to/chiropractic-icon.png",
+          icon: "/backpain.png",
           title: "CHIROPRACTIC",
           description: "X-Rays And One Month Of Sessions",
           price: isyearly ? "$440+" :"$250+",
         },
         {
-          icon: "/path/to/surgery-icon.png",
+          icon: "/handpain.png",
           title: "Surgery",
           description: "$4,000 - 50,000 Per Surgery",
           price: isyearly ? "$4,000+" :"$2300+",
@@ -81,7 +81,7 @@ export default function Pricing() {
           <span className={`ml-2 ${isCompany ? 'font-bold' : ''}`}>Company</span>
         </div>
 
-        <Row className="flex items-center justify-center mb-10 mb:w-[400px] mb:mx-0">
+        <Row className="flex items-center justify-center mb-10 mb:w-[400px] mb:mx-0 lg:w-auto">
           <Col xs={12} md={10} lg={8}>
             <Card className="lg:p-6 shadow-lg rounded-lg mb:mx-0 ">
               <Card.Body>
@@ -106,7 +106,13 @@ export default function Pricing() {
           </Col>
         </Row>
 
-        <Row className="flex items-center justify-center mb-1">
+       
+
+      </Container>
+
+      <div className=" lg:w-auto flex flex-col items-center">
+
+      <Row className="flex items-center justify-center mb-3 lg:w-[700px]">
         <Col xs={12} md={10} lg={8}>
           <div className={`p-6 shadow-lg rounded-lg ${isyearly ? 'bg-blue-500 text-white' : 'bg-gray-100 text-black'} flex justify-between items-center`}>
             <div>
@@ -120,7 +126,7 @@ export default function Pricing() {
         </Col>
       </Row>
 
-      <Row className="flex items-center justify-center mb-10">
+      <Row className="flex items-center justify-center mb-10 lg:w-[700px]">
         <Col xs={12} md={10} lg={8}>
           <div className={`p-6 shadow-lg rounded-lg ${!isyearly ? 'bg-blue-500 text-white' : 'bg-gray-100 text-black'} flex justify-between items-center`}>
             <div>
@@ -136,9 +142,7 @@ export default function Pricing() {
       <button onClick={handleYearly} className="block mx-auto bg-blue-500 text-white rounded-lg py-2 px-4 my-4">
         {isyearly ? 'Switch to Monthly' : 'Switch to Yearly'}
       </button>
-
-      </Container>
-      
+      </div>
       {/* Add some custom styles for the toggle switch */}
       <style jsx>{`
         .switch {
