@@ -49,16 +49,19 @@ export default function Header({ bg = "white", color = "black" }) {
                 <div className="lg:origin-top-right lg:absolute mb:left-5 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
                   <Link href="/services/neck-service">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Neck Pain Service</p>
+                      <p className="block px-4 py-2 text-sm text-gray-700">Neck Pain</p>
                       </Link>
                       <Link href="/services/lower-back-service">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Lower Back Pain Service</p>
+                      <p className="block px-4 py-2 text-sm text-gray-700">Lower Back Pain</p>
                       </Link>
                       <Link href="/services/wrist-service">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Wrist Pain Service</p>
+                      <p className="block px-4 py-2 text-sm text-gray-700">Wrist Pain</p>
                       </Link>
                       <Link href="/services/knee-service">
-                      <p className="block px-4 py-2 text-sm text-gray-700">Knee Pain Service</p>
+                      <p className="block px-4 py-2 text-sm text-gray-700">Knee Pain</p>
+                      </Link>
+                      <Link href="/services/sedentary-lifestyle-service">
+                      <p className="block px-4 py-2 text-sm text-gray-700">Sedentary Lifestyle</p>
                       </Link>
                   </div>
                 </div>

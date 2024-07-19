@@ -2,9 +2,64 @@
 import Image from 'next/image';
 import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-bootstrap';
 import Header from '../components/Header';
-
+import { useState, useEffect } from 'react';
+import { useWindowSize } from 'react-use';
 export default function Home() {
+
+const testimonials = [
+  {
+    name: "Aditya Jain",
+    age: 32,
+    condition: "Depression",
+    testimonial: "I was struggling with depression and it was affecting my career. When my friend told me about this technology, I was skeptical that a device would solve my problem. But NIBS has given me my life back.",
+    image: "/testimonial1.png"
+  },
+  {
+    name: "Chetna Bhuyan",
+    age: 29,
+    condition: "Post Partum Depression",
+    testimonial: "I didn’t want to take antidepressants, so my doctor told me about NIBS. I noticed a significant improvement in my overall mood, energy, and symptoms after just 4-5 sessions with NIBS.",
+    image: "/testimonial1.png"
+  },
+  {
+    name: "Shreyasi Gupta",
+    age: 38,
+    condition: "Depression",
+    testimonial: "My biggest problem was that medicines were causing lifestyle problems and I was losing my productivity at work. NIBS helped me improve without side effects, I am really thankful to their team.",
+    image: "/testimonial1.png"
+  },
+  {
+    name: "Biswa Chakraborty",
+    age: 39,
+    condition: "Depression & Anxiety",
+    testimonial: "At first, talk therapy was helpful, but I soon stopped getting better. Then, my psychologist told me about Mave Health. Their team made a special program for me with NIBS, and it’s made my life much better.",
+    image: "/testimonial1.png"
+  },
+  {
+    name: "Dheeraj Kumar",
+    age: 45,
+    condition: "Depression",
+    testimonial: "I visited my psychologist because of constant brain fog and I didn’t realize that it was depression. NIBS helped me improve my life.",
+    image: "/testimonial1.png"
+  },
+];
+
+const chunkArray = (arr, size) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+};
+  const { width } = useWindowSize();
+  const [chunks, setChunks] = useState([]);
+
+  useEffect(() => {
+    const chunkSize = width < 768 ? 1 : 4;
+    setChunks(chunkArray(testimonials, chunkSize));
+  }, [width]);
   return (
+    
     <div className=" container mt-2 rounded-3xl ">
       <Header bg="black" color="white"/>
        <section  className=" pb-16 " style={{ backgroundColor: '#3D4966',borderRadius: "0 0 30px 30px" }}>
@@ -65,14 +120,14 @@ export default function Home() {
         <Col md={4}>
           <Card className='lg:h-[80px] mb:mb-3'>
             <Card.Body>
-              <Card.Title>Early Risk Prevention</Card.Title>
+              <Card.Title>Weight Control</Card.Title>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
           <Card className='lg:h-[80px] mb:mb-3'>
             <Card.Body>
-              <Card.Title>Immidate healthcare care expert availability</Card.Title>
+              <Card.Title>One to One Sessions</Card.Title>
             </Card.Body>
           </Card>
         </Col>
@@ -80,7 +135,8 @@ export default function Home() {
     </Container>
     </section>
        <section id="features" className="py-5">
-      <Container>
+       <h1 className='lg:text-3xl font-bold mb:text-2xl text-center'>Pain Relief services</h1>
+      <Container className='mt-10'>
         <Row>
           <Col md={4}>
             <Card >
@@ -143,12 +199,12 @@ export default function Home() {
     </section>
     <section>
     <Container className="py-5">
-      <h1 className="text-center text-3xl mb-5">How it works?</h1>
+      <h1 className="text-center text-3xl mb-5 font-bold ">How it works?</h1>
       <Row className="align-items-center">
-        <Col md={4}>
-          <Image src="/work.png" className='mb-6' width={500} height={500} />
+        <Col md={6}>
+          <Image src="/work.png" className='mb-6' width={700} height={700} />
         </Col>
-        <Col md={8} className="text-center">
+        <Col md={6} className="text-center">
           <div className="steps">
             <div className="step mb-4">
               <Card className="mb-3">
@@ -190,51 +246,34 @@ export default function Home() {
       </Row>
     </Container>
     </section>
-    {/* <section id="about" className="py-5 bg-light">
-      <Container>
-        <Row>
-          <Col md={6}>
-            <h2>About Us</h2>
-            <p>Information about the company, mission, and vision.</p>
-          </Col>
-          <Col md={6}>
-            <Image src="" alt="About us" className="img-fluid" />
-          </Col>
-        </Row>
-      </Container>
-    </section> */}
     <section id="testimonials" className="py-5">
-  <Container className='border-2 p-3'>
-    <h2 className="text-center mb-12 text-3xl">Testimonials</h2>
-    <Carousel variant="dark">
-      <Carousel.Item interval={500}>
-        <Row className="justify-content-center">
-          <Col md={8} className='lg:flex lg:h-[300px] justify-between mb:h-[600px]'>
-            <blockquote className="blockquote lg:h-[300px] flex flex-col justify-center">
-              <p className="mb-2 mr-10">“Paincure.ai has been a game-changer for our company. Employee productivity has skyrocketed, and absenteeism rates have plummeted.”</p>
-              <footer className="blockquote-footer mt-2">John Doe</footer>
-            </blockquote>
-            <div className="lg:h-[300px] flex items-center">
-              <Image className="rounded-full border-2 border-black " src="/testimonial1.png" width={400} height={1000}/>
-            </div>
-          </Col>
-        </Row>
-      </Carousel.Item>
-      <Carousel.Item interval={500}>
-        <Row className="justify-content-center">
-          <Col md={8} className='lg:flex lg:h-[300px] justify-between mb:h-[600px]'>
-            <blockquote className="blockquote lg:h-[300px] flex flex-col justify-center">
-              <p className="mb-2 mr-10">"Amazing results! Employee productivity has skyrocketed, and absenteeism rates have plummeted."</p>
-              <footer className="blockquote-footer mt-2">Jane Smith</footer>
-            </blockquote>
-            <div className="lg:h-[300px] flex items-center">
-              <Image className="rounded-full border-2 border-black " src="/testimonial2.png" width={400} height={1000}/>
-            </div>
-          </Col>
-        </Row>
-      </Carousel.Item>
-    </Carousel>
-  </Container>
+  <Container className="my-5">
+  <h2 className="text-center mb-12 text-3xl font-bold">Testimonials</h2>
+      <Carousel variant='dark' className='mb:flex'>
+        {chunks.map((chunk, chunkIndex) => (
+          <Carousel.Item key={chunkIndex}>
+            <Row>
+              {chunk.map((t, index) => (
+                <Col key={index} md={3} className="mb-4">
+                  <Card className="h-[500px] lg:flex lg:flex-col lg:justify-between">
+                    <Card.Body className="lg:flex-grow-1">
+                      <Card.Title className="font-bold text-xl">{t.name}</Card.Title>
+                      <Card.Subtitle className="mb-2 text-muted">
+                        {t.age}, {t.condition}
+                      </Card.Subtitle>
+                      <Card.Text className='h-[200px]'>{t.testimonial}</Card.Text>
+                    </Card.Body>
+                    <div className='flex justify-center items-center mb-5'>
+                    <Image src={t.image}  width={170} height={170} />
+                    </div>         
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Container>
 </section>
 
     <section id="faq" className="py-5 bg-light">
@@ -242,34 +281,55 @@ export default function Home() {
         <h2 className="text-center mb-4 text-3xl">FAQ</h2>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
-            <Accordion.Header>How do I report my pain symptoms?</Accordion.Header>
+            <Accordion.Header> What is Paincure.ai?</Accordion.Header>
             <Accordion.Body>
-            Simply log in to your Paincure.ai account and fill out our user-friendly questionnaire. Our AI will analyze your responses and provide personalized recommendations.
+            Paincure.ai is a digital platform that combines AI technology with HCPC-registered healthcare experts to provide 
+            personalized pain relief therapies, helping you live a pain-free and productive life.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>What type of online consultations can I access with healthcare experts through Paincure.ai?</Accordion.Header>
+            <Accordion.Header>How do I report my pain symptoms on the Paincure.ai platform?</Accordion.Header>
             <Accordion.Body>
-              Answer
+            Log in, navigate to "Report Symptoms," and answer questions about your pain. You can also upload relevant medical records
+             to help our experts create a tailored treatment plan for you.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey='2'>
-              <Accordion.Header>How can I track my progress and improvements using the Paincure.ai platform?</Accordion.Header>
+              <Accordion.Header>How does digital pain relief therapy work for me?</Accordion.Header>
               <Accordion.Body>
-              Answer
+              After reporting your symptoms, our platform connects you with healthcare experts who provide a personalized therapy plan, including exercises and lifestyle adjustments. 
+              Access our content library and schedule one-on-one sessions as needed.
             </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey='3'>
-              <Accordion.Header>Can I access Paincure.ai's services from any device, or is there a specific app I need to use?</Accordion.Header>
+              <Accordion.Header>How many years of experience do your healthcare experts have?</Accordion.Header>
               <Accordion.Body>
-              Answer
+              Our experts are HCPC-registered, with many years of experience, including practice within the NHS, ensuring you receive qualified and dedicated care.
             </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey='4'>
-              <Accordion.Header>Is there a cost associated with using the Paincure.ai services, or are they provided to employees at no charge?</Accordion.Header>
+              <Accordion.Header>What equipment do I require to get started?</Accordion.Header>
               <Accordion.Body>
-              Answer
+              You only need a device with internet access. Some exercises may require basic items like a yoga mat and resistance bands, which will be specified in your plan.
             </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='5'>
+              <Accordion.Header>What equipment do I require to get started?</Accordion.Header>
+              <Accordion.Body>
+              You only need a device with internet access. Some exercises may require basic items like a yoga mat and resistance bands, which will be specified in your plan.
+            </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='6'>
+              <Accordion.Header>How long are trial periods?</Accordion.Header>
+              <Accordion.Body>
+              Enjoy a 1-month free trial with full access to our content library and a complimentary one-on-one session with a healthcare expert.           
+               </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='7'>
+              <Accordion.Header>How do I report my pain symptoms on the Paincure.ai platform?</Accordion.Header>
+              <Accordion.Body>
+              Simply log in, go to "Report Symptoms," and fill out the details of your pain. Our support team is available to assist you if needed.
+               </Accordion.Body>
             </Accordion.Item>
         </Accordion>
       </Container>
