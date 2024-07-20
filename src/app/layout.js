@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { usePathname } from 'next/navigation';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -13,6 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {!isHomePage && <Header />}
+      <ToastContainer style={{ maxWidth: '50vw',marginLeft: '150px', // Removes default margin
+           }} position="top-right"/>
         {children}
         <Footer />
       </body>
