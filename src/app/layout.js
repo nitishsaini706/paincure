@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {!isHomePage && <Header />}
-      <ToastContainer style={{ maxWidth: '50vw',marginLeft: '150px', // Removes default margin
+      <ToastContainer style={{ maxWidth: '50vw',marginLeft: '100px', // Removes default margin
            }} position="top-right"/>
         {children}
         <Footer />

@@ -125,10 +125,10 @@ export default function Pricing() {
   return (
     <div className=" lg:mx-auto mt-10 lg:p-5 rounded-3xl ">
       <Container className="mb:mx-0 lg:mb-20">
-        <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[400px]">Pricing </h2>
-        <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[400px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with PainCure.AI </h3>   
+        <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Pricing </h2>
+        <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with PainCure.AI </h3>   
         
-        <div className="flex items-center justify-center mb-5 lg:w-auto mb:w-[400px]">
+        <div className="flex items-center justify-center mb-5 lg:w-auto mb:w-[350px]">
           <span className={`mr-2 ${!isCompany ? 'font-bold' : ''}`}>Individual</span>
           <label className="switch ">
             <input type="checkbox" checked={isCompany} onChange={handleToggle} />
@@ -140,7 +140,7 @@ export default function Pricing() {
 <div className="lg:flex lg:justify-center lg:w-auto">
 
 
-        <Row className="flex items-center justify-center mb-10 mb:w-[400px] mb:mx-0 lg:w-[700px] ">
+        <Row className="flex items-center justify-center mb-10 mb:w-[350px] mb:mx-0 lg:w-[700px] ">
           <Col xs={12} md={10} lg={8}>
             <Card className="lg:p-3 shadow-lg rounded-lg mb:mx-0 border-red-500 border-2">
               <Card.Body>
@@ -166,7 +166,7 @@ export default function Pricing() {
             </Card>
           </Col>
         </Row>
-        <Row className="flex items-center justify-center mb-10 mb:w-[400px] mb:mx-0 lg:w-[700px]">
+        <Row className="flex items-center justify-center mb-10 mb:w-[350px] mb:mx-0 lg:w-[700px]">
           <Col xs={12} md={10} lg={8}>
             <Card className="lg:p-3 shadow-lg rounded-lg mb:mx-0 border-green-700 border-2">
               <Card.Body>
