@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 
-export default function individual() {
+export default function Individual() {
     const [first, setFirst] = useState('');
     const [last, setLast] = useState('');
     const [password, setPassword] = useState('');
