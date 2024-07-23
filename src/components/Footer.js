@@ -17,12 +17,12 @@ const Footer = () => {
                             Paincure.ai, is the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
                         </p>
                     </Col>
-                    <div className='d-flex ' style={{justifyContent:"space-between",marginTop:"25px" , minWidth:""}}>
+                    <div className='flex mt-[25px] lg:justify-evenly ' >
 
-                        <Col md={3} >
+                        <div  className='mb:mr-0 '>
                             <h5 className="text-lg font-bold mb-4">Services</h5>
                             <div className='lg:flex'>
-                                <div style={{marginRight:"90px"}}>
+                                <div className='lg:mr-[90px]'>
                                     <ul className="list-none space-y-2 text-sm cursor-pointer">
 
                                         <li ><a href="/services/lower-back-service">Back Pain</a></li>
@@ -39,8 +39,19 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                        </Col>
-                        <Col md={3}>
+                        </div>
+                        <div className='lg:flex '>
+
+                        <div className='mb:mb-3 lg:mr-[50px]'>
+
+                            <h5 className="text-lg font-bold mb-4 ">Info</h5>
+                            <ul className="list-none space-y-2 text-sm">
+                                <li><a href="/terms-condition" className="text-white  hover:underline">Terms & Conditions</a></li>
+                                <li><a href="/privacy" className="text-white  hover:underline">Privacy</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div>
                             <h5 className="text-lg font-bold mb-4 ">Other Pages</h5>
                             <ul className="list-none space-y-2 text-sm">
                                 <li><a href="/" className="text-white hover:underline">Home</a></li>
@@ -48,7 +59,8 @@ const Footer = () => {
                                 <li><a href="/blogs" className="text-white hover:underline">Blogs</a></li>
                                 <li><a href="/pricing" className="text-white hover:underline">Pricing</a></li>
                             </ul>
-                        </Col>
+                        </div>
+                        </div>
                     </div>
                 </Row>
                 <Row>

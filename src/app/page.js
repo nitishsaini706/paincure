@@ -134,6 +134,44 @@ const chunkArray = (arr, size) => {
       </Row>
     </Container>
     </section>
+    <section id="book" className="py-2">
+      <Container>
+      <div className="flex items-center justify-center  bg-gray-100 border-2 border-gray-400">
+      <div className="w-full p-8 bg-white rounded ">
+        <h2 className="mb-6 text-2xl font-bold text-center text-[#3D4966]">Book a FREE Consulting</h2>
+        <form className="space-y-4">
+          <div className="lg:flex lg:items-center lg:space-x-4 ">
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 mb:mb-2"
+            />
+            <div className="relative w-full mb:mb-2">
+              <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 ">
+                <option value="+91">+91</option>
+                {/* Add more country codes here */}
+              </select>
+              <input
+                type="text"
+                placeholder="WhatsApp Preferred"
+                className="absolute inset-y-0 left-0 w-full pl-20 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+              />
+            </div>
+            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500">
+              <option>Select Category</option>
+              {/* Add more categories here */}
+            </select>
+          </div>
+          <div className="flex items-center">
+            <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"/>
+            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to PainCure.AI's <a href="#" className="text-blue-500">Terms of Use</a> and <a href="#" className="text-blue-500">Privacy Policy</a>.</label>
+          </div>
+          <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none">Book a Free Demo</button>
+        </form>
+      </div>
+    </div>
+      </Container>
+    </section>
        <section id="features" className="py-5">
        <h1 className='lg:text-3xl font-bold mb:text-2xl text-center'>Pain Relief services</h1>
       <Container className='mt-10'>

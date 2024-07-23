@@ -38,11 +38,11 @@ export default function Header({ bg = "white", color = "black" }) {
         <div className={`w-full block lg:flex lg:items-center lg:ml-[50px] lg:w-auto ${isMenuOpen ? 'block' : 'hidden'} `}>
           <div className="text-sm lg:flex-grow ">
             <Link href="/">
-              <p className={`block  lg:inline-block lg:mt-0 lg:mr-[50px] mb:mt-5 lg:text-[18px]`}>Home</p>
+              <p className={`block  lg:inline-block lg:mt-0 lg:mr-[50px] mb:mt-5 lg:text-[18px] no-underline`}>Home</p>
             </Link>
             
             <div className="lg:relative lg:inline-block text-left">
-              <p onClick={toggleService} className={` lg:text-[18px] block cursor-pointer mb:mt-2 lg:inline-block lg:mt-0 lg:mr-[50px] ${color === 'black' ? 'text-black' : 'text-white'} bg-${bg === 'white' ? 'white' : 'gray-700'} hover:bg-opacity-75`}>
+              <p onClick={toggleService} className={` lg:text-[18px] block cursor-pointer mb:mt-2 lg:inline-block lg:mt-0 lg:mr-[50px] no-underline	 ${color === 'black' ? 'text-black' : 'text-white'} bg-${bg === 'white' ? 'white' : 'gray-700'} hover:bg-opacity-75`}>
                 Services
               </p>
               {isServiceOpen && (
@@ -68,13 +68,13 @@ export default function Header({ bg = "white", color = "black" }) {
               )}
             </div>
             <Link href="/about">
-              <p className={`block  mb:mt-2 lg:inline-block  lg:mr-[50px] lg:text-[18px]`}>About Us</p>
+              <p className={`block  mb:mt-2 lg:inline-block  lg:mr-[50px] lg:text-[18px] no-underline`}>About Us</p>
               </Link>
               <Link href="/blogs">
-              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mr-[50px] lg:text-[18px] `}>Blogs</p>
+              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mr-[50px] lg:text-[18px] no-underline`}>Blogs</p>
               </Link>
               <Link href="/pricing">
-              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mr-3 lg:text-[18px]`}>Pricing</p>
+              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mr-3 lg:text-[18px] no-underline`}>Pricing</p>
               </Link>
           </div>
           <div className="flex items-center mb:mt-4 mb:pb-2 lg:ml-[200px]">

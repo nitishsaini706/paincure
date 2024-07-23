@@ -179,7 +179,7 @@ export default function Pricing() {
                           {/* <img src={item.icon} alt={item.title} className="w-10 h-10 mr-4" /> */}
                           <BsCheck2Circle className="lg:w-10 lg:h-12 mr-2 mb:w-5 mb:h-12" color="green"/>
                           <div>
-                            <div className="font-bold lg:text-lg mb:text-sm w-[250px] ">{item.title}</div>
+                            <div className="font-bold lg:text-lg mb:text-sm w-[250px] mb:min-h-[30px]">{item.title}</div>
                             {/* <div className="lg:text-sm mb:text-xs text-gray-500">{item.description}</div> */}
                           </div>
                         </td>
