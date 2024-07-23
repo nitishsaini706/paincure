@@ -19,3 +19,23 @@ body{
     border-top: 20px solid #007bff;
     margin: 10px auto;
   }
+
+  .custom-ol {
+    list-style-type: none; /* Remove default numbering */
+    counter-reset: custom-counter; /* Initialize counter */
+}
+
+.custom-ol li {
+    position: relative;
+    padding-left: 1.5em; /* Adjust space for circle */
+    margin-bottom: 0.5em; /* Add space between items */
+}
+
+.custom-ol li::before {
+    content: '•'; /* Unicode character for circle */
+    position: absolute;
+    left: 0;
+    color: black; /* Circle color */
+    font-size: 1.2em; /* Adjust circle size */
+    line-height: 1; /* Adjust line height */
+}
