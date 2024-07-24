@@ -9,7 +9,7 @@ export default function Causes({ image, para, heading }) {
       <h1 className='mb-4 text-3xl text-center mt-5 font-bold'>Causes</h1>
       
       {heading.map((head, index) => (
-        <Row key={index} className={`mt-2 mb-2 flex justify-center items-center ${index % 2 === 0 ? '' : 'bg-gradient-to-r from-blue-500 to-blue-400 text-white'} lg:h-[300px] mb:border-2 mb:border-black`}>
+        <Row key={index} className={`mt-2 mb-2 flex justify-center items-center ${index % 2 === 0 ? '' : 'bg-gradient-to-r from-blue-500 to-blue-400 text-white'} lg:h-[300px] `}>
           <Col md={4} className={`flex justify-center items-center ${index % 2 === 0 ? '' : 'order-md-2'}`}>
             <Image src={image[index]} height={250} width={250} className='rounded-full border-0 p-3' />
           </Col>
