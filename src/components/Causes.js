@@ -1,63 +1,26 @@
 'use client'
 import React from 'react'
-import { Col, Container,Row } from 'react-bootstrap'
-import { motion } from 'framer-motion'
+import { Col, Container, Row } from 'react-bootstrap'
+import Image from 'next/image'
 
-export default function Causes({points}) {
+export default function Causes({ image, para, heading }) {
   return (
-    <div>
-        <Container className='my-5 flex items-center flex-col'>
-            <h1 className=' mb-4 text-3xl font-bold'>Causes</h1>
-            <div className='flex md:w-[1000px] mb-3 mb:w-[500px] mb:px-[50px]'>
-
-            <motion.div
-  className="container bg-blue-300 md:w-32 md:h-32 mb:w-[90px] mb:h-[100px] flex items-center justify-center rounded-2xl"
-  whileHover={{ scale: 1.2, rotate: 360 }}
-  whileTap={{ scale: 0.8, rotate: -360, borderRadius: "100%" }}
->
-  <div className="text-black text-center">{points[0]}</div>
-  </motion.div>
-            <motion.div
-  className="container bg-blue-300 md:w-32 md:h-32 mb:w-[90px] mb:h-[100px] flex items-center justify-center rounded-2xl"
-  whileHover={{ scale: 1.2, rotate: 360 }}
-  whileTap={{ scale: 0.8, rotate: -360, borderRadius: "100%" }}
->
-  <div className="text-black text-center">{points[1]}</div>
-  </motion.div>
-            <motion.div
-  className="container bg-blue-300 md:w-32 md:h-32 mb:w-[90px] mb:h-[100px] flex items-center justify-center rounded-2xl"
-  whileHover={{ scale: 1.2, rotate: 360 }}
-  whileTap={{ scale: 0.8, rotate: -360, borderRadius: "100%" }}
->
-  <div className="text-black text-center">{points[2]}</div>
-  </motion.div>
+    <div className='mb:m-3 mb:mt-4'>
+      <h1 className='mb-4 text-3xl text-center mt-5 font-bold'>Causes</h1>
+      
+      {heading.map((head, index) => (
+        <Row key={index} className={`mt-2 mb-2 flex justify-center items-center ${index % 2 === 0 ? '' : 'bg-gradient-to-r from-blue-500 to-blue-400 text-white'} lg:h-[300px]`}>
+          <Col md={4} className={`flex justify-center items-center ${index % 2 === 0 ? '' : 'order-md-2'}`}>
+            <Image src={image[index]} height={250} width={250} className='rounded-full border-0 p-3' />
+          </Col>
+          <Col md={6} className='flex justify-center items-center'>
+            <div>
+              <h1 className='md:text-3xl mb:text-2xl mb:w-[300px] font-bold md:w-[500px]'>{head}</h1>
+              <p className='mt-4 md:text-lg mb:text-sm'>{para[index]}</p>
             </div>
-            <div className='flex  md:w-[1000px] mb:w-[500px] mb:px-[50px]'>
-
-            <motion.div
-  className="container bg-blue-300 md:w-32 md:h-32 mb:w-[90px] mb:h-[100px] flex items-center justify-center rounded-2xl"
-  whileHover={{ scale: 1.2, rotate: 360 }}
-  whileTap={{ scale: 0.8, rotate: -360, borderRadius: "100%" }}
->
-  <div className="text-black text-center">{points[3]}</div>
-  </motion.div>
-            <motion.div
-  className="container bg-blue-300 md:w-32 md:h-32 mb:w-[90px] mb:h-[100px] flex items-center justify-center rounded-2xl"
-  whileHover={{ scale: 1.2, rotate: 360 }}
-  whileTap={{ scale: 0.8, rotate: -360, borderRadius: "100%" }}
->
-  <div className="text-black text-center">{points[4]}</div>
-  </motion.div>
-            <motion.div
-  className="container bg-blue-300 md:w-32 md:h-32 mb:w-[90px] mb:h-[100px] flex items-center justify-center rounded-2xl"
-  whileHover={{ scale: 1.2, rotate: 360 }}
-  whileTap={{ scale: 0.8, rotate: -360, borderRadius: "100%" }}
->
-  <div className="text-black text-center">{points[5]}</div>
-  </motion.div>
-            </div>
-
-        </Container>
+          </Col>
+        </Row>
+      ))}
     </div>
   )
 }

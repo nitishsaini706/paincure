@@ -138,7 +138,7 @@ const chunkArray = (arr, size) => {
       <Container>
       <div className="flex items-center justify-center  bg-gray-100 border-2 border-gray-400">
       <div className="w-full p-8 bg-white rounded ">
-        <h2 className="mb-6 text-2xl font-bold text-center text-[#3D4966]">Book a FREE Consulting</h2>
+        <h2 className="mb-6 text-2xl font-bold text-center">Book a FREE Consulting</h2>
         <form className="space-y-4">
           <div className="lg:flex lg:items-center lg:space-x-4 ">
             <input
@@ -164,7 +164,7 @@ const chunkArray = (arr, size) => {
           </div>
           <div className="flex items-center">
             <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"/>
-            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to PainCure.AI's <a href="#" className="text-blue-500">Terms of Use</a> and <a href="#" className="text-blue-500">Privacy Policy</a>.</label>
+            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to PainCure.AI's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
           </div>
           <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none">Book a Free Demo</button>
         </form>
@@ -177,58 +177,68 @@ const chunkArray = (arr, size) => {
       <Container className='mt-10'>
         <Row>
           <Col md={4}>
-            <Card >
+            <Card className='h-[360px]'>
             <Image src='/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
-                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+                <Card.Text>Lower back pain (LBP) is common among remote workers and is characterized by discomfort or pain in the lower spine. Usually, 
+                  it gets better in a few weeks, but occasionally it can take longer or keep coming back.
+                   It can range from mild discomfort to severe, debilitating pain, affecting quality of life and productivity.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
+            <Card className='h-[360px]'>
             <Image src='/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
-                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+                <Card.Text>Shoulder and neck pain are common issues among remote workers, characterized by discomfort or pain in the upper spine and 
+                  shoulder region. It could happen as a result of physical or mental exhaustion or extended stress. Most neck and shoulder pain lasts for a few weeks. 
+                  Also some health diseases such as diabetes, and heart attack lead to shoulder pain. These conditions can range from mild discomfort to severe pain, impacting daily activities and productivity.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
-          <Col md={4} className=''>
+          <Col md={4} className='h-[360px]'>
             <Card>
             <Image src='/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
-                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+                <Card.Text> Wrist and ankle pain are common issues among remote workers, characterized by discomfort or pain in the joints of the wrists and ankles. The complex mechanism of wrist and hand might
+                   result in several causes of discomfort. It can be caused by certain illnesses such as rheumatoid arthritis, osteoarthritis and carpel tunnel syndrome. These conditions can range from mild
+                    discomfort to severe pain, impacting daily activities and productivity.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
         <Row className='mt-5'>
           <Col md={4}>
-            <Card>
+            <Card className='h-[360px]'>
             <Image src='/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
-                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+                <Card.Text>Knee and hip pain are common issues among desk workers, characterized by discomfort or pain in the knee and hip joints. This pain is commonly seen in patients with obesity, arthritis or flat feet.
+                   These conditions can range from mild discomfort to severe pain, impacting daily activities and productivity.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
+            <Card className='h-[360px]'>
             <Image src='/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
-                <Card.Title>Yoga</Card.Title>
-                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+                <Card.Title>Yoga for Headaches and Migraines</Card.Title>
+                <Card.Text> Headaches and migraines are common issues among women’s as a result of hormonal imbalance, characterized by discomfort or pain in the head and neck region. 
+                  Genetic and environmental factors plays an important role in developing migraine. These conditions can range from mild discomfort to severe like throbbing pain, 
+                  impacting daily activities and productivity. It can get worst with physical activity, bright lights, loud noises, strong odors.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
+            <Card className='h-[360px]'>
             <Image src='/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
-                <Card.Title>Weight Loss & Gain Workout</Card.Title>
-                <Card.Text>Repetitive strain injuries in the wrists and hands can significantly impact an employee's ability to perform their job duties.</Card.Text>
+                <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
+                <Card.Text>Desk employees are sitting more than ever, and it's damaging their bodies. Whether at a desk, in a vehicle, or on the couch, approximately 7.5 hours of them spend their days seated. This sedentary lifestyle can lead to mood and mental health disorders such as anxiety and depression.</Card.Text>
               </Card.Body>
             </Card>
           </Col>

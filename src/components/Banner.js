@@ -1,7 +1,7 @@
 
 export default function Banner(){
     return(
-        <div className="p-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-400 text-white lg:flex lg:justify-between lg:items-center">
+        <div className="p-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-400 text-white lg:flex lg:justify-between lg:items-center">
             <div className="lg:w-[600px]">
                 <h1 className="lg:text-5xl">Start your journey to a pain-free work life today!</h1>
                 </div>
