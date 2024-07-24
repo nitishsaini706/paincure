@@ -43,7 +43,7 @@ export default function page() {
   ];
   return (
     
-    <div>
+    <div >
       <HeroSection heading="Wrist and Ankle Pain in Remote Employees" para="Wrist and ankle pain can significantly impact daily activities and overall mobility. These types of pain are often due to repetitive strain, injury, or underlying medical conditions. Symptoms can range from mild discomfort to severe pain, swelling, and limited movement.
 " image="/wristPainService.png"/>
 

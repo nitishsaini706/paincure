@@ -4,6 +4,8 @@ import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-boo
 import Header from '../components/Header';
 import { useState, useEffect } from 'react';
 import { useWindowSize } from 'react-use';
+import Link from 'next/link';
+import ProgramDetails from "../components/solution"
 export default function Home() {
 
 const testimonials = [
@@ -53,7 +55,58 @@ const chunkArray = (arr, size) => {
 };
   const { width } = useWindowSize();
   const [chunks, setChunks] = useState([]);
-
+  const [category, setCategory] = useState("select Category");
+  const categories = [
+    'Neck pain',
+    'Wrist pain',
+    'Lower back pain',
+    'Knee Pain',
+    'Sedentary lifestyle'
+  ];
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen); // Toggle dropdown visibility
+  };
+  const [isOpen, setIsOpen] = useState(false); // State to control dropdown visibility
+  const sections = [
+    {
+      heading: "Access",
+      points: [
+        "Tell us about your pain. Share your symptoms",
+        "AI will analyze them to understand your condition better."
+      ]
+    },
+    {
+      heading: "Connect",
+      points: [
+        "Get expert guidance.",
+        "We'll connect you with top healthcare professionals who specialize in treating your specific pain."
+      ]
+    },
+    {
+      heading: "Engage",
+      points: [
+        "Personalized care.",
+        "Receive a tailored treatment plan, including customized exercise routines and online consultations."
+      ]
+    },
+    {
+      heading: "Track",
+      points: [
+        "Track your progress.",
+        "Monitor your improvements and celebrate your milestones with detailed progress reports."
+      ]
+    },
+    {
+      heading: "Proper Footwear",
+      points: [
+        "Choose supportive and comfortable shoes to prevent and alleviate ankle pain."
+      ]
+    }
+  ];
+  const handleOptionClick = (item) => {
+    setCategory(item);
+    setIsOpen(false); // Close dropdown after selecting an option
+  };
   useEffect(() => {
     const chunkSize = width < 768 ? 1 : 4;
     setChunks(chunkArray(testimonials, chunkSize));
@@ -72,7 +125,9 @@ const chunkArray = (arr, size) => {
               Introducing Paincure.ai, the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
             </p>
             <div className='d-flex justify-start items-center lg:w-[544px] lg:h-[64px] lg:gap-[40px] md:gap-[20px]  md:w-[200px] '>
+              <Link href="/signup">
               <Button  className="me-2 border-0 text-black rounded-2xl bg-white lg:w-[162px] md:w-[60px]">Sign Up</Button>
+              </Link>
               <Button className="me-2 border-1 border-white rounded-2xl text-white lg:w-[162px] bg-[#3D4966] md:w-[60px]">Learn More</Button>
             </div>
           </Col>
@@ -148,7 +203,7 @@ const chunkArray = (arr, size) => {
             />
             <div className="relative w-full mb:mb-2">
               <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 ">
-                <option value="+91">+91</option>
+                {/* <option value="+91">+91</option> */}
                 {/* Add more country codes here */}
               </select>
               <input
@@ -157,10 +212,27 @@ const chunkArray = (arr, size) => {
                 className="absolute inset-y-0 left-0 w-full pl-20 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
               />
             </div>
-            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500">
-              <option>Select Category</option>
-              {/* Add more categories here */}
-            </select>
+            <div className="relative w-full">
+      <div
+        className="p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 cursor-pointer"
+        onClick={toggleDropdown} // Show/hide dropdown on click
+      >
+        {category}
+      </div>
+      {isOpen && ( // Only render the dropdown if isOpen is true
+        <ul className="absolute left-0 right-0 bg-white border border-gray-300 rounded mt-1 z-10">
+          {categories.map((item) => (
+            <li
+              key={item}
+              className="p-2 hover:bg-purple-500 hover:text-white cursor-pointer"
+              onClick={() => handleOptionClick(item)} // Handle option click
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
           </div>
           <div className="flex items-center">
             <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"/>
@@ -177,7 +249,7 @@ const chunkArray = (arr, size) => {
       <Container className='mt-10'>
         <Row>
           <Col md={4}>
-            <Card className='h-[360px]'>
+            <Card className='m-h-[360px]'>
             <Image src='/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
@@ -188,7 +260,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[360px]'>
+            <Card className='m-h-[360px]'>
             <Image src='/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
@@ -199,7 +271,7 @@ const chunkArray = (arr, size) => {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={4} className='h-[360px]'>
+          <Col md={4} className='m-h-[360px]'>
             <Card>
             <Image src='/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
@@ -213,7 +285,7 @@ const chunkArray = (arr, size) => {
         </Row>
         <Row className='mt-5'>
           <Col md={4}>
-            <Card className='h-[360px]'>
+            <Card className='m-h-[360px]'>
             <Image src='/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
@@ -223,7 +295,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[360px]'>
+            <Card className='m-h-[360px]'>
             <Image src='/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
@@ -234,7 +306,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[360px]'>
+            <Card className='m-h-[360px]'>
             <Image src='/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
@@ -247,51 +319,9 @@ const chunkArray = (arr, size) => {
     </section>
     <section>
     <Container className="py-5">
-      <h1 className="text-center text-3xl mb-5 font-bold ">How it works?</h1>
-      <Row className="align-items-center">
-        <Col md={6}>
-          <Image src="/work.png" className='mb-6' width={700} height={700} />
-        </Col>
-        <Col md={6} className="text-center">
-          <div className="steps">
-            <div className="step mb-4">
-              <Card className="mb-3">
-                <Card.Body>
-                  <h3 className='mb-3 font-bold '> Access</h3>
-                  <p>Tell us about your pain. Share your symptoms, and our AI will analyze them to understand your condition better.</p>
-                </Card.Body>
-              </Card>
-              <div className="arrow"></div>
-            </div>
-            <div className="step mb-4">
-              <Card className="mb-3">
-                <Card.Body>
-                  <h3 className='mb-3 font-bold'> Connect</h3>
-                  <p>Get expert guidance. We'll connect you with top healthcare professionals who specialize in treating your specific pain.</p>
-                </Card.Body>
-              </Card>
-              <div className="arrow"></div>
-            </div>
-            <div className="step mb-4">
-              <Card className="mb-3">
-                <Card.Body>
-                  <h3 className='mb-3 font-bold'> Engage</h3>
-                  <p>Personalized care. Receive a tailored treatment plan, including customized exercise routines and online consultations.</p>
-                </Card.Body>
-              </Card>
-              <div className="arrow"></div>
-            </div>
-            <div className="step">
-              <Card className="mb-3">
-                <Card.Body>
-                  <h3 className='mb-3 font-bold'> Track</h3>
-                  <p>Track your progress. Monitor your improvements and celebrate your milestones with detailed progress reports.</p>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </Col>
-      </Row>
+    
+    <ProgramDetails mainHeading={"How it works?"}
+       sections={sections} />
     </Container>
     </section>
     <section id="testimonials" className="py-5">
@@ -311,8 +341,8 @@ const chunkArray = (arr, size) => {
                       </Card.Subtitle>
                       <Card.Text className='h-[200px]'>{t.testimonial}</Card.Text>
                     </Card.Body>
-                    <div className='flex justify-center items-center mb-5'>
-                    <Image src={t.image}  width={170} height={170} />
+                    <div className='flex justify-center items-center lg:mb-5'>
+                    <Image src={t.image}  width={170} height={170} className='rounded-full'/>
                     </div>         
                   </Card>
                 </Col>

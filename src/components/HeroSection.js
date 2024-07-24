@@ -11,7 +11,7 @@ export default function HeroSection({heading,para,image}) {
           <Image src={image} height={800} width={800} className='rounded-none border-0 w-full h-full'/>
           </Col>
           <Col md={6} className='flex justify-center items-center'>
-          <div>
+          <div className='mb:p-2'>
           <h1 className='md:text-3xl mb:text-2xl mb:w-[300px] font-bold md:w-[400px]'>{heading}</h1>
           <p className='mt-4 md:text-lg mb:text-sm'>{para}</p>
           </div>

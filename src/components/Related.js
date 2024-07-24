@@ -1,23 +1,8 @@
 "use client"
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
 
 export default function Related({ mainHeading,headings, points }) {
     return (
-
-//     //   <div className='mb:m-3 mb:mt-4'>
-//     //   <h1 className=' text-3xl text-center mt-5 font-bold'>{mainHeading}</h1>
-//     //   {headings.map((head, index) => (
-//     //     <Row key={index} className={`mt-5 mb-5 flex justify-center items-center} lg:h-[300px]`}>
-//     //       <Col md={6} className='flex justify-center items-center'>
-//     //         <div>
-//     //           <h1 className='md:text-3xl mb:text-2xl mb:w-[300px] font-bold md:w-[500px]'>{head}</h1>
-//     //           <p className='mt-4 md:text-lg mb:text-sm'>{points[index]}</p>
-//     //         </div>
-//     //       </Col>
-//     //     </Row>
-//     //   ))}
-//     // </div>
       <div className='flex flex-col justify-center items-center mb-[100px]'>
         <h1 className='text-3xl font-bold m-5'>{mainHeading}</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 justify-center'>
@@ -35,10 +20,7 @@ export default function Related({ mainHeading,headings, points }) {
       </div>
     );
   }
-  
-  
-  
-// import React from "react";
+
 
 // const Related = () => {
 //   return (
