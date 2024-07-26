@@ -12,7 +12,7 @@ export default function About() {
                         <h2 className="text-center mb-3 mt-4 text-3xl font-bold">Terms and conditions</h2>
                         <h2 className='text-left mb-4'>Paincure AI Ltd (together with its affiliates, referred to as the “Company”) provides services
                             (defined in paragraph 1 of these Terms of Service) to individuals who utilize and/or subscribe to such services (“User”) through our Web application
-                            named “Paincure.ai” and/or the website at www.paincure.ai (collectively, the “Platform”).</h2>
+                            named “paincure.Ai” and/or the website at www.paincure.Ai (collectively, the “Platform”).</h2>
 
                         <h2 className='text-left  mb-4'>These Terms of Service (“Terms”) constitute a legally binding agreement between you and the Company governing your use of the services through our Platform.</h2>
 
@@ -23,7 +23,7 @@ export default function About() {
                             WHETHER OR NOT YOU HAVE REGISTERED WITH THE PLATFORM. IF YOU DO NOT AGREE TO THESE TERMS, THEN YOU HAVE NO RIGHT TO ACCESS OR USE THE PLATFORM. </h2>
                         <h2 className='text-left  mb-4'>These Terms are effective as of the date you first click “I agree” (or a similar button or checkbox) or use or access the Platform, whichever is earlier.
                             Any personal data you submit to us through the Platform or which we collect about you is governed by our privacy policy (“Privacy Policy”), available at
-                            https://www.paincure.ai/privacy. You acknowledge that by using or accessing the Platform, you have reviewed, understood, and agreed to the Privacy Policy.
+                            https://www.paincure.Ai/privacy. You acknowledge that by using or accessing the Platform, you have reviewed, understood, and agreed to the Privacy Policy.
                             The Privacy Policy is incorporated by reference into these Terms and together form part of and are hereinafter referred to as this "Agreement".
                         </h2>
                     </div>
@@ -52,8 +52,8 @@ export default function About() {
                             The Company makes no claims that the Services may be lawfully accessed in any specific location. Access to the Services may not be legal by certain persons
                             or in certain states or countries, or may require government authorization and/or registration. When Users access the Platform, they are solely responsible for
                             compliance with the laws and regulations of their jurisdiction.
-                            By signing up and using Paincure.ai, you agree to these Terms of Service and our Privacy Policy, and you commit to abiding by them. If you have any questions,
-                            please contact us at support@paincure.ai.</h2>
+                            By signing up and using paincure.Ai, you agree to these Terms of Service and our Privacy Policy, and you commit to abiding by them. If you have any questions,
+                            please contact us at support@paincure.Ai.</h2>
                     </div>
 
                     <div>

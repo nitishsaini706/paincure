@@ -23,7 +23,7 @@ export default function Header({ bg = "white", color = "black" }) {
             <a className="flex items-center" href="/">
               
               <Image id="img" src="/logo.png" alt="logo" width={30} height={30} className="mr-2" />
-              <p className={`ml-2 mb-1`}>paincure.AI</p>
+              <p className={`ml-2 mb-1`}>paincure.Ai</p>
              
             </a>
           
@@ -78,13 +78,13 @@ export default function Header({ bg = "white", color = "black" }) {
               </Link>
           </div>
           <div className="flex items-center mb:mt-4 mb:pb-2 lg:ml-[200px]">
-            <Link href="/login">
+            {/* <Link href="/login">
               <p className={`${bg === 'white' ? 'text-black border border-black bg-white' : 'text-white border border-white bg-[#3D4966]'} py-2 px-4 mx-2 rounded-2xl text-sm`}>Login</p>
-            </Link>
+            </Link> */}
             
             <Link href="/signup">
             
-              <p className={`${bg === 'white' ? 'text-white bg-blue-500' : 'text-black border border-black bg-white'} px-4 mx-2 py-2 rounded-2xl text-sm`}>Sign Up</p>
+              <p className={`${bg === 'white' ? 'text-white bg-blue-500' : 'text-black border border-black bg-white '} px-4 mx-2 py-2 rounded-2xl text-sm hover:bg-black hover:text-white`}>Sign Up As Health Expert</p>
             </Link>
             
           </div>

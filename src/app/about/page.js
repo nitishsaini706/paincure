@@ -12,8 +12,8 @@ export default function About() {
       <h2 className='text-center mb-3 mt-5 rounded-lg border-2 w-[100px] p-2'>About Us</h2>
       </div>
       <div>
-            <h2 className="text-center mb-3  text-3xl font-bold">About paincure.ai</h2>
-            <h2 className='text-center  mb-4'>Introducing Paincure.ai - your personal ally in the battle against physical discomfort.</h2>
+            <h2 className="text-center mb-3  text-3xl font-bold">About paincure.Ai</h2>
+            <h2 className='text-center  mb-4'>Introducing paincure.Ai - your personal ally in the battle against physical discomfort.</h2>
       </div>   
       <div className='mt-5'>
         <div>
@@ -50,7 +50,7 @@ export default function About() {
             </Container>
             <Container className="text-center my-5 mt-5 border-1  p-3">
       <h1 className='lg:text-3xl mb-2 font-bold mb:text-2xl'>Experience the Future of Pain Management</h1>
-      <p className='mb:text-sm'>At Paincure.ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
+      <p className='mb:text-sm'>At paincure.Ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
       <Row className="mt-[50px]">
         <Col md={4}>
           <Card className='lg:h-[130px] mb:mb-3'>
@@ -96,7 +96,7 @@ export default function About() {
                   <Card.Body>
                     <Card.Title className='text-3xl'>How We Handle Your Data in Compliance with Secure HIPAA Regulations</Card.Title>
                     <Card.Text className='mt-3'>
-                      At Paincure.ai, we take data privacy and security seriously. We handle your personal and health information with utmost care, ensuring compliance with strict HIPAA regulations. 
+                      At paincure.Ai, we take data privacy and security seriously. We handle your personal and health information with utmost care, ensuring compliance with strict HIPAA regulations. 
                         Our robust security measures guarantee the confidentiality and protection of your data at all times.
                     </Card.Text>
                   </Card.Body>
@@ -116,7 +116,7 @@ export default function About() {
                         </Form.Group>
                         <Form.Group controlId="formBasicLastName" className='mt-3'>
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Ex: john@paincure.ai" />
+                            <Form.Control type="email" placeholder="Ex: john@paincure.Ai" />
                         </Form.Group>
                         <Form.Group controlId="formBasicLastName" className='mt-3'>
                             <Form.Label>How can we help you?</Form.Label>

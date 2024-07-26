@@ -11,10 +11,10 @@ const Footer = () => {
                     <Col md={6} style={{ marginBottom: "15px" }}>
                         <div className="flex items-center mb-4">
                             <Image src="/logo.png" alt="logo" width={40} height={40} className="mr-2" />
-                            <span className="text-lg font-bold">paincure.AI</span>
+                            <span className="text-lg font-bold">paincure.Ai</span>
                         </div>
                         <p className="text-sm">
-                            Paincure.ai, is the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
+                            paincure.Ai, is the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
                         </p>
                     </Col>
                     <div className='flex mt-[25px] lg:justify-evenly ' >
@@ -65,7 +65,7 @@ const Footer = () => {
                 </Row>
                 <Row>
                     <Col md={12} className="text-center">
-                        <p className="text-sm">&copy; 2024 paincure.ai. All Rights Reserved.</p>
+                        <p className="text-sm">&copy; 2024 paincure.Ai. All Rights Reserved.</p>
                     </Col>
                 </Row>
             </Container>

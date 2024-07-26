@@ -6,39 +6,40 @@ import { useState, useEffect } from 'react';
 import { useWindowSize } from 'react-use';
 import Link from 'next/link';
 import ProgramDetails from "../components/solution"
+import { FaWhatsapp } from 'react-icons/fa';
 export default function Home() {
 
 const testimonials = [
   {
-    name: "Aditya Jain",
+    name: "Olivia Sonny",
     age: 32,
     condition: "Depression",
     testimonial: "I was struggling with depression and it was affecting my career. When my friend told me about this technology, I was skeptical that a device would solve my problem. But NIBS has given me my life back.",
     image: "/testimonial1.png"
   },
   {
-    name: "Chetna Bhuyan",
+    name: "Jasper fiery",
     age: 29,
     condition: "Post Partum Depression",
     testimonial: "I didn’t want to take antidepressants, so my doctor told me about NIBS. I noticed a significant improvement in my overall mood, energy, and symptoms after just 4-5 sessions with NIBS.",
     image: "/testimonial1.png"
   },
   {
-    name: "Shreyasi Gupta",
+    name: "Charlotte Elizabeth",
     age: 38,
     condition: "Depression",
     testimonial: "My biggest problem was that medicines were causing lifestyle problems and I was losing my productivity at work. NIBS helped me improve without side effects, I am really thankful to their team.",
     image: "/testimonial1.png"
   },
   {
-    name: "Biswa Chakraborty",
+    name: "Margot",
     age: 39,
     condition: "Depression & Anxiety",
     testimonial: "At first, talk therapy was helpful, but I soon stopped getting better. Then, my psychologist told me about Mave Health. Their team made a special program for me with NIBS, and it’s made my life much better.",
     image: "/testimonial1.png"
   },
   {
-    name: "Dheeraj Kumar",
+    name: "Elton Butcher",
     age: 45,
     condition: "Depression",
     testimonial: "I visited my psychologist because of constant brain fog and I didn’t realize that it was depression. NIBS helped me improve my life.",
@@ -55,6 +56,7 @@ const chunkArray = (arr, size) => {
 };
   const { width } = useWindowSize();
   const [chunks, setChunks] = useState([]);
+  const [checked, setChecked] = useState(false);
   const [category, setCategory] = useState("select Category");
   const categories = [
     'Neck pain',
@@ -95,12 +97,6 @@ const chunkArray = (arr, size) => {
         "Track your progress.",
         "Monitor your improvements and celebrate your milestones with detailed progress reports."
       ]
-    },
-    {
-      heading: "Proper Footwear",
-      points: [
-        "Choose supportive and comfortable shoes to prevent and alleviate ankle pain."
-      ]
     }
   ];
   const handleOptionClick = (item) => {
@@ -120,9 +116,9 @@ const chunkArray = (arr, size) => {
         <Row className="align-items-center ">
           <Col md={6} className='md:mb-2 sm:mb-2'>
             <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[68px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px]">Banish Workplace ,
-            Pain with Paincure.ai</h1>
+            Pain with paincure.Ai</h1>
             <p className='	text-white mb-3 md:text-md sm:text-sm'> 
-              Introducing Paincure.ai, the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
+              Introducing paincure.Ai, the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
             </p>
             <div className='d-flex justify-start items-center lg:w-[544px] lg:h-[64px] lg:gap-[40px] md:gap-[20px]  md:w-[200px] '>
               <Link href="/signup">
@@ -140,7 +136,7 @@ const chunkArray = (arr, size) => {
        <section id="info" className="py-5">
        <Container className="text-center my-5 border-1  p-3">
       <h1 className='lg:text-3xl mb-2 font-bold mb:text-2xl'>Experience the Future of Pain Management</h1>
-      <p className='mb:text-sm'>At Paincure.ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
+      <p className='mb:text-sm'>At paincure.Ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
       <Row className="mt-[50px]">
         <Col md={4}>
           <Card className='lg:h-[80px]  mb:mb-3'>
@@ -201,17 +197,25 @@ const chunkArray = (arr, size) => {
               placeholder="Full Name"
               className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 mb:mb-2"
             />
-            <div className="relative w-full mb:mb-2">
-              <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 ">
-                {/* <option value="+91">+91</option> */}
-                {/* Add more country codes here */}
-              </select>
-              <input
+            <div className="relative w-full mb-2">
+            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500">
+                <option value="+44">+44</option>
+                <option value="+91">+91</option>
+                <option value="+1">+1</option>
+               
+            </select>
+
+            <FaWhatsapp
+                className="absolute inset-y-0 left-[50px] my-auto text-green-500 " // Positioning the icon
+                size={24} // Size of the icon
+            />
+
+            <input
                 type="text"
                 placeholder="WhatsApp Preferred"
-                className="absolute inset-y-0 left-0 w-full pl-20 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
-              />
-            </div>
+                className="absolute inset-y-2 left-[80px] lg:w-[290px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+            />
+        </div>
             <div className="relative w-full">
       <div
         className="p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 cursor-pointer"
@@ -235,10 +239,10 @@ const chunkArray = (arr, size) => {
     </div>
           </div>
           <div className="flex items-center">
-            <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"/>
-            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to PainCure.AI's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
+            <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
+            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to paincure.Ai's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
           </div>
-          <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none">Book a Free Demo</button>
+          <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none" disabled={!checked}>Book a Free Demo</button>
         </form>
       </div>
     </div>
@@ -249,7 +253,7 @@ const chunkArray = (arr, size) => {
       <Container className='mt-10'>
         <Row>
           <Col md={4}>
-            <Card className='m-h-[360px]'>
+            <Card className='h-[400px]'>
             <Image src='/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
@@ -260,7 +264,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='m-h-[360px]'>
+            <Card className='h-[400px]'>
             <Image src='/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
@@ -271,8 +275,8 @@ const chunkArray = (arr, size) => {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={4} className='m-h-[360px]'>
-            <Card>
+          <Col md={4} >
+            <Card className='h-[400px]'>
             <Image src='/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
@@ -285,7 +289,7 @@ const chunkArray = (arr, size) => {
         </Row>
         <Row className='mt-5'>
           <Col md={4}>
-            <Card className='m-h-[360px]'>
+            <Card className='h-[400px]'>
             <Image src='/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
@@ -295,7 +299,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='m-h-[360px]'>
+            <Card className='h-[400px]'>
             <Image src='/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
@@ -306,9 +310,9 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='m-h-[360px]'>
+            <Card className='h-[400px]'>
             <Image src='/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
-              <Card.Body>
+              <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
                 <Card.Text>Desk employees are sitting more than ever, and it's damaging their bodies. Whether at a desk, in a vehicle, or on the couch, approximately 7.5 hours of them spend their days seated. This sedentary lifestyle can lead to mood and mental health disorders such as anxiety and depression.</Card.Text>
               </Card.Body>
@@ -324,7 +328,7 @@ const chunkArray = (arr, size) => {
        sections={sections} />
     </Container>
     </section>
-    <section id="testimonials" className="py-5">
+    <section id="testimonials" className="pt-2 pb-5">
   <Container className="my-5">
   <h2 className="text-center mb-12 text-3xl font-bold">Testimonials</h2>
       <Carousel variant='dark' className='mb:flex'>
@@ -359,14 +363,14 @@ const chunkArray = (arr, size) => {
         <h2 className="text-center mb-4 text-3xl">FAQ</h2>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
-            <Accordion.Header> What is Paincure.ai?</Accordion.Header>
+            <Accordion.Header> What is paincure.Ai?</Accordion.Header>
             <Accordion.Body>
-            Paincure.ai is a digital platform that combines AI technology with HCPC-registered healthcare experts to provide 
+            paincure.Ai is a digital platform that combines AI technology with HCPC-registered healthcare experts to provide 
             personalized pain relief therapies, helping you live a pain-free and productive life.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>How do I report my pain symptoms on the Paincure.ai platform?</Accordion.Header>
+            <Accordion.Header>How do I report my pain symptoms on the paincure.Ai platform?</Accordion.Header>
             <Accordion.Body>
             Log in, navigate to "Report Symptoms," and answer questions about your pain. You can also upload relevant medical records
              to help our experts create a tailored treatment plan for you.
@@ -392,19 +396,13 @@ const chunkArray = (arr, size) => {
             </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey='5'>
-              <Accordion.Header>What equipment do I require to get started?</Accordion.Header>
-              <Accordion.Body>
-              You only need a device with internet access. Some exercises may require basic items like a yoga mat and resistance bands, which will be specified in your plan.
-            </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey='6'>
               <Accordion.Header>How long are trial periods?</Accordion.Header>
               <Accordion.Body>
               Enjoy a 1-month free trial with full access to our content library and a complimentary one-on-one session with a healthcare expert.           
                </Accordion.Body>
             </Accordion.Item>
-            <Accordion.Item eventKey='7'>
-              <Accordion.Header>How do I report my pain symptoms on the Paincure.ai platform?</Accordion.Header>
+            <Accordion.Item eventKey='6'>
+              <Accordion.Header>How do I report my pain symptoms on the paincure.Ai platform?</Accordion.Header>
               <Accordion.Body>
               Simply log in, go to "Report Symptoms," and fill out the details of your pain. Our support team is available to assist you if needed.
                </Accordion.Body>
@@ -453,8 +451,8 @@ const chunkArray = (arr, size) => {
             <Card className='p-4'>
               <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Revolutionizing Workplace Wellness with Paincure.ai</Card.Title>
-                <Card.Text>Discover how Paincure.ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
+                <Card.Title>Revolutionizing Workplace Wellness with paincure.Ai</Card.Title>
+                <Card.Text>Discover how paincure.Ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -462,8 +460,8 @@ const chunkArray = (arr, size) => {
             <Card className='p-4'>
               <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Personalized Pain Management with Paincure.ai</Card.Title>
-                <Card.Text>Learn how Paincure.ai provides personalized pain management solutions to help employees .</Card.Text>
+                <Card.Title>Personalized Pain Management with paincure.Ai</Card.Title>
+                <Card.Text>Learn how paincure.Ai provides personalized pain management solutions to help employees .</Card.Text>
               </Card.Body>
             </Card>
           </Col>

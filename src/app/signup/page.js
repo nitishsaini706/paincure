@@ -127,7 +127,7 @@ export default function Signup() {
                     </div>
                     <Form.Group controlId="formBasicEmail" className="mt-4">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" value={email} placeholder="Ex: john@paincure.ai" onChange={(e) => { setEmail(e.target.value) }} />
+                        <Form.Control type="email" value={email} placeholder="Ex: john@paincure.Ai" onChange={(e) => { setEmail(e.target.value) }} />
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword" className="mt-4">
                         <Form.Label>Password</Form.Label>
@@ -198,7 +198,7 @@ export default function Signup() {
                     </div>
                     <Form.Group controlId="formBasicEmail" className="mt-4">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Ex: john@paincure.ai" />
+                        <Form.Control type="email" placeholder="Ex: john@paincure.Ai" />
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword" className="mt-4">
                         <Form.Label>Password</Form.Label>

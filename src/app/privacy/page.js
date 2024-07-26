@@ -72,7 +72,7 @@ export default function About() {
                     </div>
                     <div>
                         <h2 className="text-left mb-3 mt-4 text-3xl">Information Collection and Use</h2>
-                        <h2 className='text-left mb-4'>Paincure AI collects PII when you register with us through our website (www.paincure.ai) or our mobile application. When registering, we may ask for your 
+                        <h2 className='text-left mb-4'>Paincure AI collects PII when you register with us through our website (www.paincure.Ai) or our mobile application. When registering, we may ask for your 
                             full name, email address, phone number, birth date, address, gender, occupation, and other relevant information. Once registered, you are no longer anonymous to us.</h2>
 
                         <h2 className='text-left mb-4'>We also automatically receive and log information from your browser, including your IP address, cookie information, and the pages you request.</h2>
@@ -154,10 +154,10 @@ export default function About() {
                         </h2>
                         <ol className='custom-ol'>
                             <li>
-                            By email: support@paincure.ai or info@paincure.ai
+                            By email: support@paincure.Ai or info@paincure.Ai
                             </li>
                             <li>
-                            By visiting our website: <a>www.paincure.ai</a>
+                            By visiting our website: <a>www.paincure.Ai</a>
                             </li>
                         </ol>
                     </div>

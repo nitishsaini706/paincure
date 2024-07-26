@@ -16,8 +16,8 @@ export default function Blogs(){
             <Card className='p-4'>
               <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Revolutionizing Workplace Wellness with Paincure.ai</Card.Title>
-                <Card.Text>Discover how Paincure.ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
+                <Card.Title>Revolutionizing Workplace Wellness with paincure.Ai</Card.Title>
+                <Card.Text>Discover how paincure.Ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -25,8 +25,8 @@ export default function Blogs(){
             <Card className='p-4'>
               <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Personalized Pain Management with Paincure.ai</Card.Title>
-                <Card.Text>Learn how Paincure.ai provides personalized pain management solutions to help employees .</Card.Text>
+                <Card.Title>Personalized Pain Management with paincure.Ai</Card.Title>
+                <Card.Text>Learn how paincure.Ai provides personalized pain management solutions to help employees .</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -37,8 +37,8 @@ export default function Blogs(){
             <Card className='p-4'>
               <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Revolutionizing Workplace Wellness with Paincure.ai</Card.Title>
-                <Card.Text>Discover how Paincure.ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
+                <Card.Title>Revolutionizing Workplace Wellness with paincure.Ai</Card.Title>
+                <Card.Text>Discover how paincure.Ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -46,8 +46,8 @@ export default function Blogs(){
             <Card className='p-4'>
               <Card.Img variant="top" src="./blog.png" />
               <Card.Body>
-                <Card.Title>Personalized Pain Management with Paincure.ai</Card.Title>
-                <Card.Text>Learn how Paincure.ai provides personalized pain management solutions to help employees .</Card.Text>
+                <Card.Title>Personalized Pain Management with paincure.Ai</Card.Title>
+                <Card.Text>Learn how paincure.Ai provides personalized pain management solutions to help employees .</Card.Text>
               </Card.Body>
             </Card>
           </Col>

@@ -126,7 +126,7 @@ export default function Pricing() {
     <div className=" lg:mx-auto mt-10 lg:p-5 rounded-3xl ">
       <Container className="mb:mx-0 lg:mb-20">
         <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Pricing </h2>
-        <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with PainCure.AI </h3>   
+        <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with paincure.Ai </h3>   
         
         <div className="flex items-center justify-center mb-5 lg:w-auto mb:w-[350px]">
           <span className={`mr-2 ${!isCompany ? 'font-bold' : ''}`}>Individual</span>
@@ -145,7 +145,7 @@ export default function Pricing() {
             <Card className="lg:p-3 shadow-lg rounded-lg mb:mx-0 border-red-500 border-2">
               <Card.Body>
                 <Table responsive className="w-full text-center table-auto">
-                  <thead className="lg:text-2xl font-bold">Without PainCure.AI <br></br> <p className="text-xl">{isCompany ? '£5599-£6879':'£1599-£4779'}</p> </thead>
+                  <thead className="lg:text-2xl font-bold">Without paincure.Ai <br></br> <p className="text-xl">{isCompany ? '£5599-£6879':'£1599-£4779'}</p> </thead>
                   <tbody>
                     {without.map((item, index) => (
                       <tr key={index} className="bg-white even:bg-gray-50 flex justify-between items-center lg:p-4 mb:mr-0">
@@ -171,7 +171,7 @@ export default function Pricing() {
             <Card className="lg:p-3 shadow-lg rounded-lg mb:mx-0 border-green-700 border-2">
               <Card.Body>
                 <Table responsive className="w-full text-center table-auto">
-                <thead className="lg:text-2xl font-bold">With PainCure.AI <br></br><p className="text-xl">£{isCompany ? (isyearly ? '399/yr': '50/mo') : (isyearly ? "249/yr":'35/mo')}</p></thead>
+                <thead className="lg:text-2xl font-bold">With paincure.Ai <br></br><p className="text-xl">£{isCompany ? (isyearly ? '399/yr': '50/mo') : (isyearly ? "249/yr":'35/mo')}</p></thead>
                   <tbody>
                     {pricingData.map((item, index) => (
                       <tr key={index} className="bg-white even:bg-gray-50 flex justify-between items-center lg:p-4 ">

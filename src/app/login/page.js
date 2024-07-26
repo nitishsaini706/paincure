@@ -49,7 +49,7 @@ const Login = () => {
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" value={username} placeholder="Ex: john@paincure.ai" onChange={(e)=>{setUsername(e.target.value)}}/>
+            <Form.Control type="email" value={username} placeholder="Ex: john@paincure.Ai" onChange={(e)=>{setUsername(e.target.value)}}/>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword" className="mt-4">

@@ -9,7 +9,7 @@
 //   return (
 //     <div className='container'>
 //       <HeroSection heading="Sedentary Lifestyle Risk Assessment" para="A sedentary lifestyle among desk employees can lead
-//        to unwanted weight gain or unhealthy weight loss, significantly impacting overall health and productivity. Paincure.ai offers personalized workout services
+//        to unwanted weight gain or unhealthy weight loss, significantly impacting overall health and productivity. paincure.Ai offers personalized workout services
 //        designed to address these issues, helping employees achieve their fitness goals and maintain a healthy lifestyle." 
 //        image="/lifestyle.jpeg" />
 
