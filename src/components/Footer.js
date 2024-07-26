@@ -27,7 +27,7 @@ const Footer = () => {
 
                                         <li ><a href="/services/lower-back-service">Back Pain</a></li>
                                         <li ><a href="/services/neck-service">Neck & Shoulder Pain</a></li>
-                                        <li><a>Yoga</a></li>
+                                        <li><a href="/services/yoga-service">Yoga for Migraines and Headaches</a></li>
                                     </ul>
                                 </div>
                                 <div>
