@@ -48,7 +48,7 @@ export default function page() {
       image="/kneeMain.webp"/>
 
       <Causes image={["/kneeService.png","/Prolonged Sittingwebp.webp","/Poor Posture.webp","/knee.webp"]} heading={["Why Knee and Hip Pain are Common in Desk Employees?","Prolonged Sitting", "Poor Posture", "Lack of Movement"]} 
-      para={["Knee joint is the biggest joint in our body and works as a connection between the hip and the foot. It helps in transmitting the load of the body from the hip and core to our feet and thus allows us to stand , move and balance. It comprises various ligaments which provide stability to the joint and meniscus which provides cushioning to the joint. Knee pain is a common medical complaint that can affect people of all age groups. The prevalence can vary based on factors like age , lifestyle , gender and underlying health conditions.",
+      para={["Knee joint is the biggest joint in our body and works as a connection between the hip and the foot. It helps in transmitting the load of the body from the hip and core to our feet and thus allows us to stand , move and balance. .",
         "Sitting for long periods can lead to stiffness and discomfort in the knees and hips.",
         "Incorrect sitting posture can put undue stress on the knee and hip joints.",
               "A sedentary lifestyle can weaken the muscles around the knees and hips, making them more susceptible to pain and injury."

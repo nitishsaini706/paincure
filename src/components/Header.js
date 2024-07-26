@@ -63,6 +63,9 @@ export default function Header({ bg = "white", color = "black" }) {
                       <Link href="/services/sedentary-lifestyle-service">
                       <p className="block px-4 py-2 text-sm text-gray-700">Sedentary Lifestyle</p>
                       </Link>
+                      <Link href="/services/yoga-service">
+                      <p className="block px-4 py-2 text-sm text-gray-700">Yoga for Migraines and Headaches</p>
+                      </Link>
                   </div>
                 </div>
               )}
