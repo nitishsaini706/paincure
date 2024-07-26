@@ -213,7 +213,7 @@ const chunkArray = (arr, size) => {
             <input
                 type="text"
                 placeholder="WhatsApp Preferred"
-                className="absolute inset-y-2 left-[80px] lg:w-[290px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                className="absolute inset-y-2 left-[80px] lg:w-[280px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
             />
         </div>
             <div className="relative w-full">

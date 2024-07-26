@@ -17,8 +17,8 @@ export default function Header({ bg = "white", color = "black" }) {
 
   return (
     <nav className={` mb:min-w-full sticky top-0 z-40 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] lg:px-4 mb:px-[50px] lg:pt-4 mb:pt-3 pb-3 ${bg === 'white' ? ' border-b border-black bg-white' : 'bg-[#3D4966]'} ${color === 'black' ? 'text-black' : 'text-white'}`}>
-      <div className="lg:container lg:flex lg:justify-between">
-        <div className="flex lg:items-center justify-between">
+      <div className="lg:container lg:flex lg:justify-between lg:items-center">
+        <div className="flex lg:items-center justify-between lg:mt-3">
           
             <a className="flex items-center" href="/">
               
@@ -77,14 +77,14 @@ export default function Header({ bg = "white", color = "black" }) {
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block  mr-3 lg:text-[18px] no-underline`}>Pricing</p>
               </Link>
           </div>
-          <div className="flex items-center mb:mt-4 mb:pb-2 lg:ml-[200px]">
-            {/* <Link href="/login">
-              <p className={`${bg === 'white' ? 'text-black border border-black bg-white' : 'text-white border border-white bg-[#3D4966]'} py-2 px-4 mx-2 rounded-2xl text-sm`}>Login</p>
-            </Link> */}
-            
+          <div className="flex items-center mb:mt-4 mb:pb-2 lg:ml-[100px]">
             <Link href="/signup">
+              <p className={`${bg === 'white' ? 'text-black border border-black bg-white' : 'text-white border border-white bg-[#3D4966]'} py-2 px-4 mx-2 rounded-2xl text-sm`}>Sign Up As Health Expert</p>
+            </Link>
             
-              <p className={`${bg === 'white' ? 'text-white bg-blue-500' : 'text-black border border-black bg-white '} px-4 mx-2 py-2 rounded-2xl text-sm hover:bg-black hover:text-white`}>Sign Up As Health Expert</p>
+            <Link href="/login">
+            
+              <p className={`${bg === 'white' ? 'text-white bg-blue-500' : 'text-black border border-black bg-white '} px-4 mx-2 py-2 rounded-2xl text-sm hover:bg-black hover:text-white`}>My Account</p>
             </Link>
             
           </div>
