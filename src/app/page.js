@@ -8,7 +8,47 @@ import Link from 'next/link';
 import ProgramDetails from "../components/solution"
 import { FaWhatsapp } from 'react-icons/fa';
 export default function Home() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const apiUrl = "https://paincurebackend.onrender.com"
+  console.log(apiUrl)
+  useEffect(() => {
+      
+      fetch(`${apiUrl}/api/blogs/web`)
+          .then(response => response.json())
+          .then(data => {
+            setBlogs(data.blog);
+            setLoading(false);
+        })
+        .catch(error => {
+          console.error('Error fetching blog data:', error);
+          setLoading(false);
+      });
+        }, []);
 
+        const BlogCardShimmer = () => (
+          <Card className='p-4'>
+            <div style={{ width: '100%', height: '200px', background: '#f0f0f0', position: 'relative' }}>
+              <div className='shimmer' style={{ width: '100%', height: '100%', position: 'absolute' }}></div>
+            </div>
+            <Card.Body>
+              <div className='shimmer' style={{ width: '100%', height: '20px', marginBottom: '10px' }}></div>
+              <div className='shimmer' style={{ width: '100%', height: '60px' }}></div>
+            </Card.Body>
+          </Card>
+        );
+        
+        const styles = `
+          .shimmer {
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+          }
+          @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+          }
+        `;
 const testimonials = [
   {
     name: "Olivia Sonny",
@@ -443,40 +483,45 @@ const chunkArray = (arr, size) => {
       </Row>
     </Container>
     </section>
-    <section id="blog" className="py-5 bg-light">
-      <Container>
-        <h2 className="text-center mb-4 text-3xl ">Our Blogs</h2>
-        <Row>
-          <Col md={4}>
-            <Card className='p-4'>
-              <Card.Img variant="top" src="./blog.png" />
-              <Card.Body>
-                <Card.Title>Revolutionizing Workplace Wellness with paincure.Ai</Card.Title>
-                <Card.Text>Discover how paincure.Ai is transforming workplace wellness with advanced AI solutions.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className='p-4'>
-              <Card.Img variant="top" src="./blog.png" />
-              <Card.Body>
-                <Card.Title>Personalized Pain Management with paincure.Ai</Card.Title>
-                <Card.Text>Learn how paincure.Ai provides personalized pain management solutions to help employees .</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className='p-4'>
-              <Card.Img variant="top" src="./blog.png" />
-              <Card.Body>
-                <Card.Title>The Benefits of Hydration for Weight Loss</Card.Title>
-                <Card.Text>Discover how staying hydrated can support your weight loss goals and improve overall health.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    <style>{styles}</style>
+            <Container>
+                <h2 className="text-center mb-3 mt-5 text-3xl">Our Blogs</h2>
+                <h2 className='text-center mb-4 text-xl'>Learn more about the company and the team behind it.</h2>
+                <Row className='mt-5 mb-10'>
+                    {loading ? (
+                        Array.from({ length: 3 }).map((_, index) => (
+                            <Col key={index} md={4}>
+                                <BlogCardShimmer />
+                            </Col>
+                        ))
+                    ) : (
+                        blogs.slice(0, 3).map((blog, index) => (
+                            <Col key={index} md={4}>
+                                <Card className='p-4 h-[500px]'>
+                                    <div className=' h-[300px]' >
+                                        <Image
+                                            src={blog.image || './blog.png'}
+                                            width={400}
+                                            height={400}
+                                      
+                                        />
+                                    </div>
+                                    <Card.Body className='h-[100px]'>
+                                        <Card.Title className='mb-2'>{blog.title}</Card.Title>
+                                        <Card.Text >
+                                            {blog.body.slice(0, 50)}......
+                                            <Link href={`/blog/${blog.slug}`} passHref>
+                                                <Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">Read More</Button>
+                                            </Link>
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))
+                    )}
+                    </Row>
+                    </Container>
+    {/* </section> */}
     </div>
   );
 }
