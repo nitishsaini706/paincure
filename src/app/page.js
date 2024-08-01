@@ -7,9 +7,25 @@ import { useWindowSize } from 'react-use';
 import Link from 'next/link';
 import ProgramDetails from "../components/solution"
 import { FaWhatsapp } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [formData,setFormData] = useState({
+    name:'',
+    phone:'',
+    service:''
+  })
+  const setChange = (e) => {
+    const { id, value } = e.target;
+    console.log('e', e)
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+  
   const apiUrl = "https://paincurebackend.onrender.com"
   console.log(apiUrl)
   useEffect(() => {
@@ -87,6 +103,53 @@ const testimonials = [
   },
 ];
 
+const submit = (e)=>{
+  e.preventDefault();
+  if(!checked){
+    toast.error("Please accpet Privacy Policy");
+    return;
+  }
+
+  if(formData.name == ''){
+    toast.error("name is required");
+    return;
+  }
+  if(formData.phone == ''){
+    toast.error("phone is required")
+    return;
+  }
+  if(formData.service == ''){
+    toast.error("category is required")
+    return;
+  }
+  else{
+    setLoading(true)
+    fetch(`${apiUrl}/api/users/whatsapp`,{method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)})
+            .then(response => response.json())
+            .then(data => {
+              setLoading(false)
+              console.log(data)
+              if(data && data.length){
+                toast.success("we'll get back to you shortly. :-)")
+                setFormData({
+                  name:'',
+                  phone:'',
+                  service:''
+                })
+              }
+            })
+            .catch(error => {
+              console.error('Error fetching blog data:', error);
+              toast.error("Hold on, we've got a problem. :-(")
+              setLoading(false)
+        }); 
+  }
+}
 const chunkArray = (arr, size) => {
   const result = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -141,6 +204,7 @@ const chunkArray = (arr, size) => {
   ];
   const handleOptionClick = (item) => {
     setCategory(item);
+    setChange({target:{id:'service',value:item}})
     setIsOpen(false); // Close dropdown after selecting an option
   };
   useEffect(() => {
@@ -234,8 +298,11 @@ const chunkArray = (arr, size) => {
           <div className="lg:flex lg:items-center lg:space-x-4 ">
             <input
               type="text"
+              id='name'
               placeholder="Full Name"
+              value={formData.name}
               className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 mb:mb-2"
+              onChange={setChange}
             />
             <div className="relative w-full mb-2">
             <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500">
@@ -253,6 +320,9 @@ const chunkArray = (arr, size) => {
             <input
                 type="text"
                 placeholder="WhatsApp Preferred"
+                id='phone'
+                onChange={setChange}
+                value={formData.phone}
                 className="absolute inset-y-2 left-[80px] lg:w-[280px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
             />
         </div>
@@ -268,6 +338,7 @@ const chunkArray = (arr, size) => {
           {categories.map((item) => (
             <li
               key={item}
+              id={item}
               className="p-2 hover:bg-purple-500 hover:text-white cursor-pointer"
               onClick={() => handleOptionClick(item)} // Handle option click
             >
@@ -282,7 +353,7 @@ const chunkArray = (arr, size) => {
             <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
             <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to paincure.Ai's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
           </div>
-          <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none" disabled={!checked}>Book a Free Demo</button>
+          <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none" onClick={submit}>Book a Free Demo</button>
         </form>
       </div>
     </div>
