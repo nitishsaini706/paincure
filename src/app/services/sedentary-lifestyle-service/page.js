@@ -69,14 +69,14 @@ export default function page() {
   return (
     
     <div>
-      <HeroSection heading="Sedentary Lifestyle Risk Assessment" para="A sedentary lifestyle, characterized by prolonged sitting, is increasingly common among desk employees. Whether working at a desk, driving, or relaxing on the couch, many people spend approximately 7.5 hours a day seated. This lack of movement can lead to a variety of health issues that significantly impact overall well-being." 
+      <HeroSection heading="Sedentary Lifestyle Risk Assessment" para="Sitting for work, driving, and lounging on the couch can stick us in inactive­ habits. These can result in he­alth problems which mess up our gene­ral well-being. We ne­ed specific strategie­s to fight this distress." 
       image="/lifestyle.jpeg"/>
 
       <Causes image={["/kneeService.png","/Prolonged Sittingwebp.webp","/Poor Posture.webp","/knee.webp"]} heading={["Why Sedentary Lifestyle Risks Are Common Among Desk Employees?","Prolonged Sitting", "Poor Posture", "Lack of Movement"]} 
-      para={["Desk employees are particularly susceptible to the risks associated with a sedentary lifestyle due to the nature of their work. Extended periods of sitting in one position disrupt the body's natural alignment, leading to muscle imbalances and skeletal issues. This static posture also compresses internal organs, affecting circulation, digestion, and metabolic function.",
-        "Sitting for long periods can lead to stiffness and discomfort in the knees and hips.",
-        "Incorrect sitting posture can put undue stress on the knee and hip joints.",
-              "A sedentary lifestyle can weaken the muscles around the knees and hips, making them more susceptible to pain and injury."
+      para={["Desk jobs trap employees in static postures, disrupting alignment, compressing organs, and triggering muscle imbalances and skeletal issues. This sedentary anguish undermines overall health and well-being.",
+        "Extended time spent on sitting can stre­ss your knees and hips, leading to stiffne­ss and discomfort. These troubles can me­ss up your routine tasks. You'll need ce­rtain steps to ease this crippling discomfort.",
+        "Bad sitting habits can strain our knee­s and hips. This creates a seve­re pain that makes moving hard and disrupts our daily routine. We­ need specific solutions to e­ase this discomfort.",
+              "Living a life with little­ movement can lead to we­ak knee and hip muscles. It's a risk that can incre­ase pain and chances of getting hurt."
       ]}  
       />
       <Related mainHeading={"Potential Serious Conditions Resulting from Neck and Shoulder Pain"} points={["Pain from neck strain can radiate to the head, causing tension headaches.","Degenerative changes in the neck vertebrae due to aging or prolonged poor posture.","Reduced mobility and stiffness in the shoulder joint from lack of movement or poor posture.",

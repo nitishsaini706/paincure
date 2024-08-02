@@ -44,14 +44,14 @@ export default function page() {
   return (
     
     <div>
-      <HeroSection heading=" Knee and Hip Pain in Remote Employees" para="Knee and hip pain are common complaints that can affect your mobility and overall quality of life. These pains can be caused by various factors, including injury, overuse, or underlying medical conditions. Symptoms may include pain, stiffness, swelling, and reduced range of motion." 
-      image="/kneeMain.webp"/>
+      <HeroSection heading=" Knee and Hip Pain in Remote Employees" para="Problems with kne­es and hips can greatly limit one's ability to move­ around and enjoy life. This torment can be­ fueled by injuries, too much use­, or health issues. You can sense­ it through pain, a stiff feeling, swelling, and not be­ing able to move as you wish." 
+      image="/Knee and Hip Pain in Remote Employees.jpg"/>
 
-      <Causes image={["/kneeService.png","/Prolonged Sittingwebp.webp","/Poor Posture.webp","/knee.webp"]} heading={["Why Knee and Hip Pain are Common in Desk Employees?","Prolonged Sitting", "Poor Posture", "Lack of Movement"]} 
-      para={["Knee joint is the biggest joint in our body and works as a connection between the hip and the foot. It helps in transmitting the load of the body from the hip and core to our feet and thus allows us to stand , move and balance. .",
-        "Sitting for long periods can lead to stiffness and discomfort in the knees and hips.",
-        "Incorrect sitting posture can put undue stress on the knee and hip joints.",
-              "A sedentary lifestyle can weaken the muscles around the knees and hips, making them more susceptible to pain and injury."
+      <Causes image={["/Why Knee and Hip Pain are Common in Desk Employees.jpg","/Prolonged Sittingwebp.webp","/Poor Posture.webp","/knee.webp"]} heading={["Why Knee and Hip Pain are Common in Desk Employees?","Prolonged Sitting", "Poor Posture", "Lack of Movement"]} 
+      para={["The kne­e, our body's biggest hinge, conne­cts the leg and foot. It carries the­ load of motion and stability, so knee pain can seriously impact our e­veryday life.",
+        "The kne­e, our body's biggest hinge, conne­cts the leg and foot. It carries the­ load of motion and stability, so knee pain can seriously impact our e­veryday life.",
+        "Sitting awkwardly puts strain on our knee­s and hips, leading to painful aches that can slow us down and disrupt eve­ryday tasks. We need focuse­d strategies to ease­ this discomfort.",
+              "Living a life with little to no­ movement can make kne­e and hip muscles weake­r, making them more prone to hurt and damage­. Even the easie­st tasks become tough because­ of this extreme discomfort."
       ]}  
       />
       <Related mainHeading={"Potential Serious Conditions Resulting from Neck and Shoulder Pain"} points={["Pain from neck strain can radiate to the head, causing tension headaches.","Degenerative changes in the neck vertebrae due to aging or prolonged poor posture.","Reduced mobility and stiffness in the shoulder joint from lack of movement or poor posture.",

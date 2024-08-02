@@ -81,13 +81,16 @@ export default function Header({ bg = "white", color = "black" }) {
               </Link>
           </div>
           <div className="flex items-center mb:mt-4 mb:pb-2 lg:ml-[100px]">
+          <a href="https://paincurcmsfrontend.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <p className={`${bg === 'white' ? 'text-black border border-black bg-white' : 'text-white border border-white bg-[#3D4966]'} py-2 px-4 mx-2 rounded-2xl text-sm`}>Become health expert</p>
+            </a>
             <Link href="/signup">
-              <p className={`${bg === 'white' ? 'text-black border border-black bg-white' : 'text-white border border-white bg-[#3D4966]'} py-2 px-4 mx-2 rounded-2xl text-sm`}>Sign Up As Health Expert</p>
+              <p className={`${bg === 'white' ? 'text-black border border-black bg-white' : 'text-white border border-white bg-[#3D4966]'} py-2 px-4 mx-2 rounded-2xl text-sm`}>Sign Up</p>
             </Link>
             
             <Link href="/login">
             
-              <p className={`${bg === 'white' ? 'text-white bg-blue-500' : 'text-black border border-black bg-white '} px-4 mx-2 py-2 rounded-2xl text-sm hover:bg-black hover:text-white`}>My Account</p>
+              <p className={`${bg === 'white' ? 'text-white bg-blue-500' : 'text-black border border-black bg-white '} px-4 mx-2 py-2 rounded-2xl text-sm hover:bg-black hover:text-white`}>Login</p>
             </Link>
             
           </div>

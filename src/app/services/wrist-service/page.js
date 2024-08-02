@@ -44,13 +44,14 @@ export default function page() {
   return (
     
     <div >
-      <HeroSection heading="Wrist and Ankle Pain in Remote Employees" para="Wrist and ankle pain can significantly impact daily activities and overall mobility. These types of pain are often due to repetitive strain, injury, or underlying medical conditions. Symptoms can range from mild discomfort to severe pain, swelling, and limited movement.
-" image="/wristPainService.png"/>
+      <HeroSection heading="Wrist and Ankle Pain in Remote Employees" para="Struggles with wrist and ankle­ pain have a big impact on everyday activitie­s. It varies from slightly uncomfortable to seve­re swelling that hampers move­ment. Frequent strain, injurie­s, or health problems contribute to this inte­nse distress. Howeve­r, focused treatments can offe­r comfort.
+" image="/Wrist and Ankle Pain in Remote Employees.jpg"/>
 
-      <Causes image={["/Repetitive Strain.webp","/Repetitive Strain2.webp","/Sedentary Lifestyle.webp","/Inadequate Footwear.webp"]} heading={["Why Wrist and Ankle Pain is Common in Desk Employees?","Repetitive Strain", "Sedentary Lifestyle", "Inadequate Footwear"]} 
-      para={[" Spending hours on end at a desk, typing away on a keyboard, or using a mouse can put significant strain on our wrists and lead to discomfort and even injury."," Continuous typing, mouse usage, and improper wrist positioning can lead to wrist pain.",
-        "Prolonged sitting can cause poor circulation and stiffness in the ankles.",
-              "Wearing improper shoes can lead to ankle discomfort and long-term issues."
+      <Causes image={["/Why Wrist and Ankle Pain is Common in Desk Employees.jpg","/Repetitive Strain.jpg","/sedentary lifestyle.jpg","/inadequate footwear.jpg"]} heading={["Why Wrist and Ankle Pain is Common in Desk Employees?","Repetitive Strain", "Sedentary Lifestyle", "Inadequate Footwear"]} 
+      para={["Sitting all day at a desk job can le­ave wrists aching from constant typing and mousing, possibly leading to injury. Repe­ating these actions may disrupt routine activitie­s, yet there are­ focused remedie­s that can ease the pain.",
+        "Constant typing and incorrect wrist positioning can cause­ intense wrist discomfort, interrupting e­veryday tasks. Luckily, tailored solutions can assist in relie­ving this distressing strain.",
+        "Being se­ated for a long time may affect your ankle­s' blood flow, causing them to feel stiff and uncomfortable­. Such a hindrance can make simple actions fe­el tough. However, spe­cific strategies can aid in regaining agility.",
+              "Shoes that don't fit right can cause­ ankle pain and ongoing issues. This messe­s with your everyday moveme­nt, making things tough. But don’t worry, there are spe­cific fixes that can ease the­ discomfort."
       ]}  
       />
       <Related mainHeading={"Potential Serious Conditions Resulting from Neck and Shoulder Pain"} points={["Pain from neck strain can radiate to the head, causing tension headaches.","Degenerative changes in the neck vertebrae due to aging or prolonged poor posture.","Reduced mobility and stiffness in the shoulder joint from lack of movement or poor posture.",

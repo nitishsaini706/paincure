@@ -219,10 +219,10 @@ const chunkArray = (arr, size) => {
       <Container className=' lg:ml-5 py-13 md:ml-2'>
         <Row className="align-items-center ">
           <Col md={6} className='md:mb-2 sm:mb-2'>
-            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[68px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px]">Banish Workplace ,
-            Pain with paincure.Ai</h1>
+            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[45px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px]">Desk job got you down? We'll lift
+               you and prevent physical health risks.</h1>
             <p className='	text-white mb-3 md:text-md sm:text-sm'> 
-              Introducing paincure.Ai, the innovative solution that harnesses AI and expert healthcare to tackle workplace physical discomfort, empowering you to perform at your best.
+            Reclaim your work-life balance, pain-free, with paincure.ai's tailored care to reduce physical health issues early.
             </p>
             <div className='d-flex justify-start items-center lg:w-[544px] lg:h-[64px] lg:gap-[40px] md:gap-[20px]  md:w-[200px] '>
               <Link href="/signup">
