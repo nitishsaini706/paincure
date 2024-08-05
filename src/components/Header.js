@@ -33,7 +33,7 @@ export default function Header({ bg = "white", color = "black" }) {
   };
 
   return (
-    <nav   className={`mb:min-w-full sticky top-0 z-40 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] lg:px-4 mb:px-[50px] lg:pt-4 mb:pt-3 pb-3 ${bg !== 'white' ? `bg-gradient-to-r from-blue-500 to-blue-400 ` : `bg-white`} ${color === 'black' ? 'text-black' : 'text-white'}`}>
+    <nav   className={`mb:min-w-full sticky top-0 z-40 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] lg:px-4 mb:px-[15px] lg:pt-4 mb:pt-3 pb-3 ${bg !== 'white' ? `bg-gradient-to-r from-blue-500 to-blue-400 ` : `bg-white`} ${color === 'black' ? 'text-black' : 'text-white'}`}>
       <div className="lg:container lg:flex lg:justify-between lg:items-center">
         <div className="flex lg:items-center justify-between lg:mt-3">
           <a className="flex items-center" href="/">
