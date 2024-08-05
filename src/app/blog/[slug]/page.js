@@ -44,7 +44,7 @@ const Blog = async ({ params }) => {
                 <h1 className='text-3xl mb-3'>Author: {blog.name}</h1>
                 <h1 className='text-xl mb-5'> Created on: {formatToIST(blog.creation_time)}</h1>
                 <div className='flex justify-center items-center'>
-                <Image src={blog.image || '/blog.png'} width={800} height={800} alt={blog.title} />
+                <Image src={blog.image || 'https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/blog.png'} width={800} height={800} alt={blog.title} />
                 </div>
 
             

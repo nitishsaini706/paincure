@@ -3,11 +3,8 @@
 @tailwind utilities;
 
 /* globals.css */
-body{
-    margin-left:10px;
-    margin-right:10px;
-}
-  
+
+
 .step {
     position: relative;
   }

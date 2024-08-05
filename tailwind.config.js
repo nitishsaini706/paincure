@@ -6,6 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'opacity': 'opacity',
+        'max-height': 'max-height',
+      },
+      transitionDuration: {
+        'DEFAULT': '300ms',
+      },
+      transitionTimingFunction: {
+        'DEFAULT': 'ease-in-out',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

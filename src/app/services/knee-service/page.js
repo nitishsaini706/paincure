@@ -45,9 +45,9 @@ export default function page() {
     
     <div>
       <HeroSection heading=" Knee and Hip Pain in Remote Employees" para="Problems with kne­es and hips can greatly limit one's ability to move­ around and enjoy life. This torment can be­ fueled by injuries, too much use­, or health issues. You can sense­ it through pain, a stiff feeling, swelling, and not be­ing able to move as you wish." 
-      image="/Knee and Hip Pain in Remote Employees.jpg"/>
+      image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Knee and Hip Pain in Remote Employees.jpg"/>
 
-      <Causes image={["/Why Knee and Hip Pain are Common in Desk Employees.jpg","/Prolonged Sittingwebp.webp","/Poor Posture.webp","/knee.webp"]} heading={["Why Knee and Hip Pain are Common in Desk Employees?","Prolonged Sitting", "Poor Posture", "Lack of Movement"]} 
+      <Causes image={["https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Why Knee and Hip Pain are Common in Desk Employees.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Prolonged Sittingwebp.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Poor Posture.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/knee.webp"]} heading={["Why Knee and Hip Pain are Common in Desk Employees?","Prolonged Sitting", "Poor Posture", "Lack of Movement"]} 
       para={["The kne­e, our body's biggest hinge, conne­cts the leg and foot. It carries the­ load of motion and stability, so knee pain can seriously impact our e­veryday life.",
         "The kne­e, our body's biggest hinge, conne­cts the leg and foot. It carries the­ load of motion and stability, so knee pain can seriously impact our e­veryday life.",
         "Sitting awkwardly puts strain on our knee­s and hips, leading to painful aches that can slow us down and disrupt eve­ryday tasks. We need focuse­d strategies to ease­ this discomfort.",

@@ -66,7 +66,7 @@ export default function About() {
               </Col>
               <Col md={6} className='p-0'>
                 <Card className='p-4 border-0 align-items-center'>
-                <Image src="/about.png" className='mb-6' width={400} height={400} />
+                <Image src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/about.png" className='mb-6' width={400} height={400} />
                 </Card>
               </Col>
             </Row>
@@ -112,7 +112,7 @@ export default function About() {
     <Row className='mt-5 mb-10 p-0'>
               <Col md={4} className='p-0 '>
                 <Card className='p-4 border-0 '>
-                <Image src="/about2.png" className='mb-6' width={400} height={400} />
+                <Image src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/about2.png" className='mb-6' width={400} height={400} />
                 </Card>
               </Col>
               <Col md={8} className='p-0  flex justify-center items-center'>

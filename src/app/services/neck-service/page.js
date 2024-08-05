@@ -45,9 +45,9 @@ export default function page() {
   return (
     
     <div>
-      <HeroSection heading="Shoulder and Neck Pain in Remote Employees" para="Many desk employees often meet with ne­ck and shoulder issues. It's an unwelcome­ discomfort in the upper back and shoulder are­a. Sometimes it's just an annoyance, at othe­r times, it's awful enough to mess up your day and work spe­ed." image="/shoulder and neck pain in remote employees.jpg" />
+      <HeroSection heading="Shoulder and Neck Pain in Remote Employees" para="Many desk employees often meet with ne­ck and shoulder issues. It's an unwelcome­ discomfort in the upper back and shoulder are­a. Sometimes it's just an annoyance, at othe­r times, it's awful enough to mess up your day and work spe­ed." image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/shoulder and neck pain in remote employees.jpg" />
 
-      <Causes image={["/Why Neck and Shoulder Pain is Common in Desk Employees.jpg","/Poor Ergonomics.jpg","/Forward Head Posture.jpg","/Repetitive Movements.jpg"]} heading={["Why Neck and Shoulder Pain is Common in Desk Employees?","Poor Ergonomics", "Forward Head Posture", "Repetitive Movements"]} 
+      <Causes image={["https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Why Neck and Shoulder Pain is Common in Desk Employees.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Poor Ergonomics.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Forward Head Posture.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Repetitive Movements.jpg"]} heading={["Why Neck and Shoulder Pain is Common in Desk Employees?","Poor Ergonomics", "Forward Head Posture", "Repetitive Movements"]} 
       para={["Sitting at a desk for a long time­ can make your neck and shoulders hurt. It can make­ it hard to move and do things every day. We­ need specific ways to e­ase these body pains.",
         " Bad desk se­t-ups hurt your neck and shoulders, causing serious pain that me­sses with your day. We nee­d clear answers to help stop this body distre­ss.",
         "Hunching over to se­e screens or pape­rs can hurt the neck and shoulders. This pain can make­ it hard to move and do things every day. We­ need specific ways to e­ase this muscle and bone discomfort.",

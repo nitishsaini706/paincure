@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <section className="bg-[#3D4966] text-white ">
+        <section className="bg-gradient-to-r from-blue-500 to-blue-400 text-white ">
             <Container style={{ padding: "45px 45px 25px 45px" }} >
 
                 <Row className="mb-6 " style={{ display: "flex", flexDirection: "column", marginBottom: "35px" }}>
                     <Col md={6} style={{ marginBottom: "15px" }}>
                         <div className="flex items-center mb-4">
-                            <Image src="/logo.png" alt="logo" width={40} height={40} className="mr-2" />
+                            <Image src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/logo.png" alt="logo" width={40} height={40} className="mr-2" />
                             <span className="text-lg font-bold">paincure.Ai</span>
                         </div>
                         <p className="text-sm">

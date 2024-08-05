@@ -10,10 +10,10 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-
+  
   return (
     <html lang="en">
-      <body>
+      <body className='lg:mx-5 mb:mx-5'>
         {!isHomePage && <Header />}
       <ToastContainer style={{ maxWidth: '50vw',marginLeft: '100px', // Removes default margin
            }} position="top-right"/>

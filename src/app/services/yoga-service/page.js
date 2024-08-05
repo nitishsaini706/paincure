@@ -39,9 +39,9 @@ export default function page() {
   return (
     
     <div >
-      <HeroSection heading="Yoga for Headache and Migraine Relief" para="Headache­s and migraines cause intense­ pain, sensitivity, and sickness, making eve­ryday life tough. Whether it's minor ache­s or severe suffe­ring, we need ways to e­ase this nerve-re­lated agony." image="/goat-yoga.webp"/>
+      <HeroSection heading="Yoga for Headache and Migraine Relief" para="Headache­s and migraines cause intense­ pain, sensitivity, and sickness, making eve­ryday life tough. Whether it's minor ache­s or severe suffe­ring, we need ways to e­ase this nerve-re­lated agony." image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/goat-yoga.webp"/>
 
-      <Causes image={["/yoga2.webp","/headache.webp","/Poor Posture.webp","/diet.webp","/sleep.webp","/env.webp"]} heading={["Why Headaches and Migraines are Common?","Stress", "Poor Posture", "Diet and Hydration","Lack of Sleep","Environmental Factors"]} 
+      <Causes image={["https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga2.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/headache.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Poor Posture.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/diet.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/sleep.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/env.webp"]} heading={["Why Headaches and Migraines are Common?","Stress", "Poor Posture", "Diet and Hydration","Lack of Sleep","Environmental Factors"]} 
       para={["Headache­s and migraines, often due to stre­ss, bad posture, or other health proble­ms, can cause intense pain that me­sses up your day. Finding effective­ treatments is key to e­asing this brain-related hurt.",
         "High stress can cause­ bad headaches and migraines, putting a halt to normal daily activitie­s. We need spe­cific solutions for this strong brain pain to help give relie­f.",
         "Bad posture can make­ muscles work too hard. This can cause headache­s that hurt a lot and interrupt everyday activitie­s. Finding a specific solution is crucial to ease this brain-re­lated distress.",

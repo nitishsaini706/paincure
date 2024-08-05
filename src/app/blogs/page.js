@@ -134,7 +134,7 @@ export default function Blogs() {
                                 <Card className='p-4 h-[500px]'>
                                     <div className='h-[300px]'>
                                         <Image
-                                            src={blog.image || './blog.png'}
+                                            src={blog.image || 'https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/blog.png'}
                                             width={400}
                                             height={400}
                                         />

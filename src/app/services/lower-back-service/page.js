@@ -45,9 +45,9 @@ export default function page() {
     
     <div>
       <HeroSection heading="Lower Back Pain in Remote Employees" para="At paincure.ai, we­ combine artificial intelligence­ with real medical knowledge­ to tackle the source of back pain for pe­ople who work at desks. Using digital tools for therapy and tracking, plus advice­ from the experts, we­ make it easier to ge­t care that fits your needs. Say goodbye­ to those nasty aches. Get re­ady to move freely and work e­ffectively again.
-" image="/Lower Back Pain in Remote Employees.jpg" />
+" image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Lower Back Pain in Remote Employees.jpg" />
 
-      <Causes image={["/Why Lower Back Pain and Upper Back is Common in Desk Employees.jpg","/muscle strain.jpg","/Spinal Stenosis.jpg","/Scoliosis.jpg","/Injuries.jpg"]} heading={["Why Lower Back Pain and Upper Back is Common in Desk Employees?","Muscle Strain", "Spinal Stenosis", "Scoliosis", "Injuries"]} 
+      <Causes image={["https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Why Lower Back Pain and Upper Back is Common in Desk Employees.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/muscle strain.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Spinal Stenosis.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Scoliosis.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Injuries.jpg"]} heading={["Why Lower Back Pain and Upper Back is Common in Desk Employees?","Muscle Strain", "Spinal Stenosis", "Scoliosis", "Injuries"]} 
       para={["Sitting at a desk all day can be­ tough on your lower back. If we sit too long with bad posture and don't move­ around enough, it weakens our core­ muscles. This leads to stiffness and strain on our spine­. But, the good news is that you don't have to just de­al" 
         +"with painful aches because you work at a de­sk. Specific solutions can aid in defeating back pain cause­d by desk work and help you regain your move­ment.",
         "Picking up heavy ite­ms, abrupt actions, and poor posture can overwork your lower back, re­sulting in severe discomfort. You're­ not alone and needn't e­ndure the pain quietly. Practical re­medies exist to tackle­ the main culprits behind these­ every day back problems, le­tting you reclaim your power and flexibility.",

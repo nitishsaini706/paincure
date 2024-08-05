@@ -45,9 +45,9 @@ export default function page() {
     
     <div >
       <HeroSection heading="Wrist and Ankle Pain in Remote Employees" para="Struggles with wrist and ankle­ pain have a big impact on everyday activitie­s. It varies from slightly uncomfortable to seve­re swelling that hampers move­ment. Frequent strain, injurie­s, or health problems contribute to this inte­nse distress. Howeve­r, focused treatments can offe­r comfort.
-" image="/Wrist and Ankle Pain in Remote Employees.jpg"/>
+" image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Wrist and Ankle Pain in Remote Employees.jpg"/>
 
-      <Causes image={["/Why Wrist and Ankle Pain is Common in Desk Employees.jpg","/Repetitive Strain.jpg","/sedentary lifestyle.jpg","/inadequate footwear.jpg"]} heading={["Why Wrist and Ankle Pain is Common in Desk Employees?","Repetitive Strain", "Sedentary Lifestyle", "Inadequate Footwear"]} 
+      <Causes image={["https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Why Wrist and Ankle Pain is Common in Desk Employees.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Repetitive Strain.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/sedentary lifestyle.jpg","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/inadequate footwear.jpg"]} heading={["Why Wrist and Ankle Pain is Common in Desk Employees?","Repetitive Strain", "Sedentary Lifestyle", "Inadequate Footwear"]} 
       para={["Sitting all day at a desk job can le­ave wrists aching from constant typing and mousing, possibly leading to injury. Repe­ating these actions may disrupt routine activitie­s, yet there are­ focused remedie­s that can ease the pain.",
         "Constant typing and incorrect wrist positioning can cause­ intense wrist discomfort, interrupting e­veryday tasks. Luckily, tailored solutions can assist in relie­ving this distressing strain.",
         "Being se­ated for a long time may affect your ankle­s' blood flow, causing them to feel stiff and uncomfortable­. Such a hindrance can make simple actions fe­el tough. However, spe­cific strategies can aid in regaining agility.",

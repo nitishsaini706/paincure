@@ -12,6 +12,7 @@ import { toast } from 'react-toastify';
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+ 
   const [formData,setFormData] = useState({
     name:'',
     phone:'',
@@ -65,41 +66,43 @@ export default function Home() {
             100% { background-position: 200% 0; }
           }
         `;
+
+       
 const testimonials = [
   {
     name: "Olivia Sonny",
     age: 32,
     condition: "Depression",
     testimonial: "I was struggling with depression and it was affecting my career. When my friend told me about this technology, I was skeptical that a device would solve my problem. But NIBS has given me my life back.",
-    image: "/testimonial1.png"
+    image: "https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/test1.jpg"
   },
   {
     name: "Jasper fiery",
     age: 29,
     condition: "Post Partum Depression",
     testimonial: "I didn’t want to take antidepressants, so my doctor told me about NIBS. I noticed a significant improvement in my overall mood, energy, and symptoms after just 4-5 sessions with NIBS.",
-    image: "/testimonial1.png"
+    image: "https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/test2.jpg"
   },
   {
     name: "Charlotte Elizabeth",
     age: 38,
     condition: "Depression",
     testimonial: "My biggest problem was that medicines were causing lifestyle problems and I was losing my productivity at work. NIBS helped me improve without side effects, I am really thankful to their team.",
-    image: "/testimonial1.png"
+    image: "https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/test5.jpg"
   },
   {
     name: "Margot",
     age: 39,
     condition: "Depression & Anxiety",
     testimonial: "At first, talk therapy was helpful, but I soon stopped getting better. Then, my psychologist told me about Mave Health. Their team made a special program for me with NIBS, and it’s made my life much better.",
-    image: "/testimonial1.png"
+    image: "https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/test4.jpg"
   },
   {
     name: "Elton Butcher",
     age: 45,
     condition: "Depression",
     testimonial: "I visited my psychologist because of constant brain fog and I didn’t realize that it was depression. NIBS helped me improve my life.",
-    image: "/testimonial1.png"
+    image: "https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/test3.jpg"
   },
 ];
 
@@ -213,26 +216,26 @@ const chunkArray = (arr, size) => {
   }, [width]);
   return (
     
-    <div className=" container mt-2 rounded-3xl ">
+    <div className=" mt-2 rounded-3xl ">
       <Header bg="black" color="white"/>
-       <section  className=" pb-16 " style={{ backgroundColor: '#3D4966',borderRadius: "0 0 30px 30px" }}>
+       <section  className=" pb-16 bg-gradient-to-r from-blue-500 to-blue-400 " style={{ borderRadius: "0 0 30px 30px" }}>
       <Container className=' lg:ml-5 py-13 md:ml-2'>
         <Row className="align-items-center ">
           <Col md={6} className='md:mb-2 sm:mb-2'>
-            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[45px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px]">Desk job got you down? We'll lift
+            <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[45px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px] mb:mt-4">Desk job got you down? We'll lift
                you and prevent physical health risks.</h1>
             <p className='	text-white mb-3 md:text-md sm:text-sm'> 
             Reclaim your work-life balance, pain-free, with paincure.ai's tailored care to reduce physical health issues early.
             </p>
             <div className='d-flex justify-start items-center lg:w-[544px] lg:h-[64px] lg:gap-[40px] md:gap-[20px]  md:w-[200px] '>
               <Link href="/signup">
-              <Button  className="me-2 border-0 text-black rounded-2xl bg-white lg:w-[162px] md:w-[60px]">Sign Up</Button>
+              <Button  className="me-2 border-0  rounded-2xl bg-white text-black hover:bg-blue-500 lg:w-[162px] md:w-[60px]">Sign Up</Button>
               </Link>
-              <Button className="me-2 border-1 border-white rounded-2xl text-white lg:w-[162px] bg-[#3D4966] md:w-[60px]">Learn More</Button>
+              <Button className="me-2 border-1 border-white rounded-2xl text-black lg:w-[162px] bg-white md:w-[60px]">Learn More</Button>
             </div>
           </Col>
           <Col md={6} >
-            <Image src="/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl lg:w-[464px] lg:ml-16 md:ml-2 md:w-[200px] mt-8 " width={460} height={10} />
+            <Image src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/image1.png" alt="Paincure AI" className="img-fluid rounded-2xl lg:w-[464px] lg:ml-20  md:w-[200px] mt-8 " width={460} height={10} />
           </Col>
         </Row>
       </Container>
@@ -243,21 +246,21 @@ const chunkArray = (arr, size) => {
       <p className='mb:text-sm'>At paincure.Ai, we harness state-of-the-art AI technology, including Mediapipe and OpenCV, to analyze body posture and detect pain symptoms.</p>
       <Row className="mt-[50px]">
         <Col md={4}>
-          <Card className='lg:h-[80px]  mb:mb-3'>
+          <Card className='lg:h-[80px]  mb:mb-3 hover:bg-blue-400 hover:text-white'>
             <Card.Body>
               <Card.Title>Boost productivity</Card.Title>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[80px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3 hover:bg-blue-400 hover:text-white'>
             <Card.Body>
               <Card.Title>Decrease absenteeism</Card.Title>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[80px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3 hover:bg-blue-400 hover:text-white'>
             <Card.Body>
               <Card.Title>Early Risk Prevention</Card.Title>
             </Card.Body>
@@ -266,21 +269,21 @@ const chunkArray = (arr, size) => {
       </Row>
       <Row >
         <Col md={4}>
-          <Card className='lg:h-[80px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3 hover:bg-blue-400 hover:text-white'>
             <Card.Body>
               <Card.Title>Reduce Sick Leave Costs</Card.Title>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[80px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3 hover:bg-blue-400 hover:text-white'>
             <Card.Body>
               <Card.Title>Weight Control</Card.Title>
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
-          <Card className='lg:h-[80px] mb:mb-3'>
+          <Card className='lg:h-[80px] mb:mb-3 hover:bg-blue-400 hover:text-white'>
             <Card.Body>
               <Card.Title>One to One Sessions</Card.Title>
             </Card.Body>
@@ -291,7 +294,7 @@ const chunkArray = (arr, size) => {
     </section>
     <section id="book" className="py-2">
       <Container>
-      <div className="flex items-center justify-center  bg-gray-100 border-2 border-gray-400">
+      <div className="flex items-center justify-center  bg-gray-100 border-2 border-blue-200">
       <div className="w-full p-8 bg-white rounded ">
         <h2 className="mb-6 text-2xl font-bold text-center">Book a FREE Consulting</h2>
         <form className="space-y-4">
@@ -301,19 +304,17 @@ const chunkArray = (arr, size) => {
               id='name'
               placeholder="Full Name"
               value={formData.name}
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 mb:mb-2"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none  mb:mb-2"
               onChange={setChange}
             />
             <div className="relative w-full mb-2">
-            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500">
-                <option value="+44">+44</option>
-                <option value="+91">+91</option>
-                <option value="+1">+1</option>
-               
+            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none ">
+                <option  value="+44" >+44</option>              
             </select>
+            
 
             <FaWhatsapp
-                className="absolute inset-y-0 left-[50px] my-auto text-green-500 " // Positioning the icon
+                className="absolute inset-y-0 left-[50px] my-auto  text-green-500" // Positioning the icon
                 size={24} // Size of the icon
             />
 
@@ -323,12 +324,12 @@ const chunkArray = (arr, size) => {
                 id='phone'
                 onChange={setChange}
                 value={formData.phone}
-                className="absolute inset-y-2 left-[80px] lg:w-[280px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                className="absolute inset-y-2 left-[80px] lg:w-[280px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none "
             />
         </div>
             <div className="relative w-full">
       <div
-        className="p-2 border border-gray-300 rounded focus:outline-none focus:border-purple-500 cursor-pointer"
+        className="p-2 border border-gray-300 rounded focus:outline-none  cursor-pointer"
         onClick={toggleDropdown} // Show/hide dropdown on click
       >
         {category}
@@ -339,7 +340,7 @@ const chunkArray = (arr, size) => {
             <li
               key={item}
               id={item}
-              className="p-2 hover:bg-purple-500 hover:text-white cursor-pointer"
+              className="p-2 hover:bg-gradient-to-r from-blue-500 to-blue-400 hover:text-white cursor-pointer"
               onClick={() => handleOptionClick(item)} // Handle option click
             >
               {item}
@@ -350,10 +351,10 @@ const chunkArray = (arr, size) => {
     </div>
           </div>
           <div className="flex items-center">
-            <input type="checkbox" id="terms" className="w-4 h-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
+            <input type="checkbox" id="terms" className="w-4 h-4 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
             <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to paincure.Ai's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
           </div>
-          <button type="submit" className="w-full py-2 mt-4 text-white bg-[#3D4966] rounded hover:bg-[#2b3449] focus:outline-none" onClick={submit}>Book a Free Demo</button>
+          <button type="submit" className="w-full py-2 mt-4 text-white bg-gradient-to-r from-blue-500 to-blue-400 rounded hover:bg-white hover:font-bold" onClick={submit}>Book a Free Demo</button>
         </form>
       </div>
     </div>
@@ -365,7 +366,7 @@ const chunkArray = (arr, size) => {
         <Row>
           <Col md={4}>
             <Card className='h-[400px]'>
-            <Image src='/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
+            <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
                 <Card.Text>Lower back pain (LBP) is common among remote workers and is characterized by discomfort or pain in the lower spine. Usually, 
@@ -376,7 +377,7 @@ const chunkArray = (arr, size) => {
           </Col>
           <Col md={4}>
             <Card className='h-[400px]'>
-            <Image src='/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
+            <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
                 <Card.Text>Shoulder and neck pain are common issues among remote workers, characterized by discomfort or pain in the upper spine and 
@@ -388,7 +389,7 @@ const chunkArray = (arr, size) => {
           </Col>
           <Col md={4} >
             <Card className='h-[400px]'>
-            <Image src='/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
+            <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
                 <Card.Text> Wrist and ankle pain are common issues among remote workers, characterized by discomfort or pain in the joints of the wrists and ankles. The complex mechanism of wrist and hand might
@@ -401,7 +402,7 @@ const chunkArray = (arr, size) => {
         <Row className='mt-5'>
           <Col md={4}>
             <Card className='h-[400px]'>
-            <Image src='/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
+            <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
                 <Card.Text>Knee and hip pain are common issues among desk workers, characterized by discomfort or pain in the knee and hip joints. This pain is commonly seen in patients with obesity, arthritis or flat feet.
@@ -411,7 +412,7 @@ const chunkArray = (arr, size) => {
           </Col>
           <Col md={4}>
             <Card className='h-[400px]'>
-            <Image src='/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
+            <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
                 <Card.Text> Headaches and migraines are common issues among women’s as a result of hormonal imbalance, characterized by discomfort or pain in the head and neck region. 
@@ -422,7 +423,7 @@ const chunkArray = (arr, size) => {
           </Col>
           <Col md={4}>
             <Card className='h-[400px]'>
-            <Image src='/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
+            <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
                 <Card.Text>Desk employees are sitting more than ever, and it's damaging their bodies. Whether at a desk, in a vehicle, or on the couch, approximately 7.5 hours of them spend their days seated. This sedentary lifestyle can lead to mood and mental health disorders such as anxiety and depression.</Card.Text>
@@ -448,8 +449,8 @@ const chunkArray = (arr, size) => {
             <Row>
               {chunk.map((t, index) => (
                 <Col key={index} md={3} className="mb-4">
-                  <Card className="h-[500px] lg:flex lg:flex-col lg:justify-between">
-                    <Card.Body className="lg:flex-grow-1">
+                  <Card className="h-[500px] lg:flex lg:flex-col lg:justify-between ">
+                    <Card.Body className="lg:flex-grow-1 ">
                       <Card.Title className="font-bold text-xl">{t.name}</Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">
                         {t.age}, {t.condition}

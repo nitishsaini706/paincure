@@ -11,7 +11,7 @@ const ProgramSection = ({ mainHeading, sections }) => {
   return (
     <div className="flex flex-col items-center justify-center mt-10 mb-10">
       <h1 className="text-3xl font-bold m-5">{mainHeading}</h1>
-      <div className="w-full max-w-4xl mx-auto space-y-6">
+      <div className="w-full max-w-4xl mx-auto space-y-6 ">
         {sections.map((section, index) => (
           <div
             key={index}
@@ -26,7 +26,7 @@ const ProgramSection = ({ mainHeading, sections }) => {
                   {index + 1}
                 </div>
                 <div>
-                  <h2 className="text-3xl font-semibold">
+                  <h2 className="text-3xl font-semibold ">
                     {section.heading} <span className="text-2xl text-gray-500">{section.duration}</span>
                   </h2>
                   <p className="text-gray-500 text-sm">{section.subtitle}</p>
@@ -69,7 +69,7 @@ const ProgramSection = ({ mainHeading, sections }) => {
             {expanded === index && (
               <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                 {section.points.map((point, pointIndex) => (
-                  <div key={pointIndex} className="bg-gray-50 p-4 rounded-md shadow-sm">
+                  <div key={pointIndex} className="bg-gray-50 p-4 rounded-md shadow-sm ">
                     <p>{point}</p>
                   </div>
                 ))}

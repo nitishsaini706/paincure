@@ -176,7 +176,7 @@ export default function Signup() {
                     </Button>
 
                     <Button variant="outline-primary" type="button" className="w-full mt-2">
-                        <Image src="/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" width={4} height={4} />
+                        <Image src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" width={4} height={4} />
                         Sign in with Google
                     </Button>
 
@@ -237,7 +237,7 @@ export default function Signup() {
                     </Button>
 
                     <Button variant="outline-primary" type="button" className="w-full mt-2">
-                    <Image src="/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" width={4} height={4} />
+                    <Image src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/google-logo.png" alt="Google logo" className="inline-block w-4 h-4 mr-2" width={4} height={4} />
                         Sign in with Google
                     </Button>
 
