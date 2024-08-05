@@ -132,7 +132,7 @@ export default function Blogs() {
                         blogs.slice(0, 3).map((blog, index) => (
                             <Col key={index} md={4}>
                                 <Card className='p-4 h-[500px]'>
-                                    <div className='h-[300px]'>
+                                    <div className='mb:h-[200px] lg:h-[250px]'>
                                         <Image
                                             src={blog.image || 'https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/blog.png'}
                                             width={400}

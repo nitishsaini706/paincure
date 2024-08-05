@@ -308,7 +308,7 @@ const chunkArray = (arr, size) => {
               onChange={setChange}
             />
             <div className="relative w-full mb-2">
-            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none ">
+            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none bg-white">
                 <option  value="+44" >+44</option>              
             </select>
             
@@ -382,13 +382,13 @@ const chunkArray = (arr, size) => {
                 <Card.Title>Neck Pain</Card.Title>
                 <Card.Text>Shoulder and neck pain are common issues among remote workers, characterized by discomfort or pain in the upper spine and 
                   shoulder region. It could happen as a result of physical or mental exhaustion or extended stress. Most neck and shoulder pain lasts for a few weeks. 
-                  Also some health diseases such as diabetes, and heart attack lead to shoulder pain. These conditions can range from mild discomfort to severe pain, impacting daily activities and productivity.
+                  Also some health diseases such as diabetes, and heart attack lead to shoulder pain.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4} >
-            <Card className='h-[400px]'>
+            <Card className='h-[450px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
@@ -411,7 +411,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[400px]'>
+            <Card className='h-[450px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>

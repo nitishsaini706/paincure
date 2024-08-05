@@ -50,7 +50,7 @@ export default function Header({ bg = "white", color = "black" }) {
         </div>
         <div className={`w-full block lg:flex lg:items-center lg:ml-[40px] lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`} >
           <div className="text-sm lg:flex-grow">
-            <Link href="/">
+            <Link href="/" onClick={toggleMenu}>
               <p className={`block lg:inline-block lg:mt-0 lg:mr-[40px] mb:mt-5 lg:text-[18px] no-underline hover:font-semibold`}>Home</p>
             </Link>
 
@@ -97,13 +97,13 @@ export default function Header({ bg = "white", color = "black" }) {
                 )}
               </div>
             </div>
-            <Link href="/about">
+            <Link href="/about" onClick={toggleMenu}>
               <p className={`block mb:mt-2 lg:inline-block lg:mr-[40px] lg:text-[18px] no-underline hover:font-semibold`}>About Us</p>
             </Link>
-            <Link href="/blogs">
+            <Link href="/blogs" onClick={toggleMenu}>
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[40px] lg:text-[18px] no-underline hover:font-semibold`}>Blogs</p>
             </Link>
-            <Link href="/pricing">
+            <Link href="/pricing" onClick={toggleMenu}>
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[30px] lg:text-[18px] no-underline hover:font-semibold`}>Pricing</p>
             </Link>
             <Link href="https://paincurcmsfrontend.vercel.app/">
@@ -111,10 +111,10 @@ export default function Header({ bg = "white", color = "black" }) {
             </Link>
           </div>
           <div className="flex lg:items-center mb:justify-between mb:mt-4 mb:pb-2 lg:ml-[100px]">
-            <Link href="/signup">
+            <Link href="/signup" onClick={toggleMenu}>
               <p className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Sign Up</p>
             </Link>
-            <Link href="/login">
+            <Link href="/login" onClick={toggleMenu}>
               <p className={`${bg === 'white' ? 'border border-black' : 'border border-black bg-white text-black'} hover:bg-black hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Login</p>
             </Link>
           </div>
