@@ -1,8 +1,7 @@
 "use client"
 import { useState } from "react";
-import { Container, Row, Col, Card, Table } from "react-bootstrap";
-import { BsCheck2Circle,BsXCircle   } from "react-icons/bs";
-
+import { Container, Row, Col, Card, Table, Button } from "react-bootstrap";
+import { useMediaQuery } from 'react-responsive';
 export default function Pricing() {
   const [isCompany, setIsCompany] = useState(false);
   const [isyearly, setIsyearly] = useState(false);
@@ -13,7 +12,7 @@ export default function Pricing() {
   const handleYearly = () => {
     setIsyearly(!isyearly);
   };
-
+  const isLargeScreen = useMediaQuery({ query: '(min-width: 992px)' });
   const pricingData = isCompany
     ? [
         {
@@ -122,10 +121,32 @@ export default function Pricing() {
         
       ];
 
+      
+      const features = [
+        { title: "Features", value: "With Paincure.ai", isMainTitle: true,noValue: "Without Paincure.ai" },
+        { title: "Health Risk Assessment", value: "✓", noValue:'✗' },
+        { title: "Pain-Specific Content Library and Pre-Recorded Workout Routine", value: "✓", noValue:'✗' },
+        { title: "Avoiding the Need for Chiropractic", value: "✓", noValue:'✗' },
+        { title: "One-to-One Session with a Healthcare Expert", value: "✓",noValue:'✗' },
+        { title: "Ergonomic Setup Audit and Assessment", value: "✓",noValue: "✗" },
+        { title: "Employee Physical Health Risk Assessment Report", value: "✓", noValue: '✗' },
+        { title: "Monthly General Health and Safety Webinars", value: "✓", noValue: '✗' },
+        { title: "Comprehensive Health Risk Assessment", value: "✓", noValue: '✗' },
+        { title: "Extensive Pain-Specific Content Library and Pre-Recorded Workout Routine", value: "✓",noValue: '✗' },
+        { title: "Personalized One-to-One Sessions with Healthcare Experts", value: "✓",noValue:"✗" },
+      ];
+      const firstFeature = features[0];
+      const restFeatures = features.slice(1);
+   
+     
+ 
+      
+
+      
   return (
     <div className=" lg:mx-auto mt-10 lg:p-5 rounded-3xl ">
       <Container className="mb:mx-0 lg:mb-20">
-        <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Pricing </h2>
+        <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Solutions </h2>
         <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with paincure.Ai </h3>   
         
         <div className="flex items-center justify-center mb-5 lg:w-auto mb:w-[350px]">
@@ -137,7 +158,7 @@ export default function Pricing() {
           <span className={`ml-2 ${isCompany ? 'font-bold' : ''}`}>Company</span>
         </div>
 
-<div className="lg:flex lg:justify-center lg:w-auto">
+{/* <div className="lg:flex lg:justify-center lg:w-auto">
 
 
         <Row className="flex items-center justify-center mb-10 mb:w-[350px] mb:mx-0 lg:w-[700px] ">
@@ -149,13 +170,13 @@ export default function Pricing() {
                   <tbody>
                     {without.map((item, index) => (
                       <tr key={index} className="bg-white even:bg-gray-50 flex justify-between items-center lg:p-4 mb:mr-0">
-                        <td className="flex items-center lg:w-[300px] mb:mr-0">
-                          {/* <img src={item.icon} alt={item.title} className="w-10 h-10 mr-2" /> */}
+                        <td className="flex items-center lg:w-[300px] mb:mr-0"> */}
+                          {/* <img src={item.icon} alt={item.title} className="w-10 h-10 mr-2" />
                           <BsXCircle className="lg:w-10 lg:h-12 mr-2 mb:w-5 mb:h-12" color="red"/>
-                          <div>
-                            <div className=" text-wrap font-bold lg:text-lg mb:text-sm w-[250px]">{item.title}</div>
+                          <div> */}
+                            {/* <div className=" text-wrap font-bold lg:text-lg mb:text-sm w-[250px]">{item.title}</div> */}
                             {/* <div className="lg:text-sm mb:text-xs text-gray-500">{item.description}</div> */}
-                          </div>
+                          {/* </div>
                         </td>
                         
                       </tr>
@@ -175,16 +196,16 @@ export default function Pricing() {
                   <tbody>
                     {pricingData.map((item, index) => (
                       <tr key={index} className="bg-white even:bg-gray-50 flex justify-between items-center lg:p-4 ">
-                        <td className="flex items-center lg:w-[300px] mb:mr-0 ">
+                        <td className="flex items-center lg:w-[300px] mb:mr-0 "> */}
                           {/* <img src={item.icon} alt={item.title} className="w-10 h-10 mr-4" /> */}
-                          <BsCheck2Circle className="lg:w-10 lg:h-12 mr-2 mb:w-5 mb:h-12" color="green"/>
-                          <div>
-                            <div className="font-bold lg:text-lg mb:text-sm w-[250px] mb:min-h-[30px]">{item.title}</div>
+                          {/* <BsCheck2Circle className="lg:w-10 lg:h-12 mr-2 mb:w-5 mb:h-12" color="green"/>
+                          <div> */}
+                            {/* <div className="font-bold lg:text-lg mb:text-sm w-[250px] mb:min-h-[30px]">{item.title}</div> */}
                             {/* <div className="lg:text-sm mb:text-xs text-gray-500">{item.description}</div> */}
-                          </div>
-                        </td>
+                          {/* </div>
+                        </td> */}
                         {/* <td className="font-bold text-lg text-right">{item.price}</td> */}
-                      </tr>
+                      {/* </tr>
                     ))}
                   </tbody>
                 </Table>
@@ -193,10 +214,50 @@ export default function Pricing() {
           </Col>
         </Row>
 
-</div>
-       
+</div> */}
+        {/* <div className="lg:flex lg:justify-center lg:w-auto"> */}
 
+    {/* </div> */}
       </Container>
+
+ 
+  
+   
+
+    
+      <Container className="mb-5 bg-gradient-to-r from-blue-500 to-blue-400 text-white p-5">
+      {isLargeScreen ? (
+        <>
+          {features.map((feature, index) => (
+            <Row key={index} className="border-b border-white-600 py-4">
+              <Col md={6}>
+                <h4 className="text-2xl">{feature.title}</h4>
+              </Col>
+              <Col md={3} className="text-center border-l border-white-600">
+                <span className='text-2xl'>{feature.value}</span>
+              </Col>
+              <Col md={3} className="text-center border-l border-white-600">
+                <span className='text-2xl'>{feature.noValue}</span>
+              </Col>
+            </Row>
+          ))}
+        </>
+      ) : (
+        <div style={{  padding: '3px', borderRadius: '8px' }}>
+        <h3 className="text-center text-3xl mb-2" style={{ color: '#ffffff' }}>Features</h3>
+        <ul className="list-unstyled">
+          {restFeatures.map((feature, index) => (
+            <li key={index} className="d-flex justify-content-between align-items-center py-2 border-bottom border-gray-600">
+              <span style={{ color: '#ffffff' }}>{feature.title}</span>
+              <span className='text-2xl'>{feature.value}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    
+      )}
+    </Container>
+
 
       <div className=" lg:w-auto flex flex-col items-center">
 
@@ -273,6 +334,7 @@ export default function Pricing() {
           transform: translateX(26px);
         }
       `}</style>
+    
     </div>
   );
 }

@@ -36,3 +36,12 @@
     font-size: 1.2em; /* Adjust circle size */
     line-height: 1; /* Adjust line height */
 }
+
+.table-bg {
+  background: linear-gradient(to right, #3b82f6, #60a5fa); /* Match these colors with your gradient */
+  color: white;
+}
+
+.table-bg th, .table-bg td {
+  background: inherit;
+}

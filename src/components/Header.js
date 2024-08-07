@@ -51,13 +51,13 @@ export default function Header({ bg = "white", color = "black" }) {
         <div className={`w-full block lg:flex lg:items-center lg:ml-[40px] lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`} >
           <div className="text-sm lg:flex-grow">
             <Link href="/" onClick={toggleMenu}>
-              <p className={`block lg:inline-block lg:mt-0 lg:mr-[40px] mb:mt-5 lg:text-[18px] no-underline hover:font-semibold`}>Home</p>
+              <p className={`block lg:inline-block lg:mt-0 lg:mr-[40px] mb:mt-5 lg:text-[18px] no-underline font-bold`}>Home</p>
             </Link>
 
             <div className="lg:relative lg:inline-block text-left " onMouseEnter={()=>setIsServiceOpen(true)} onClick={toggleService}>
             <div className="flex  items-center " >
                 <p 
-                    className={`hover:font-semibold lg:text-[18px] block cursor-pointer mb:mt-2 lg:inline-block lg:mt-0 lg:mr-[30px] no-underline ${color === 'black' ? 'text-black' : 'text-white'} bg-${bg === 'white' ? 'white' : 'gray-700'} hover:bg-opacity-75`}
+                    className={`hover:font-bold lg:text-[18px] block cursor-pointer mb:mt-2 lg:inline-block lg:mt-0 lg:mr-[30px] no-underline font-bold ${color === 'black' ? 'text-black' : 'text-white'} bg-${bg === 'white' ? 'white' : 'gray-700'} hover:bg-opacity-75`}
                 >
                     Services
                 </p>
@@ -75,22 +75,22 @@ export default function Header({ bg = "white", color = "black" }) {
                   <div className="lg:origin-top-right lg:absolute mb:left-5 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 " >
                     <div className="py-1">
                       <Link href="/services/neck-service">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-semibold">Neck Pain</p>
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Neck Pain</p>
                       </Link>
                       <Link href="/services/lower-back-service">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-semibold">Lower Back Pain</p>
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Lower Back Pain</p>
                       </Link>
                       <Link href="/services/wrist-service">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-semibold">Wrist Pain</p>
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Wrist Pain</p>
                       </Link>
                       <Link href="/services/knee-service">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-semibold">Knee Pain</p>
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Knee Pain</p>
                       </Link>
                       <Link href="/services/sedentary-lifestyle-service">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-semibold">Sedentary Lifestyle</p>
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Sedentary Lifestyle</p>
                       </Link>
                       <Link href="/services/yoga-service">
-                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-semibold">Yoga for Migraines and Headaches</p>
+                        <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Yoga for Migraines and Headaches</p>
                       </Link>
                     </div>
                   </div>
@@ -98,21 +98,21 @@ export default function Header({ bg = "white", color = "black" }) {
               </div>
             </div>
             <Link href="/about" onClick={toggleMenu}>
-              <p className={`block mb:mt-2 lg:inline-block lg:mr-[40px] lg:text-[18px] no-underline hover:font-semibold`}>About Us</p>
+              <p className={`block mb:mt-2 lg:inline-block lg:mr-[40px] lg:text-[18px] no-underline font-bold`}>About Us</p>
             </Link>
             <Link href="/blogs" onClick={toggleMenu}>
-              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[40px] lg:text-[18px] no-underline hover:font-semibold`}>Blogs</p>
+              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[40px] lg:text-[18px] no-underline font-bold`}>Blogs</p>
             </Link>
             <Link href="/pricing" onClick={toggleMenu}>
-              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[30px] lg:text-[18px] no-underline hover:font-semibold`}>Pricing</p>
+              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[30px] lg:text-[18px] no-underline font-bold`}>Solutions</p>
             </Link>
             <Link href="https://paincurcmsfrontend.vercel.app/">
-              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block lg:text-[18px] no-underline `}>Become Health Expert</p>
+              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block lg:text-[18px] no-underline font-bold`}>Become Health Expert</p>
             </Link>
           </div>
           <div className="flex lg:items-center mb:justify-between mb:mt-4 mb:pb-2 lg:ml-[100px]">
             <Link href="/signup" onClick={toggleMenu}>
-              <p className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Sign Up</p>
+              <p className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Get Started</p>
             </Link>
             <Link href="/login" onClick={toggleMenu}>
               <p className={`${bg === 'white' ? 'border border-black' : 'border border-black bg-white text-black'} hover:bg-black hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Login</p>

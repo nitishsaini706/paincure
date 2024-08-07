@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import { Container, Row, Col, Card,Accordion ,Carousel ,Button } from 'react-bootstrap';
+import { Container, Row, Col, Card,Accordion ,Carousel ,Button,Modal } from 'react-bootstrap';
 import Header from '../components/Header';
 import { useState, useEffect } from 'react';
 import { useWindowSize } from 'react-use';
@@ -12,7 +12,10 @@ import { toast } from 'react-toastify';
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
- 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [formData,setFormData] = useState({
     name:'',
     phone:'',
@@ -127,6 +130,7 @@ const submit = (e)=>{
   }
   else{
     setLoading(true)
+    setShow(false)
     fetch(`${apiUrl}/api/users/whatsapp`,{method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -217,7 +221,7 @@ const chunkArray = (arr, size) => {
   return (
     
     <div className=" mt-2 rounded-3xl ">
-      <Header bg="black" color="white"/>
+      <Header bg="white" color="black"/>
        <section  className=" pb-16 bg-gradient-to-r from-blue-500 to-blue-400 " style={{ borderRadius: "0 0 30px 30px" }}>
       <Container className=' lg:ml-5 py-13 md:ml-2'>
         <Row className="align-items-center ">
@@ -292,141 +296,69 @@ const chunkArray = (arr, size) => {
       </Row>
     </Container>
     </section>
-    <section id="book" className="py-2">
-      <Container>
-      <div className="flex items-center justify-center  bg-gray-100 border-2 border-blue-200">
-      <div className="w-full p-8 bg-white rounded ">
-        <h2 className="mb-6 text-2xl font-bold text-center">Book a FREE Consulting</h2>
-        <form className="space-y-4">
-          <div className="lg:flex lg:items-center lg:space-x-4 ">
-            <input
-              type="text"
-              id='name'
-              placeholder="Full Name"
-              value={formData.name}
-              className="w-full p-2 border border-gray-300 rounded focus:outline-none  mb:mb-2"
-              onChange={setChange}
-            />
-            <div className="relative w-full mb-2">
-            <select className="w-full p-2 border border-gray-300 rounded focus:outline-none bg-white">
-                <option  value="+44" >+44</option>              
-            </select>
-            
-
-            <FaWhatsapp
-                className="absolute inset-y-0 left-[50px] my-auto  text-green-500" // Positioning the icon
-                size={24} // Size of the icon
-            />
-
-            <input
-                type="text"
-                placeholder="WhatsApp Preferred"
-                id='phone'
-                onChange={setChange}
-                value={formData.phone}
-                className="absolute inset-y-2 left-[80px] lg:w-[280px] mb:w-[150px] pl-10 p-2 border border-gray-300 rounded focus:outline-none "
-            />
-        </div>
-            <div className="relative w-full">
-      <div
-        className="p-2 border border-gray-300 rounded focus:outline-none  cursor-pointer"
-        onClick={toggleDropdown} // Show/hide dropdown on click
-      >
-        {category}
-      </div>
-      {isOpen && ( // Only render the dropdown if isOpen is true
-        <ul className="absolute left-0 right-0 bg-white border border-gray-300 rounded mt-1 z-10">
-          {categories.map((item) => (
-            <li
-              key={item}
-              id={item}
-              className="p-2 hover:bg-gradient-to-r from-blue-500 to-blue-400 hover:text-white cursor-pointer"
-              onClick={() => handleOptionClick(item)} // Handle option click
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-          </div>
-          <div className="flex items-center">
-            <input type="checkbox" id="terms" className="w-4 h-4 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
-            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to paincure.Ai's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
-          </div>
-          <button type="submit" className="w-full py-2 mt-4 text-white bg-gradient-to-r from-blue-500 to-blue-400 rounded hover:bg-white hover:font-bold" onClick={submit}>Book a Free Demo</button>
-        </form>
-      </div>
-    </div>
-      </Container>
-    </section>
+   
        <section id="features" className="py-5">
        <h1 className='lg:text-3xl font-bold mb:text-2xl text-center'>Pain Relief services</h1>
       <Container className='mt-10'>
         <Row>
           <Col md={4}>
-            <Card className='h-[400px]'>
+            <Card className='h-[300px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
-                <Card.Text>Lower back pain (LBP) is common among remote workers and is characterized by discomfort or pain in the lower spine. Usually, 
-                  it gets better in a few weeks, but occasionally it can take longer or keep coming back.
-                   It can range from mild discomfort to severe, debilitating pain, affecting quality of life and productivity.</Card.Text>
+                <Card.Text>Office work ofte­n creates lower back discomfort, ranging from light pains to se­vere cramps, 
+                  disrupting our eve­ryday activities. Specific strategie­s are crucial to soothe this bodily misery and re­gain efficiency.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[400px]'>
+            <Card className='h-[300px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
-                <Card.Text>Shoulder and neck pain are common issues among remote workers, characterized by discomfort or pain in the upper spine and 
-                  shoulder region. It could happen as a result of physical or mental exhaustion or extended stress. Most neck and shoulder pain lasts for a few weeks. 
-                  Also some health diseases such as diabetes, and heart attack lead to shoulder pain.
+                <Card.Text>Sitting at a desk ofte­n leads to shoulder and neck pain, making e­veryday jobs tough. 
+                  Health problems could also bring about this body pain, me­ssing up work efficiency.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4} >
-            <Card className='h-[450px]'>
+            <Card className='h-[300px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
-                <Card.Text> Wrist and ankle pain are common issues among remote workers, characterized by discomfort or pain in the joints of the wrists and ankles. The complex mechanism of wrist and hand might
-                   result in several causes of discomfort. It can be caused by certain illnesses such as rheumatoid arthritis, osteoarthritis and carpel tunnel syndrome. These conditions can range from mild
-                    discomfort to severe pain, impacting daily activities and productivity.</Card.Text>
+                <Card.Text>Sitting jobs often cause­ wrist and ankle discomfort, leading to pain in conditions like arthritis. 
+                  The­se joint pains can interrupt eve­ryday activities, but there are­ specific ways to ease the­m.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
         <Row className='mt-5'>
           <Col md={4}>
-            <Card className='h-[400px]'>
+            <Card className='h-[300px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
-                <Card.Text>Knee and hip pain are common issues among desk workers, characterized by discomfort or pain in the knee and hip joints. This pain is commonly seen in patients with obesity, arthritis or flat feet.
-                   These conditions can range from mild discomfort to severe pain, impacting daily activities and productivity.</Card.Text>
+                <Card.Text>Sitting at a desk all day strains our kne­es and hips. It can bring out pain from issues like arthritis or we­ight problems.
+                   Joint pain can make eve­ryday tasks tough.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[450px]'>
+            <Card className='h-[300px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
-                <Card.Text> Headaches and migraines are common issues among women’s as a result of hormonal imbalance, characterized by discomfort or pain in the head and neck region. 
-                  Genetic and environmental factors plays an important role in developing migraine. These conditions can range from mild discomfort to severe like throbbing pain, 
-                  impacting daily activities and productivity. It can get worst with physical activity, bright lights, loud noises, strong odors.</Card.Text>
+                <Card.Text> Hormones changing and things in our surroundings can cause­ awful headaches and migraines. The­se can mess up regular activitie­s.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[400px]'>
+            <Card className='h-[300px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
-                <Card.Text>Desk employees are sitting more than ever, and it's damaging their bodies. Whether at a desk, in a vehicle, or on the couch, approximately 7.5 hours of them spend their days seated. This sedentary lifestyle can lead to mood and mental health disorders such as anxiety and depression.</Card.Text>
+                <Card.Text>Sitting too much can lead to me­ntal issues like stress and sadne­ss, harming happiness. We nee­d specific solutions to fight these fe­elings and bring back balance to work and life.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -593,6 +525,101 @@ const chunkArray = (arr, size) => {
                     )}
                     </Row>
                     </Container>
+                    <>
+      {/* Sticky Button */}
+      <div className="fixed lg:bottom-4 lg:right-4 p-2  mb:bottom-10 mb:right-4">
+        <Button
+          variant="success"
+          style={{  background: 'linear-gradient(to right, #3b82f6, #60a5fa)', borderColor: '#3b82f6' }}
+       className='flex justify-between items-center mr-2'
+          onClick={handleShow}
+        >
+           <FaWhatsapp
+               className='text-green-200'
+            />
+          Book a free demo
+
+        </Button>
+      </div>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Book a FREE Consulting</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <div className="flex items-center justify-center  bg-gray-100 border-2 border-blue-200">
+      <div className="w-full p-8 bg-white rounded ">
+      
+        <form className="space-y-4">
+          <div className="lg:flex lg:items-center lg:space-x-4 ">
+           <div className='w-full'>
+
+         
+            <input
+              type="text"
+              id='name'
+              placeholder="Full Name"
+              value={formData.name}
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none  mb:mb-2"
+              onChange={setChange}
+            />
+             <div className="flex w-full mb-2"> 
+            {/* <select className="w-full p-2 border border-gray-300 rounded focus:outline-none bg-white">
+                <option  value="+44" >+44</option>              
+            </select>  */}
+            
+
+            <FaWhatsapp
+                className=" inset-y-0 left-[50px] my-auto  text-green-500" // Positioning the icon
+                size={24} // Size of the icon
+            />
+
+            <input
+                type="text"
+                placeholder="WhatsApp Preferred"
+                id='phone'
+                onChange={setChange}
+                value={formData.phone}
+                className="ml-3 w-full p-2 border border-gray-300 rounded focus:outline-none  mb:mb-2"
+            />
+        
+        </div>
+            <div className="relative w-full">
+      <div
+        className="p-2 border border-gray-300 rounded focus:outline-none  cursor-pointer"
+        onClick={toggleDropdown} // Show/hide dropdown on click
+      >
+        {category}
+      </div>
+      {isOpen && ( // Only render the dropdown if isOpen is true
+        <ul className="absolute left-0 right-0 bg-white border border-gray-300 rounded mt-1 z-10">
+          {categories.map((item) => (
+            <li
+              key={item}
+              id={item}
+              className="p-2 hover:bg-gradient-to-r from-blue-500 to-blue-400 hover:text-white cursor-pointer"
+              onClick={() => handleOptionClick(item)} // Handle option click
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+          </div>
+          </div>
+          <div className="flex items-center">
+            <input type="checkbox" id="terms" className="w-4 h-4 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
+            <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to paincure.Ai's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
+          </div>
+          <button type="submit" className="w-full py-2 mt-4 text-white bg-gradient-to-r from-blue-500 to-blue-400 rounded hover:bg-white hover:font-bold" onClick={submit}>Book a Free Demo</button>
+        </form>
+      </div>
+    </div>
+        </Modal.Body>
+       
+      </Modal>
+    </>
     {/* </section> */}
     </div>
   );
