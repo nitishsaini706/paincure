@@ -456,8 +456,7 @@ const chunkArray = (arr, size) => {
     </section>
     <section>
     <Container className="py-5">
-    
-    <ProgramDetails mainHeading={"How it works?"}
+    <ProgramDetails mainHeading={"How It Works: Our 4 Easy Steps process to Achieve Lasting Pain Relief"}
        sections={sections} />
     </Container>
     </section>
