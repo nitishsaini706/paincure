@@ -191,28 +191,28 @@ const chunkArray = (arr, size) => {
   const [isOpen, setIsOpen] = useState(false); // State to control dropdown visibility
   const sections = [
     {
-      heading: "Access",
+      heading: "Step: 1 Access Your Path to Relief",
       points: [
         "Tell us about your pain. Share your symptoms",
         "AI will analyze them to understand your condition better."
       ]
     },
     {
-      heading: "Connect",
+      heading: "Step: 2 Connect with Leading Experts",
       points: [
         "Get expert guidance.",
         "We'll connect you with top healthcare professionals who specialize in treating your specific pain."
       ]
     },
     {
-      heading: "Engage",
+      heading: "Step: 3 Engage in Tailored Care",
       points: [
         "Personalized care.",
         "Receive a tailored treatment plan, including customized exercise routines and online consultations."
       ]
     },
     {
-      heading: "Track",
+      heading: "Step : 4 Implement and Track Your Progress",
       points: [
         "Track your progress.",
         "Monitor your improvements and celebrate your milestones with detailed progress reports."
