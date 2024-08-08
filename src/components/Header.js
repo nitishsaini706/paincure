@@ -34,7 +34,7 @@ export default function Header({ bg = "white", color = "black" }) {
 
   return (
     <nav   className={`mb:min-w-full border-1 mb:flex-row border-black sticky top-0 z-40 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] lg:pl-4 mb:px-[15px] lg:pt-4 mb:pt-3 pb-3 ${bg !== 'white' ? `bg-gradient-to-r from-blue-500 to-blue-400 ` : `bg-white`} ${color === 'black' ? 'text-black' : 'text-white'}`}>
-      <div className=" lg:flex lg:justify-between lg:items-center">
+      <div className=" lg:flex lg:justify-evenly lg:items-center">
         <div className="flex lg:items-center justify-between lg:mt-3 lg:ml-4">
           <a className="flex items-center" href="/">
             <Image id="img" src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/logo.png" alt="logo" width={30} height={30} className="mr-2" />

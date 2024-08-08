@@ -144,7 +144,7 @@ export default function Pricing() {
 
       
   return (
-    <div className=" lg:mx-auto mt-10 lg:p-5 rounded-3xl ">
+    <div className=" lg:mx-[100px] mt-10 lg:p-5 rounded-3xl ">
       <Container className="mb:mx-0 lg:mb-20">
         <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Solutions </h2>
         <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with paincure.Ai </h3>   

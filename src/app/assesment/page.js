@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-// Sample questions data
+import { useRouter } from 'next/navigation'
+
 const questions = [
   {
     question: "What is your Full Name?",
@@ -162,6 +163,8 @@ const Assessment = () => {
   const [otherAnswer, setOtherAnswer] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const totalQuestions = questions.length;
+  const router = useRouter()
+ 
 
   const submit = async()=>{
     try{
@@ -174,9 +177,10 @@ const Assessment = () => {
         i+=1;
       }
       setIsLoading(true)
-      const resp = await axios.post("https://paincurebackend.onrender.com/assesment",finaldata);
-      if(resp && resp.status == 200){
+      const resp = await axios.post("https://paincurebackend.onrender.com/api/assessments",finaldata);
+      if(resp && resp.status == 201){
         setIsLoading(false);
+        router.push('/', { scroll: false })
         toast.success("We'll reach out to you shortly :)")
       }
     }catch(e){
@@ -283,8 +287,9 @@ const Assessment = () => {
             <div>
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <div key={index} style={{ margin: "5px" }}>
-                  <label>
+                  <label className='flex'>
                     <input
+                    className='mr-2'
                       type={
                         questions[currentQuestionIndex].type === "single-choice"
                           ? "radio"
@@ -296,7 +301,7 @@ const Assessment = () => {
                       }
                       checked={userAnswers[currentQuestionIndex]?.includes(option) || false}
                     />
-                    {option}
+                   <p className='text-[17px]'>{option}</p> 
                   </label>
                 </div>
               ))}

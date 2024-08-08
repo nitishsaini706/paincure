@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
-  const isLargeScreen = useMediaQuery({ query: '(max-width: 350px)' });
+  const isLargeScreen = useMediaQuery({ query: '(max-width: 440px)' });
 
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -631,7 +631,7 @@ const chunkArray = (arr, size) => {
         </Button>
       </div>
 
-      <Modal show={show} onHide={handleClose} className={`${isLargeScreen ? 'mb:top-[150px] mb:w-[400px] mb:left-2':''}`}>
+      <Modal show={show} onHide={handleClose} className={`${isLargeScreen ? 'mb:top-[150px] mb:w-[400px] mb:p-2':''}`}>
         <Modal.Header closeButton>
           <Modal.Title>Book a FREE Consulting</Modal.Title>
         </Modal.Header>
