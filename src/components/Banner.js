@@ -9,7 +9,7 @@ export default function Banner(){
                 <h2 className="lg:text-3xl mb:mb-2 ">Get Started with a Free Consultation!</h2>
                 </div>
                 <div>
-                    <a href="/" className="rounded-xl lg:w-[250px] bg-gray-100 text-black lg:py-3 lg:px-6 mb:w-[100px] mb:p-2 mb:text-xs mb:text-center lg:text-xl">Book Now</a>
+                    <a href="/assesment" className="rounded-xl lg:w-[250px] bg-gray-100 text-black lg:py-3 lg:px-6 mb:w-[100px] mb:p-2 mb:text-xs mb:text-center lg:text-xl">Book Now</a>
                 </div>
         </div>
         </div>

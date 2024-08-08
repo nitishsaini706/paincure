@@ -113,12 +113,12 @@ export default function Header({ bg = "white", color = "black" }) {
             </Link>
             <div className='mb:flex mb:flex-row mb:justify-between mb:mt-2 lg:mb-2'>
 
-            <Link href="/signup" onClick={toggleMenu}>
+            <Link href="/assesment" onClick={toggleMenu}>
               <p className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm font-bold mb:mb-1 mb:w-[130px]`}>Get Started</p>
             </Link>
-            <Link href="/login" onClick={toggleMenu}>
+            {/* <Link href="/login" onClick={toggleMenu}>
               <p className={`${bg === 'white' ? 'border border-black' : 'border border-black bg-white text-black'} hover:bg-black hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm font-bold mb:mb-1 mb:w-[80px]`}>Login</p>
-            </Link>
+            </Link> */}
             </div>
           </div>
         </div>

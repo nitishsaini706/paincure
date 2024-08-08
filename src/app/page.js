@@ -8,8 +8,11 @@ import Link from 'next/link';
 import ProgramDetails from "../components/solution"
 import { FaWhatsapp } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Home() {
+  const isLargeScreen = useMediaQuery({ query: '(max-width: 350px)' });
+
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
@@ -235,14 +238,16 @@ const chunkArray = (arr, size) => {
           <Col md={6} className='md:mb-2 sm:mb-2'>
             <h1 className="text-white mb-3 lg:w-[682px] lg:h-[168px] font-dm-sans font-bold lg:text-[45px] lg:leading-[130%] tracking-[-0.02em] mb:text-[30px] mb:mt-4">Desk job got you down? We'll lift
                you and prevent physical health risks.</h1>
-            <p className='	text-white mb-3 md:text-md sm:text-sm'> 
-            Reclaim your work-life balance, pain-free, with paincure.ai's tailored care to reduce physical health issues early.
+            <p className='	text-white mb-3 md:text-xl sm:text-sm'> 
+            Personalized pain relief for the modern desk worker - paincure.Ai
             </p>
             <div className='d-flex justify-start items-center lg:w-[544px] lg:h-[64px] lg:gap-[40px] md:gap-[20px]  md:w-[200px] '>
-              <Link href="/signup">
-              <Button  className="me-2 border-0  rounded-2xl bg-white text-black hover:bg-blue-500 lg:w-[162px] md:w-[60px]">Sign Up</Button>
+              <Link href="/assesment">
+              <Button  className="me-2 border-0  rounded-2xl bg-white text-black hover:bg-blue-500 hover:text-white lg:w-[162px] md:w-[60px]">Get Started</Button>
               </Link>
+              <Link href="/services/sedentary-lifestyle-service">
               <Button className="me-2 border-1 border-white rounded-2xl text-black lg:w-[162px] bg-white md:w-[60px]">Learn More</Button>
+              </Link>
             </div>
           </Col>
           <Col md={6} >
@@ -626,7 +631,7 @@ const chunkArray = (arr, size) => {
         </Button>
       </div>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className={`${isLargeScreen ? 'mb:top-[150px] mb:w-[400px] mb:left-2':''}`}>
         <Modal.Header closeButton>
           <Modal.Title>Book a FREE Consulting</Modal.Title>
         </Modal.Header>
