@@ -13,9 +13,10 @@ export default function RootLayout({ children }) {
   const isAboutPage = pathname === '/about';
   const isBlogPage = pathname === '/blogs';
   const isSolutionPage = pathname === '/pricing';
+  const assesment = pathname === '/assesment';
   return (
     <html lang="en">
-      <body className='lg:mx-5 mb:mx-5'>
+      <body className={`lg:mx-5 mb:mx-5 `}>
         {!isHomePage && !isAboutPage && !isBlogPage && !isSolutionPage && <Header />}
         {isAboutPage && <Header color='white' bg='blue' />}
         {isBlogPage && <Header color='white' bg='blue' />}
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
       <ToastContainer style={{ maxWidth: '50vw',marginLeft: '100px', 
            }} position="top-right"/>
         {children}
-        <Footer />
+       {!assesment && <Footer />}
       </body>
     </html>
   );

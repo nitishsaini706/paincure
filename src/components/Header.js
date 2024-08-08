@@ -33,12 +33,12 @@ export default function Header({ bg = "white", color = "black" }) {
   };
 
   return (
-    <nav   className={`mb:min-w-full sticky top-0 z-40 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] lg:px-4 mb:px-[15px] lg:pt-4 mb:pt-3 pb-3 ${bg !== 'white' ? `bg-gradient-to-r from-blue-500 to-blue-400 ` : `bg-white`} ${color === 'black' ? 'text-black' : 'text-white'}`}>
-      <div className="lg:container lg:flex lg:justify-between lg:items-center">
-        <div className="flex lg:items-center justify-between lg:mt-3">
+    <nav   className={`mb:min-w-full border-1 mb:flex-row border-black sticky top-0 z-40 mb:border-[1px] lg:border-0 mb:border-blue-950 lg:text-[20px] lg:pl-4 mb:px-[15px] lg:pt-4 mb:pt-3 pb-3 ${bg !== 'white' ? `bg-gradient-to-r from-blue-500 to-blue-400 ` : `bg-white`} ${color === 'black' ? 'text-black' : 'text-white'}`}>
+      <div className=" lg:flex lg:justify-between lg:items-center">
+        <div className="flex lg:items-center justify-between lg:mt-3 lg:ml-4">
           <a className="flex items-center" href="/">
             <Image id="img" src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/logo.png" alt="logo" width={30} height={30} className="mr-2" />
-            <p className={`lg:ml-2 mb-1 font-bold`}>paincure.Ai</p>
+            <p className={` mb-1 font-bold`}>paincure.Ai</p>
           </a>
           <div className="lg:hidden">
             <button className={`text-${color === 'white' ? 'white' : 'black'} focus:outline-none`} onClick={toggleMenu}>
@@ -48,7 +48,7 @@ export default function Header({ bg = "white", color = "black" }) {
             </button>
           </div>
         </div>
-        <div className={`w-full block lg:flex lg:items-center lg:ml-[40px] lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`} >
+        <div className={` block lg:flex lg:items-center lg:ml-[100px]  ${isMenuOpen ? 'block' : 'hidden'}`} >
           <div className="text-sm lg:flex-grow">
             <Link href="/" onClick={toggleMenu}>
               <p className={`block lg:inline-block lg:mt-0 lg:mr-[40px] mb:mt-5 lg:text-[18px] no-underline font-bold`}>Home</p>
@@ -106,17 +106,20 @@ export default function Header({ bg = "white", color = "black" }) {
             <Link href="/pricing" onClick={toggleMenu}>
               <p className={`block lg:mt-4 mb:mt-2 lg:inline-block mr-[30px] lg:text-[18px] no-underline font-bold`}>Solutions</p>
             </Link>
-            <Link href="https://paincurcmsfrontend.vercel.app/">
-              <p className={`block lg:mt-4 mb:mt-2 lg:inline-block lg:text-[18px] no-underline font-bold`}>Become Health Expert</p>
-            </Link>
           </div>
-          <div className="flex lg:items-center mb:justify-between mb:mt-4 mb:pb-2 lg:ml-[100px]">
+          <div className="flex mb:flex-col lg:flex-row lg:items-center mb:justify-between mb:mt-4 mb:pb-2 lg:ml-[50px]">
+            <Link href="https://paincurcmsfrontend.vercel.app/">
+              <button className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm font-bold mb:mb-1`}>Become Health Expert</button>
+            </Link>
+            <div className='mb:flex mb:flex-row mb:justify-between mb:mt-2 lg:mb-2'>
+
             <Link href="/signup" onClick={toggleMenu}>
-              <p className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Get Started</p>
+              <p className={`${bg === 'white' ? 'border border-black' : 'border border-white '} hover:bg-blue-600 hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm font-bold mb:mb-1 mb:w-[130px]`}>Get Started</p>
             </Link>
             <Link href="/login" onClick={toggleMenu}>
-              <p className={`${bg === 'white' ? 'border border-black' : 'border border-black bg-white text-black'} hover:bg-black hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm`}>Login</p>
+              <p className={`${bg === 'white' ? 'border border-black' : 'border border-black bg-white text-black'} hover:bg-black hover:text-white px-4 mx-2 py-2 rounded-2xl text-sm font-bold mb:mb-1 mb:w-[80px]`}>Login</p>
             </Link>
+            </div>
           </div>
         </div>
       </div>
