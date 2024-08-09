@@ -181,7 +181,7 @@ const Assessment = () => {
       let i=0;
       for(let key of Object.keys(userAnswers)){
         finaldata.push({
-          [questions[i].question] : key
+          [questions[i].question] : userAnswers[key]
         })
         i+=1;
       
@@ -193,6 +193,9 @@ const Assessment = () => {
         setIsLoading(false);
         router.push('/', { scroll: false })
         toast.success("We'll reach out to you shortly :)")
+      }else{
+        toast.error("There's some error :(")
+        setIsLoading(false);
       }
     }catch(e){
       console.log('first', first)
@@ -262,7 +265,7 @@ const Assessment = () => {
         }
       }
       if(currentQuestionIndex == 1){
-        const regex = /^\d{2,3}$/;
+        const regex = /^([1-9](?:\.\d+)?|10(?:\.0)?)$/;
         if(!regex.test(otherAnswer)){
           toast.error("Not a valid Height.");
           return;
