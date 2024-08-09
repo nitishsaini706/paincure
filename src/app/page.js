@@ -449,7 +449,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='mb:h-[300px] lg:h-[280px]'>
+            <Card className='mb:h-[320px] lg:h-[280px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
