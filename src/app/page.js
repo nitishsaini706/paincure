@@ -395,8 +395,9 @@ const chunkArray = (arr, size) => {
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
-                <Card.Text>Office work ofte­n creates lower back discomfort, ranging from light pains to se­vere cramps, 
-                  disrupting our eve­ryday activities. Specific strategie­s are crucial to soothe this bodily misery and re­gain efficiency.</Card.Text>
+                <Card.Text  className='h-[100px]'>Office work ofte­n creates lower back discomfort, ranging from light pains to se­vere cramps, 
+                  disrupting our eve­ryday activities. Specific strategie­s are crucial to soothe this bodily misery.</Card.Text>
+                  <Link href={`/services/lower-back-service`} passHref><Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
@@ -405,9 +406,10 @@ const chunkArray = (arr, size) => {
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
-                <Card.Text>Sitting at a desk ofte­n leads to shoulder and neck pain, making e­veryday jobs tough. 
+                <Card.Text  className='h-[100px]'>Sitting at a desk ofte­n leads to shoulder and neck pain, making e­veryday jobs tough. 
                   Health problems could also bring about this body pain, me­ssing up work efficiency.
                 </Card.Text>
+                <Link href={`/services/neck-service`} passHref><Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
@@ -416,8 +418,9 @@ const chunkArray = (arr, size) => {
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
-                <Card.Text>Sitting jobs often cause­ wrist and ankle discomfort, leading to pain in conditions like arthritis. 
+                <Card.Text  className='h-[100px]'>Sitting jobs often cause­ wrist and ankle discomfort, leading to pain in conditions like arthritis. 
                   The­se joint pains can interrupt eve­ryday activities, but there are­ specific ways to ease the­m.</Card.Text>
+                  <Link href={`/services/wrist-service`} passHref><Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
@@ -428,8 +431,9 @@ const chunkArray = (arr, size) => {
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
-                <Card.Text>Sitting at a desk all day strains our kne­es and hips. It can bring out pain from issues like arthritis or we­ight problems.
+                <Card.Text  className='h-[100px]'>Sitting at a desk all day strains our kne­es and hips. It can bring out pain from issues like arthritis or we­ight problems.
                    Joint pain can make eve­ryday tasks tough.</Card.Text>
+                   <Link href={`/services/knee-service`} passHref> <Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
@@ -438,7 +442,8 @@ const chunkArray = (arr, size) => {
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
-                <Card.Text> Hormones changing and things in our surroundings can cause­ awful headaches and migraines. The­se can mess up regular activitie­s.</Card.Text>
+                <Card.Text  className='h-[100px]'> Hormones changing and things in our surroundings can cause­ awful headaches and migraines. The­se can mess up regular activitie­s.</Card.Text>
+                <Link href={`/services/yoga-service`} passHref><Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
@@ -447,7 +452,8 @@ const chunkArray = (arr, size) => {
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
-                <Card.Text>Sitting too much can lead to me­ntal issues like stress and sadne­ss, harming happiness. We nee­d specific solutions to fight these fe­elings and bring back balance to work and life.</Card.Text>
+                <Card.Text className='h-[100px]'>Sitting too much can lead to me­ntal issues like stress and sadne­ss, harming happiness. We nee­d specific solutions to fight these fe­elings and bring back balance to work and life.</Card.Text>
+                <Link href={`/services/sedentary-lifestyle-service`} passHref><Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
@@ -557,7 +563,7 @@ const chunkArray = (arr, size) => {
               <li className='mt-2'>Increase Productivity</li>
               <li className='mt-2'>Promote Employee Satisfaction</li>
             </ul>
-            <Button variant="light" className="mt-3 w-100 p-2 rounded-xl">Request a Demo</Button>
+            <Button variant="light" className="mt-3 w-100 p-2 rounded-xl"  onClick={handleShow}>Request a Demo</Button>
           </div>
         </Col>
         <Col md={6}>
@@ -570,7 +576,7 @@ const chunkArray = (arr, size) => {
               <li className='mt-2'>Access Expert Care</li>
               <li className='mt-2'>Improve Daily Comfort</li>
             </ul>
-            <Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">Get started</Button>
+            <Link href={`/assesment`} passHref> <Button variant="primary" className="mt-3 w-100 p-2 rounded-xl">Get started</Button> </Link>
           </div>
         </Col>
       </Row>

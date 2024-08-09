@@ -10,6 +10,14 @@ const questions = [
     type: "text",
   },
   {
+    question: "What is your Height in Feet?",
+    type: "text",
+  },
+  {
+    question: "What is your Weight in kg?",
+    type: "text",
+  },
+  {
     question: "What is your Email address?",
     type: "text",
   },
@@ -156,6 +164,26 @@ const Loader = () => {
     </div>
   );
 };
+const questionKeywords = {
+  "What is your Full Name?": "fullName",
+  "What is your Height in Feet?": "height",
+  "What is your Weight in kg?": "weight",
+  "What is your Email address?": "email",
+  "What is your Age?": "age",
+  "What is your Gender?": "gender",
+  "Company Name:": "companyName",
+  "Designation": "designation",
+  "How many hours do you spend sitting each day?": "sittingHours",
+  "Do you engage in regular physical activity or exercise?": "exercise",
+  "If yes, how often do you exercise?": "exerciseFrequency",
+  "What type of physical activities do you participate in? (Check all that apply)": "activities",
+  "On average, how many hours of sleep do you get each night?": "sleepHours",
+  "Do you have any known medical conditions? (Check all that apply)": "medicalConditions",
+  "Are you currently taking any medications?": "medications",
+  "Do you have a history of surgeries?": "surgeries",
+  "Which services are you interested in? (Check all that apply)": "services",
+  "What are your primary health and wellness goals? (Check all that apply)": "goals"
+};
 
 const Assessment = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -171,11 +199,15 @@ const Assessment = () => {
       let finaldata=[]
       let i=0;
       for(let key of Object.keys(userAnswers)){
-        finaldata.push({
-          [questions[i].question] : key
-        })
+        const keyword = questionKeywords[questions[i].question];
+        if (keyword) {
+          finaldata.push({
+            [keyword]: userAnswers[i] // or the specific value you're capturing from user input
+          });
+        }
         i+=1;
       }
+      console.log(finaldata)
       setIsLoading(true)
       const resp = await axios.post("https://paincurebackend.onrender.com/api/assessments",finaldata);
       if(resp && resp.status == 201){
