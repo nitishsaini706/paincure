@@ -164,26 +164,7 @@ const Loader = () => {
     </div>
   );
 };
-const questionKeywords = {
-  "What is your Full Name?": "fullName",
-  "What is your Height in Feet?": "height",
-  "What is your Weight in kg?": "weight",
-  "What is your Email address?": "email",
-  "What is your Age?": "age",
-  "What is your Gender?": "gender",
-  "Company Name:": "companyName",
-  "Designation": "designation",
-  "How many hours do you spend sitting each day?": "sittingHours",
-  "Do you engage in regular physical activity or exercise?": "exercise",
-  "If yes, how often do you exercise?": "exerciseFrequency",
-  "What type of physical activities do you participate in? (Check all that apply)": "activities",
-  "On average, how many hours of sleep do you get each night?": "sleepHours",
-  "Do you have any known medical conditions? (Check all that apply)": "medicalConditions",
-  "Are you currently taking any medications?": "medications",
-  "Do you have a history of surgeries?": "surgeries",
-  "Which services are you interested in? (Check all that apply)": "services",
-  "What are your primary health and wellness goals? (Check all that apply)": "goals"
-};
+
 
 const Assessment = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -199,13 +180,11 @@ const Assessment = () => {
       let finaldata=[]
       let i=0;
       for(let key of Object.keys(userAnswers)){
-        const keyword = questionKeywords[questions[i].question];
-        if (keyword) {
-          finaldata.push({
-            [keyword]: userAnswers[i] // or the specific value you're capturing from user input
-          });
-        }
+        finaldata.push({
+          [questions[i].question] : key
+        })
         i+=1;
+      
       }
       console.log(finaldata)
       setIsLoading(true)
@@ -268,14 +247,14 @@ const Assessment = () => {
       return;
     }
     if(currentQuestion.type === "text"){
-      if(currentQuestionIndex == 1){
+      if(currentQuestionIndex == 3){
         const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/i
         if(!regex.test(otherAnswer)){
           toast.error("Not a valid email.");
           return;
         }
       }
-      if(currentQuestionIndex == 2){
+      if(currentQuestionIndex == 4){
         const regex = /^\d{2,3}$/;
         if(!regex.test(otherAnswer)){
           toast.error("Not a valid age.");
