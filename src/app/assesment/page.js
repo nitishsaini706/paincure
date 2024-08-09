@@ -172,7 +172,7 @@ const Assessment = () => {
       let i=0;
       for(let key of Object.keys(userAnswers)){
         finaldata.push({
-          [questions[i].question] : key
+          [questions[i].question] : userAnswers[key]
         })
         i+=1;
       }
