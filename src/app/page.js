@@ -191,28 +191,28 @@ const chunkArray = (arr, size) => {
   const [isOpen, setIsOpen] = useState(false); // State to control dropdown visibility
   const sections = [
     {
-      heading: "Access",
+      heading: "Step: 1 Access Your Path to Relief",
       points: [
         "Tell us about your pain. Share your symptoms",
         "AI will analyze them to understand your condition better."
       ]
     },
     {
-      heading: "Connect",
+      heading: "Step: 2 Connect with Leading Experts",
       points: [
         "Get expert guidance.",
         "We'll connect you with top healthcare professionals who specialize in treating your specific pain."
       ]
     },
     {
-      heading: "Engage",
+      heading: "Step: 3 Engage in Tailored Care",
       points: [
         "Personalized care.",
         "Receive a tailored treatment plan, including customized exercise routines and online consultations."
       ]
     },
     {
-      heading: "Track",
+      heading: "Step : 4 Implement and Track Your Progress",
       points: [
         "Track your progress.",
         "Monitor your improvements and celebrate your milestones with detailed progress reports."
@@ -391,7 +391,7 @@ const chunkArray = (arr, size) => {
       <Container className='mt-10'>
         <Row>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
@@ -402,7 +402,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
@@ -414,7 +414,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4} >
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
@@ -427,7 +427,7 @@ const chunkArray = (arr, size) => {
         </Row>
         <Row className='mt-5'>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
@@ -438,7 +438,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
@@ -448,7 +448,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
@@ -462,8 +462,7 @@ const chunkArray = (arr, size) => {
     </section>
     <section>
     <Container className="py-5">
-    
-    <ProgramDetails mainHeading={"How it works?"}
+    <ProgramDetails mainHeading={"How It Works: Our 4 Easy Steps process to Achieve Lasting Pain Relief"}
        sections={sections} />
     </Container>
     </section>

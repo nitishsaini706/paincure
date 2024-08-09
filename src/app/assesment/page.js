@@ -31,7 +31,7 @@ const questions = [
     options: ["Male", "Female", "Other"],
   },
   {
-    question: "Company Name:",
+    question: "Company you work for:",
     type: "text",
   },
   {
@@ -250,6 +250,7 @@ const Assessment = () => {
   };
 
   const handleTextAnswer = (value) => {
+  
     setUserAnswers((prevAnswers) => {
       const newAnswers = [...prevAnswers];
       newAnswers[currentQuestionIndex] = [value];
@@ -262,10 +263,26 @@ const Assessment = () => {
     const currentQuestion = questions[currentQuestionIndex];
 
     if (currentQuestion.type === "text" && !otherAnswer.trim()) {
+      
       toast.error("Field required.");
       return;
     }
-
+    if(currentQuestion.type === "text"){
+      if(currentQuestionIndex == 1){
+        const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/i
+        if(!regex.test(otherAnswer)){
+          toast.error("Not a valid email.");
+          return;
+        }
+      }
+      if(currentQuestionIndex == 2){
+        const regex = /^\d{2,3}$/;
+        if(!regex.test(otherAnswer)){
+          toast.error("Not a valid age.");
+          return;
+        }
+      }
+    }
     if (
       (currentQuestion.type === "multi-choice" || currentQuestion.type === "single-choice") &&
       !userAnswers[currentQuestionIndex]?.length &&

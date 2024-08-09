@@ -37,7 +37,7 @@ export default function Header({ bg = "white", color = "black" }) {
       <div className=" lg:flex lg:justify-evenly lg:items-center">
         <div className="flex lg:items-center justify-between lg:mt-3 lg:ml-4">
           <a className="flex items-center" href="/">
-            <Image id="img" src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/logo.png" alt="logo" width={30} height={30} className="mr-2" />
+            <Image id="img" src="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/logo.png" alt="logo" width={50} height={50} className="mr-2 rounded-3xl" />
             <p className={` mb-1 font-bold`}>paincure.Ai</p>
           </a>
           <div className="lg:hidden">
