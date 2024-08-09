@@ -261,6 +261,20 @@ const Assessment = () => {
           return;
         }
       }
+      if(currentQuestionIndex == 1){
+        const regex = /^\d{2,3}$/;
+        if(!regex.test(otherAnswer)){
+          toast.error("Not a valid Height.");
+          return;
+        }
+      }
+      if(currentQuestionIndex == 2){
+        const regex = /^\d{2,3}$/;
+        if(!regex.test(otherAnswer)){
+          toast.error("Not a valid Weight.");
+          return;
+        }
+      }
     }
     if (
       (currentQuestion.type === "multi-choice" || currentQuestion.type === "single-choice") &&
