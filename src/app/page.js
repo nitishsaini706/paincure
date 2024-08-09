@@ -391,7 +391,7 @@ const chunkArray = (arr, size) => {
       <Container className='mt-10'>
         <Row>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/backpain.png' alt="Back Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Back Pain</Card.Title>
@@ -401,7 +401,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/neckpain.png' alt="Neck Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Neck Pain</Card.Title>
@@ -412,7 +412,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4} >
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/handpain.png' alt="Hand Pain" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Wrist and Hand Pain</Card.Title>
@@ -424,7 +424,7 @@ const chunkArray = (arr, size) => {
         </Row>
         <Row className='mt-5'>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/kneepain.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Knee and Hip Pain</Card.Title>
@@ -434,7 +434,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body>
                 <Card.Title>Yoga for Headaches and Migraines</Card.Title>
@@ -443,7 +443,7 @@ const chunkArray = (arr, size) => {
             </Card>
           </Col>
           <Col md={4}>
-            <Card className='h-[300px]'>
+            <Card className='mb:h-[300px] lg:h-[250px]'>
             <Image src='https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/weight.png' alt="Paincure AI" className='mt-2 ml-2' width={50} height={50}/>
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>

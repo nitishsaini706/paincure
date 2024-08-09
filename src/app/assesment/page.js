@@ -23,7 +23,7 @@ const questions = [
     options: ["Male", "Female", "Other"],
   },
   {
-    question: "Company Name:",
+    question: "Company you work for:",
     type: "text",
   },
   {
@@ -218,6 +218,21 @@ const Assessment = () => {
   };
 
   const handleTextAnswer = (value) => {
+    if(currentQuestionIndex == 1){
+      const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/i
+      if(!regex.test(value)){
+        toast.error("Not a valid email.");
+        return;
+      }
+    }
+    if(currentQuestionIndex == 2){
+      const regex = /^\d{2,3}$/;
+      if(!regex.test(value)){
+        toast.error("Not a valid age.");
+        return;
+      }
+    }
+  
     setUserAnswers((prevAnswers) => {
       const newAnswers = [...prevAnswers];
       newAnswers[currentQuestionIndex] = [value];
