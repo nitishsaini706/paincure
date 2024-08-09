@@ -454,7 +454,7 @@ const chunkArray = (arr, size) => {
               <Card.Body >
                 <Card.Title className=''>Sedentary Lifestyle Risk Assessment</Card.Title>
                 <Card.Text className='lg:h-[100px]'>Sitting too much can lead to me­ntal issues like stress and sadne­ss, harming happiness. We nee­d specific solutions to fight these fe­elings and bring back balance to work and life.</Card.Text>
-                <Link href={`/services/sedentary-lifestyle-service`} passHref><Button variant="primary" className="mt-3 mb:mt-5 w-50 p-2 rounded-xl">More Info</Button></Link>
+                <Link href={`/services/sedentary-lifestyle-service`} passHref><Button variant="primary" className="mt-3 w-50 p-2 rounded-xl">More Info</Button></Link>
               </Card.Body>
             </Card>
           </Col>
