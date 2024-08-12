@@ -74,22 +74,22 @@ export default function Header({ bg = "white", color = "black" }) {
                 {isServiceOpen && (
                   <div className="lg:origin-top-right lg:absolute mb:left-5 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 " >
                     <div className="py-1">
-                      <Link href="/services/neck-service">
+                      <Link href="/services/neck-service" onClick={toggleMenu}>
                         <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Neck Pain</p>
                       </Link>
-                      <Link href="/services/lower-back-service">
+                      <Link href="/services/lower-back-service" onClick={toggleMenu}>
                         <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Lower Back Pain</p>
                       </Link>
-                      <Link href="/services/wrist-service">
+                      <Link href="/services/wrist-service" onClick={toggleMenu}>
                         <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Wrist Pain</p>
                       </Link>
-                      <Link href="/services/knee-service">
+                      <Link href="/services/knee-service" onClick={toggleMenu}>
                         <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Knee Pain</p>
                       </Link>
-                      <Link href="/services/sedentary-lifestyle-service">
+                      <Link href="/services/sedentary-lifestyle-service" onClick={toggleMenu}>
                         <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Sedentary Lifestyle</p>
                       </Link>
-                      <Link href="/services/yoga-service">
+                      <Link href="/services/yoga-service" onClick={toggleMenu}>
                         <p className="block px-4 py-2 text-sm text-gray-700 hover:font-bold">Yoga for Migraines and Headaches</p>
                       </Link>
                     </div>

@@ -8,7 +8,7 @@ export default function HeroSection({heading,para,image}) {
     <div className='mb:m-3 mb:mt-4 bg-gradient-to-r from-blue-500 to-blue-400 text-white'>
         <Row>
         <Col md={6}>
-          <Image src={image} height={800} width={800} className='rounded-none border-0 w-full h-full'/>
+          <Image src={image} height={800} width={800}  className='rounded-none border-0 w-full h-full lg:max-h-[500px]  max-w-[800px] mb:max-h-[300px]'/>
           </Col>
           <Col md={6} className='flex justify-center items-center'>
           <div className='mb:p-2'>
