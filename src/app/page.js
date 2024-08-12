@@ -467,7 +467,7 @@ const chunkArray = (arr, size) => {
        sections={sections} />
     </Container>
     </section>
-    <section id="testimonials" className="pt-2 pb-5">
+    {/* <section id="testimonials" className="pt-2 pb-5">
   <Container className="my-5">
   <h2 className="text-center mb-12 text-3xl font-bold">Testimonials</h2>
       <Carousel variant='dark' className='mb:flex'>
@@ -495,7 +495,7 @@ const chunkArray = (arr, size) => {
         ))}
       </Carousel>
     </Container>
-</section>
+</section> */}
 
     <section id="faq" className="py-5 bg-light">
       <Container>
