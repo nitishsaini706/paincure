@@ -129,7 +129,7 @@ export default function Blogs() {
                             </Col>
                         ))
                     ) : (
-                        blogs.slice(0, 3).map((blog, index) => (
+                        blogs && blogs.length ? blogs.slice(0, 3).map((blog, index) => (
                             <Col key={index} md={4}>
                                 <Card className='p-4 h-[500px]'>
                                     <div className='mb:h-[200px] lg:h-[250px]'>
@@ -150,7 +150,7 @@ export default function Blogs() {
                                     </Card.Body>
                                 </Card>
                             </Col>
-                        ))
+                        )) : <h1>No Blogs found</h1>
                     )}
                 </Row>
                 <Banner className='mb-10' />
@@ -162,7 +162,7 @@ export default function Blogs() {
                             </Col>
                         ))
                     ) : (
-                        blogs.slice(3, 6).map((blog, index) => (
+                        blogs && blogs.length ? blogs.slice(3, 6).map((blog, index) => (
                             <Col key={index} md={4}>
                                 <Card className='p-4 h-[500px]'>
                                     <div className='h-[300px]'>
@@ -183,7 +183,7 @@ export default function Blogs() {
                                     </Card.Body>
                                 </Card>
                             </Col>
-                        ))
+                        )) : <h1>No Blogs found</h1>
                     )}
                 </Row>
             </Container>

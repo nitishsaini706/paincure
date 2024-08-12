@@ -594,7 +594,7 @@ const chunkArray = (arr, size) => {
                             </Col>
                         ))
                     ) : (
-                        blogs.slice(0, 3).map((blog, index) => (
+                        blogs && blogs.length ? blogs.slice(0, 3).map((blog, index) => (
                             <Col key={index} md={4}>
                                 <Card className='p-4 h-[500px]'>
                                     <div className=' h-[300px]' >
@@ -616,7 +616,7 @@ const chunkArray = (arr, size) => {
                                     </Card.Body>
                                 </Card>
                             </Col>
-                        ))
+                        )) : <h1>No Blogs</h1>
                     )}
                     </Row>
                     </Container>
