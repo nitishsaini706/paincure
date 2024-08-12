@@ -10,6 +10,14 @@ const questions = [
     type: "text",
   },
   {
+    question: "What is your Height in Feet?",
+    type: "text",
+  },
+  {
+    question: "What is your Weight in kg?",
+    type: "text",
+  },
+  {
     question: "What is your Email address?",
     type: "text",
   },
@@ -157,6 +165,7 @@ const Loader = () => {
   );
 };
 
+
 const Assessment = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
@@ -175,13 +184,18 @@ const Assessment = () => {
           [questions[i].question] : userAnswers[key]
         })
         i+=1;
+      
       }
+      console.log(finaldata)
       setIsLoading(true)
       const resp = await axios.post("https://paincurebackend.onrender.com/api/assessments",finaldata);
       if(resp && resp.status == 201){
         setIsLoading(false);
         router.push('/', { scroll: false })
         toast.success("We'll reach out to you shortly :)")
+      }else{
+        toast.error("There's some error :(")
+        setIsLoading(false);
       }
     }catch(e){
       console.log('first', first)
@@ -236,17 +250,31 @@ const Assessment = () => {
       return;
     }
     if(currentQuestion.type === "text"){
-      if(currentQuestionIndex == 1){
+      if(currentQuestionIndex == 3){
         const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/i
         if(!regex.test(otherAnswer)){
           toast.error("Not a valid email.");
           return;
         }
       }
-      if(currentQuestionIndex == 2){
+      if(currentQuestionIndex == 4){
         const regex = /^\d{2,3}$/;
         if(!regex.test(otherAnswer)){
           toast.error("Not a valid age.");
+          return;
+        }
+      }
+      if(currentQuestionIndex == 1){
+        const regex = /^([1-9](?:\.\d+)?|10(?:\.0)?)$/;
+        if(!regex.test(otherAnswer)){
+          toast.error("Not a valid Height.");
+          return;
+        }
+      }
+      if(currentQuestionIndex == 2){
+        const regex = /^\d{2,3}$/;
+        if(!regex.test(otherAnswer)){
+          toast.error("Not a valid Weight.");
           return;
         }
       }
