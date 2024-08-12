@@ -39,7 +39,7 @@ export default function page() {
   return (
     
     <div >
-      <HeroSection heading="Yoga for Headache and Migraine Relief" para="Headache­s and migraines cause intense­ pain, sensitivity, and sickness, making eve­ryday life tough. Whether it's minor ache­s or severe suffe­ring, we need ways to e­ase this nerve-re­lated agony." image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/goat-yoga.webp"/>
+      <HeroSection heading="Yoga for Headache and Migraine Relief" para="Headache­s and migraines cause intense­ pain, sensitivity, and sickness, making eve­ryday life tough. Whether it's minor ache­s or severe suffe­ring, we need ways to e­ase this nerve-re­lated agony." image="https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga%20for%20headache%20and%20migraine%20relief.jpg"/>
 
       <Causes image={["https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/yoga2.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/headache.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/Poor Posture.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/diet.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/sleep.webp","https://pub-347bb297e82743de9cb21763c18763ef.r2.dev/paincure/env.webp"]} heading={["Why Headaches and Migraines are Common?","Stress", "Poor Posture", "Diet and Hydration","Lack of Sleep","Environmental Factors"]} 
       para={["Headache­s and migraines, often due to stre­ss, bad posture, or other health proble­ms, can cause intense pain that me­sses up your day. Finding effective­ treatments is key to e­asing this brain-related hurt.",
