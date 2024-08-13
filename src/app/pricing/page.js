@@ -1,11 +1,91 @@
 "use client"
 import { useState } from "react";
-import { Container, Row, Col, Card, Table, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Table, Button, Modal } from "react-bootstrap";
 import { useMediaQuery } from 'react-responsive';
+import { FaWhatsapp } from 'react-icons/fa';
 export default function Pricing() {
   const [isCompany, setIsCompany] = useState(false);
   const [isyearly, setIsyearly] = useState(false);
-
+  const [checked, setChecked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [formData,setFormData] = useState({
+    name:'',
+    phone:'',
+    service:''
+  })
+  const [category, setCategory] = useState("select Category");
+  const categories = [
+    'Neck pain',
+    'Wrist pain',
+    'Lower back pain',
+    'Knee Pain',
+    'Sedentary lifestyle'
+  ];
+  const setChange = (e) => {
+    const { id, value } = e.target;
+    console.log('e', e)
+    if(id == "phone"){
+      setShowicon(false)
+    }else if(formData.phone==""){
+      setShowicon(true)
+    }
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value
+    })
+    );
+  };
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen); // Toggle dropdown visibility
+  };
+  const submit = (e)=>{
+    e.preventDefault();
+    if(!checked){
+      toast.error("Please accpet Privacy Policy");
+      return;
+    }
+  
+    if(formData.name == ''){
+      toast.error("name is required");
+      return;
+    }
+    if(formData.phone == ''){
+      toast.error("phone is required")
+      return;
+    }
+    if(formData.service == ''){
+      toast.error("category is required")
+      return;
+    }
+    else{
+      setLoading(true)
+      setShow(false)
+      fetch(`${apiUrl}/api/users/whatsapp`,{method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)})
+              .then(response => response.json())
+              .then(data => {
+                setLoading(false)
+                console.log(data)
+                if(data && data.length){
+                  toast.success("we'll get back to you shortly. :-)")
+                  setFormData({
+                    name:'',
+                    phone:'',
+                    service:''
+                  })
+                }
+              })
+              .catch(error => {
+                console.error('Error fetching blog data:', error);
+                toast.error("Hold on, we've got a problem. :-(")
+                setLoading(false)
+          }); 
+    }
+  }
   const handleToggle = () => {
     setIsCompany(!isCompany);
   };
@@ -148,7 +228,7 @@ export default function Pricing() {
       <Container className="mb:mx-0 lg:mb-20">
         <h2 className="text-center mb-8 text-4xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Solutions </h2>
         <h3 className="text-center mb-8 text-2xl font-bold text-gray-800 lg:w-auto mb:w-[350px]">Start your Free Trial Now <br></br> Shaping healthcare and pain management with paincure.Ai </h3>   
-        
+{/*         
         <div className="flex items-center justify-center mb-5 lg:w-auto mb:w-[350px]">
           <span className={`mr-2 ${!isCompany ? 'font-bold' : ''}`}>Individual</span>
           <label className="switch ">
@@ -156,7 +236,75 @@ export default function Pricing() {
             <span className="slider round"></span>
           </label>
           <span className={`ml-2 ${isCompany ? 'font-bold' : ''}`}>Company</span>
-        </div>
+        </div> */}
+
+
+
+
+ 
+
+  <div className="flex items-center justify-around mb:mb-3">
+    
+<div className=" p-8 bg-white rounded w-[500px] min-h-[300px] border-2 border-blue-500">
+
+  <form className="space-y-4">
+    <div className="lg:flex lg:items-center lg:space-x-4 ">
+     <div className='w-full'>
+
+   
+      <input
+        type="text"
+        id='name'
+        placeholder="Full Name"
+        value={formData.name}
+        className="w-full p-2 border border-gray-300 rounded focus:outline-none  mb:mb-2"
+        onChange={setChange}
+      />
+       <div className="relative mb-2"> {/* Wrapper for relative positioning */}
+      { <FaWhatsapp className="absolute inset-y-0 left-3 my-auto text-green-500" size={24} />}
+      <input
+          type="text"
+          placeholder="        WhatsApp Preferred" // Use a simple string for the placeholder
+          id="phone"
+          onChange={setChange}
+          value={formData.phone}
+          className="pl-10 w-full p-2 border border-gray-300 rounded focus:outline-none" // Add padding to the left to avoid overlap with the icon
+      />
+  </div>
+      <div className="relative w-full">
+<div
+  className="p-2 border border-gray-300 rounded focus:outline-none  cursor-pointer"
+  onClick={toggleDropdown} // Show/hide dropdown on click
+>
+  {category}
+</div>
+{isOpen && ( // Only render the dropdown if isOpen is true
+  <ul className="absolute left-0 right-0 bg-white border border-gray-300 rounded mt-1 z-10">
+    {categories.map((item) => (
+      <li
+        key={item}
+        id={item}
+        className="p-2 hover:bg-gradient-to-r from-blue-500 to-blue-400 hover:text-white cursor-pointer"
+        onClick={() => handleOptionClick(item)} // Handle option click
+      >
+        {item}
+      </li>
+    ))}
+  </ul>
+)}
+</div>
+    </div>
+    </div>
+    <div className="flex items-center">
+      <input type="checkbox" id="terms" className="w-4 h-4 border-gray-300 rounded" value={checked} onClick={()=>{setChecked(!checked)}}/>
+      <label htmlFor="terms" className="ml-2 text-gray-700">I have read and agree to paincure.Ai's <a href="/terms-condition" className="text-blue-500">Terms of Use</a> and <a href="/privacy" className="text-blue-500">Privacy Policy</a>.</label>
+    </div>
+    <button type="submit" className="w-full py-2 mt-4 text-white bg-gradient-to-r from-blue-500 to-blue-400 rounded hover:bg-white hover:font-bold" onClick={submit}>Book a Free Demo</button>
+  </form>
+</div>
+</div>
+
+
 
 {/* <div className="lg:flex lg:justify-center lg:w-auto">
 
@@ -261,7 +409,7 @@ export default function Pricing() {
 
       <div className=" lg:w-auto flex flex-col items-center">
 
-      <Row className="flex items-center justify-center mb-3 lg:w-[700px] mb:w-[350px]">
+      {/* <Row className="flex items-center justify-center mb-3 lg:w-[700px] mb:w-[350px]">
         <Col xs={12} md={10} lg={8}>
           <div className={`p-6 shadow-lg rounded-lg ${isyearly ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'} flex justify-between items-center`}>
             <div>
@@ -273,9 +421,9 @@ export default function Pricing() {
             )}
           </div>
         </Col>
-      </Row>
-
-      <Row className="flex items-center justify-center mb-10 lg:w-[700px] mb:w-[350px]">
+      </Row> */}
+  
+      {/* <Row className="flex items-center justify-center mb-10 lg:w-[700px] mb:w-[350px]">
         <Col xs={12} md={10} lg={8}>
           <div className={`p-6 shadow-lg rounded-lg ${!isyearly ? 'bg-blue-500 text-white' : 'bg-gray-100 text-black'} flex justify-between items-center`}>
             <div>
@@ -290,7 +438,7 @@ export default function Pricing() {
       </Row>
       <button onClick={handleYearly} className="block mx-auto bg-blue-500 text-white rounded-lg py-2 px-4 my-4">
         {isyearly ? 'Switch to Monthly' : 'Switch to Yearly'}
-      </button>
+      </button> */}
       </div>
       {/* Add some custom styles for the toggle switch */}
       <style jsx>{`
