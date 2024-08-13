@@ -1,397 +1,269 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useReducer, useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
-const questions = [
+const sections = [
   {
-    question: "What is your Full Name?",
-    type: "text",
+    title: "Personal Information",
+    questions: [
+      { question: "What is your Full Name?", type: "text" },
+      { question: "What is your Height in Feet?", type: "text" },
+      { question: "What is your Weight in kg?", type: "text" },
+      { question: "What is your Email address?", type: "text" },
+      { question: "What is your Age?", type: "text" },
+      { question: "What is your Gender?", type: "single-choice", options: ["Male", "Female", "Other"] },
+    ]
   },
   {
-    question: "What is your Height in Feet?",
-    type: "text",
+    title: "Professional Information",
+    questions: [
+      { question: "Company you work for:", type: "text" },
+      { question: "Designation", type: "text" },
+    ]
   },
   {
-    question: "What is your Weight in kg?",
-    type: "text",
+    title: "Health and Wellness",
+    questions: [
+      { question: "How many hours do you spend sitting each day?", type: "single-choice", options: ["Less than 2 hours", "2-4 hours", "4-6 hours", "6-8 hours", "More than 8 hours"] },
+      { question: "Do you engage in regular physical activity or exercise?", type: "single-choice", options: ["Yes", "No"] },
+      { question: "If yes, how often do you exercise?", type: "single-choice", options: ["Daily", "3-5 times a week", "1-2 times a week", "Rarely", "NA"] },
+      { question: "What type of physical activities do you participate in? (Check all that apply)", type: "multi-choice", options: ["Walking", "Running", "Yoga", "Gym", "Swimming", "Boxing/MMA", "Other"] },
+      { question: "On average, how many hours of sleep do you get each night?", type: "single-choice", options: ["Less than 4 hours", "4-6 hours", "6-8 hours", "More than 8 hours"] },
+      { question: "Do you have any known medical conditions? (Check all that apply)", type: "multi-choice", options: ["Diabetes", "Hypertension", "Heart Disease", "Asthma", "Arthritis", "None", "Other"] },
+      { question: "Are you currently taking any medications?", type: "single-choice", options: ["Yes", "No", "Other"] },
+      { question: "Do you have a history of surgeries?", type: "single-choice", options: ["Yes", "No", "Other"] },
+    ]
   },
   {
-    question: "What is your Email address?",
-    type: "text",
-  },
-  {
-    question: "What is your Age?",
-    type: "text",
-  },
-  {
-    question: "What is your Gender?",
-    type: "single-choice",
-    options: ["Male", "Female", "Other"],
-  },
-  {
-    question: "Company you work for:",
-    type: "text",
-  },
-  {
-    question: "Designation",
-    type: "text",
-  },
-  {
-    question: "How many hours do you spend sitting each day?",
-    type: "single-choice",
-    options: [
-      "Less than 2 hours",
-      "2-4 hours",
-      "4-6 hours",
-      "6-8 hours",
-      "More than 8 hours",
-    ],
-  },
-  {
-    question: "Do you engage in regular physical activity or exercise?",
-    type: "single-choice",
-    options: ["Yes", "No"],
-  },
-  {
-    question: "If yes, how often do you exercise?",
-    type: "single-choice",
-    options: ["Daily", "3-5 times a week", "1-2 times a week", "Rarely", "NA"],
-  },
-  {
-    question: "What type of physical activities do you participate in? (Check all that apply)",
-    type: "multi-choice",
-    options: [
-      "Walking",
-      "Running",
-      "Yoga",
-      "Gym",
-      "Swimming",
-      "Boxing/MMA",
-      "Other",
-    ],
-  },
-  {
-    question: "On average, how many hours of sleep do you get each night?",
-    type: "single-choice",
-    options: [
-      "Less than 4 hours",
-      "4-6 hours",
-      "6-8 hours",
-      "More than 8 hours",
-    ],
-  },
-  {
-    question: "Do you have any known medical conditions? (Check all that apply)",
-    type: "multi-choice",
-    options: [
-      "Diabetes",
-      "Hypertension",
-      "Heart Disease",
-      "Asthma",
-      "Arthritis",
-      "None",
-      "Other",
-    ],
-  },
-  {
-    question: "Are you currently taking any medications?",
-    type: "single-choice",
-    options: ["Yes", "No", "Other"],
-  },
-  {
-    question: "Do you have a history of surgeries?",
-    type: "single-choice",
-    options: ["Yes", "No", "Other"],
-  },
-  {
-    question: "Which services are you interested in? (Check all that apply)",
-    type: "multi-choice",
-    options: [
-      "Lower Back Pain management",
-      "Neck and Shoulder Pain management",
-      "Wrist and Ankle Pain management",
-      "Knee and Hip Pain management",
-      "Yoga Pain management",
-      "Sedentary lifestyle management",
-    ],
-  },
-  {
-    question: "What are your primary health and wellness goals? (Check all that apply)",
-    type: "multi-choice",
-    options: [
-      "Pain Relief",
-      "Weight loss",
-      "Weight gain",
-      "Improve fitness",
-      "Improve Posture",
-      "Increase flexibility",
-      "Reduce stress",
-      "Improve sleep",
-      "Other",
-    ],
-  },
+    title: "Service Preferences",
+    questions: [
+      { question: "Which services are you interested in? (Check all that apply)", type: "multi-choice", options: ["Lower Back Pain management", "Neck and Shoulder Pain management", "Wrist and Ankle Pain management", "Knee and Hip Pain management", "Yoga Pain management", "Sedentary lifestyle management"] },
+      { question: "What are your primary health and wellness goals? (Check all that apply)", type: "multi-choice", options: ["Pain Relief", "Weight loss", "Weight gain", "Improve fitness", "Improve Posture", "Increase flexibility", "Reduce stress", "Improve sleep", "Other"] },
+    ]
+  }
 ];
 
-const ProgressBar = ({ progress }) => {
-  return (
-    <div
-      style={{
-        width: "100%",
-        height: "10px",
-        backgroundColor: "#e0e0e0",
-        borderRadius: "5px",
-        marginBottom: "20px",
-      }}
-    >
-      <div
-        style={{
-          width: `${progress}%`,
-          backgroundColor: "#5ba1f9",
-          height: "10px",
-          borderRadius: "5px",
-        }}
-      />
-    </div>
-  );
+const initialState = sections.reduce((acc, section) => {
+  acc[section.title] = {};
+  section.questions.forEach((q) => {
+    acc[section.title][q.question] = q.type === 'multi-choice' ? [] : '';
+  });
+  return acc;
+}, {});
+
+const formReducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_ANSWER':
+      return {
+        ...state,
+        [action.section]: {
+          ...state[action.section],
+          [action.question]: action.payload,
+        },
+      };
+    default:
+      return state;
+  }
 };
 
-const Loader = () => {
-  return (
-    <div className="absolute top-[250px] h-full">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-4 border-blue-900"></div>
-    </div>
-  );
-};
+const ProgressBar = ({ progress }) => (
+  <div className="w-full h-2 bg-gray-200 rounded">
+    <div className="h-2 bg-blue-600 rounded" style={{ width: `${progress}%` }} />
+  </div>
+);
 
+const Loader = () => (
+  <div className="absolute top-[250px] h-full">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-4 border-blue-900"></div>
+  </div>
+);
 
 const Assessment = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([]);
-  const [otherAnswer, setOtherAnswer] = useState("");
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [formState, dispatch] = useReducer(formReducer, initialState);
   const [isLoading, setIsLoading] = useState(false);
-  const totalQuestions = questions.length;
-  const router = useRouter()
- 
+  const router = useRouter();
 
-  const submit = async()=>{
-    try{
-      let finaldata=[]
-      let i=0;
-      for(let key of Object.keys(userAnswers)){
-        finaldata.push({
-          [questions[i].question] : userAnswers[key]
-        })
-        i+=1;
+  const handleAnswerChange = (section, question, answer, isMultiChoice) => {
+    if (isMultiChoice) {
+      const updatedAnswers = formState[section][question].includes(answer)
+        ? formState[section][question].filter((a) => a !== answer)
+        : [...formState[section][question], answer];
+      dispatch({ type: 'SET_ANSWER', section, question, payload: updatedAnswers });
+    } else {
+      dispatch({ type: 'SET_ANSWER', section, question, payload: answer });
+    }
+  };
+
+  const validateCurrentSection = () => {
+    const currentSection = sections[currentSectionIndex];
+    for (let question of currentSection.questions) {
+      const answer = formState[currentSection.title][question.question];
+      if (question.type === 'text' && !answer.trim()) {
+        toast.error(`Please answer: ${question.question}`);
+        return false;
+      }
       
+      if(question.type === 'text' && findWordInSentence(question.question,"Email")){
+        const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+        if(!regex.test(answer)){
+          toast.error(`Not a Valid mail`);
+          return false;
+        }
       }
-      console.log(finaldata)
-      setIsLoading(true)
-      const resp = await axios.post("https://paincurebackend.onrender.com/api/assessments",finaldata);
-      if(resp && resp.status == 201){
-        setIsLoading(false);
-        router.push('/', { scroll: false })
-        toast.success("We'll reach out to you shortly :)")
-      }else{
-        toast.error("There's some error :(")
-        setIsLoading(false);
+      if(question.type === 'text' && findWordInSentence(question.question,"Age")){
+        const regex = /^\d{2,3}$/;
+        if(!regex.test(answer)){
+          toast.error(`Not a Valid Age`);
+          return false;
+        }
       }
-    }catch(e){
-      console.log('first', first)
-      toast.error("There's some error :(")
+      if (question.type === 'single-choice' && !answer) {
+        toast.error(`Please select an option for: ${question.question}`);
+        return false;
+      }
+    }
+    return true;
+  };
+  function findWordInSentence(sentence, word) {
+    // Create a regex pattern using the word, with word boundaries
+    const regex = new RegExp(`\\b${word}\\b`, 'i'); // 'i' for case-insensitive matching
+    return regex.test(sentence);
+}
+  const handleNextSection = () => {
+    if (!validateCurrentSection()) return;
+    if (currentSectionIndex < sections.length - 1) {
+      setCurrentSectionIndex(currentSectionIndex + 1);
+    } else {
+      handleSubmit();
+    }
+  };
+
+  const handleBackSection = () => {
+    if (currentSectionIndex > 0) {
+      setCurrentSectionIndex(currentSectionIndex - 1);
+    }
+  };
+  function extractValues(obj) {
+    const valuesArray = [];
+
+    function iterate(subObj) {
+        for (const key in subObj) {
+            if (typeof subObj[key] === 'object' && !Array.isArray(subObj[key])) {
+                iterate(subObj[key]);
+            } else {
+                const serializedEntry = JSON.stringify({ [key]: Array.isArray(subObj[key]) ? subObj[key] : [subObj[key]] });
+                valuesArray.push(serializedEntry);
+            }
+        }
+    }
+
+    iterate(obj);
+
+    // Convert the array of strings to a single string in the desired format
+    return valuesArray;
+}
+
+
+
+  const handleSubmit = async () => {
+    setIsLoading(true);
+    try {
+      // console.log('formState', formState)
+      const extractedValues = extractValues(formState);
+      // console.log('first', extractedValues)
+      const resp = await axios.post("https://paincurebackend.onrender.com/api/assessments", extractedValues);
+      if (resp.status === 201) {
+        toast.success("We'll reach out to you shortly :)");
+        router.push('/', { scroll: false });
+      } else {
+        toast.error("There's some error :(");
+      }
+    } catch (error) {
+      console.log('error', error)
+      toast.error("There's some error :(");
+    } finally {
       setIsLoading(false);
     }
-  }
-
-  const handleAnswerChange = (option, isMultipleChoice) => {
-    const currentAnswers = userAnswers[currentQuestionIndex] || [];
-    
-    if (isMultipleChoice) {
-      if (currentAnswers.includes(option)) {
-        const updatedAnswers = currentAnswers.filter((answer) => answer !== option);
-        setUserAnswers((prevAnswers) => {
-          const newAnswers = [...prevAnswers];
-          newAnswers[currentQuestionIndex] = updatedAnswers;
-          return newAnswers;
-        });
-      } else {
-        setUserAnswers((prevAnswers) => {
-          const newAnswers = [...prevAnswers];
-          newAnswers[currentQuestionIndex] = [...currentAnswers, option];
-          return newAnswers;
-        });
-      }
-    } else {
-      setUserAnswers((prevAnswers) => {
-        const newAnswers = [...prevAnswers];
-        newAnswers[currentQuestionIndex] = [option];
-        return newAnswers;
-      });
-    }
   };
 
-  const handleTextAnswer = (value) => {
-  
-    setUserAnswers((prevAnswers) => {
-      const newAnswers = [...prevAnswers];
-      newAnswers[currentQuestionIndex] = [value];
-      return newAnswers;
-    });
-    setOtherAnswer(value);
-  };
+  const progress = ((currentSectionIndex + 1) / sections.length) * 100;
 
-  const handleNextQuestion = () => {
-    const currentQuestion = questions[currentQuestionIndex];
-
-    if (currentQuestion.type === "text" && !otherAnswer.trim()) {
-      
-      toast.error("Field required.");
-      return;
-    }
-    if(currentQuestion.type === "text"){
-      if(currentQuestionIndex == 3){
-        const regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/i
-        if(!regex.test(otherAnswer)){
-          toast.error("Not a valid email.");
-          return;
-        }
-      }
-      if(currentQuestionIndex == 4){
-        const regex = /^\d{2,3}$/;
-        if(!regex.test(otherAnswer)){
-          toast.error("Not a valid age.");
-          return;
-        }
-      }
-      if(currentQuestionIndex == 1){
-        const regex = /^([1-9](?:\.\d+)?|10(?:\.0)?)$/;
-        if(!regex.test(otherAnswer)){
-          toast.error("Not a valid Height.");
-          return;
-        }
-      }
-      if(currentQuestionIndex == 2){
-        const regex = /^\d{2,3}$/;
-        if(!regex.test(otherAnswer)){
-          toast.error("Not a valid Weight.");
-          return;
-        }
-      }
-    }
-    if (
-      (currentQuestion.type === "multi-choice" || currentQuestion.type === "single-choice") &&
-      !userAnswers[currentQuestionIndex]?.length &&
-      otherAnswer.trim() === ""
-    ) {
-      toast.error("Field required.");
-      return;
-    }
-
-    if (currentQuestion.options && otherAnswer.trim()) {
-      const updatedAnswers = [...userAnswers];
-      if (currentQuestion.type === "multi-choice") {
-        updatedAnswers[currentQuestionIndex].push(`Other: ${otherAnswer}`);
-      } else {
-        updatedAnswers[currentQuestionIndex] = [`Other: ${otherAnswer}`];
-      }
-      setUserAnswers(updatedAnswers);
-      setOtherAnswer("");
-    }
-
-    if (currentQuestionIndex < totalQuestions - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setOtherAnswer("");
-    } else {
-      submit();
-    }
-  };
-
-  const handleBackQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
-    }
-  };
-
-  const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-  
   return (
-    <>
-    <div className={`p-[20px] flex justify-center items-center `}>
-    {isLoading && <Loader />}
-      
-      <div className="flex flex-col items-center min-w-full justify-center">
+    <div className="p-5 flex justify-center items-center relative">
+      {isLoading && <Loader />}
+      <div className="flex flex-col items-center w-full max-w-3xl">
         <ProgressBar progress={progress} />
 
-        <h2 className="lg:text-3xl mb:text-xl p-2 mt-12">
-          {questions[currentQuestionIndex].question}
+        <h2 className="text-2xl mt-10 mb-6">
+          {sections[currentSectionIndex].title}
         </h2>
 
-        <div className="flex flex-col justify-center items-center">
-          {["multi-choice", "single-choice"].includes(questions[currentQuestionIndex].type) ? (
-            <div>
-              {questions[currentQuestionIndex].options.map((option, index) => (
-                <div key={index} style={{ margin: "5px" }}>
-                  <label className='flex'>
+        <div className="w-full">
+          {sections[currentSectionIndex].questions.map((question, index) => (
+            <div key={index} className="mb-6">
+              <p className="text-lg mb-2">{question.question}</p>
+              {["multi-choice", "single-choice"].includes(question.type) ? (
+                <div>
+                  {question.options.map((option, idx) => (
+                    <div key={idx} className="mb-2">
+                      <label className="flex items-center">
+                        <input
+                          type={question.type === "single-choice" ? "radio" : "checkbox"}
+                          name={question.question}
+                          onChange={() =>
+                            handleAnswerChange(sections[currentSectionIndex].title, question.question, option, question.type === "multi-choice")
+                          }
+                          checked={formState[sections[currentSectionIndex].title][question.question].includes(option)}
+                          className="mr-2"
+                        />
+                        <span>{option}</span>
+                      </label>
+                    </div>
+                  ))}
+                  {question.options.includes("Other") && (
                     <input
-                    className='mr-2'
-                      type={
-                        questions[currentQuestionIndex].type === "single-choice"
-                          ? "radio"
-                          : "checkbox"
-                      }
-                      name={`question-${currentQuestionIndex}`}
-                      onChange={() =>
-                        handleAnswerChange(option, questions[currentQuestionIndex].type === "multi-choice")
-                      }
-                      checked={userAnswers[currentQuestionIndex]?.includes(option) || false}
+                      type="text"
+                      placeholder="Please specify"
+                      value={formState[sections[currentSectionIndex].title][question.question]}
+                      onChange={(e) => handleAnswerChange(sections[currentSectionIndex].title, question.question, e.target.value, false)}
+                      className="mt-2 p-2 border border-gray-300 rounded"
                     />
-                   <p className='text-[17px]'>{option}</p> 
-                  </label>
+                  )}
                 </div>
-              ))}
-              {questions[currentQuestionIndex].options.includes("Other") && (
+              ) : (
                 <input
                   type="text"
-                  placeholder="Please specify"
-                  value={otherAnswer}
-                  onChange={(e) => handleTextAnswer(e.target.value)}
-                  className='outline-none'
-                  style={{ margin: "5px" }}
-                />
-              )}
-            </div>
-          ) : (
-            <input
-              type="text"
-              placeholder="Enter your answer"
-              value={otherAnswer}
-              onChange={(e) => handleTextAnswer(e.target.value)}
-              className="mx-2 border-b-2 border-black p-2 my-3 outline-none"
-            />
-          )}
-          <div>
-            <button
-              onClick={handleBackQuestion}
-              className="my-8 border-2 border-black py-2 px-3 rounded-2xl mx-2 font-bold hover:bg-blue-500 hover:text-white"
-            >
-              Back
-            </button>
-            <button
-              onClick={handleNextQuestion}
-              className="my-8 border-2 border-black py-2 px-3 rounded-2xl font-bold hover:bg-blue-500 hover:text-white"
-            >
-              {currentQuestionIndex === totalQuestions - 1 ? "Submit" : "Next"}
-    
-            </button>
-          </div>
-        </div>
-      </div>
-      
+                  placeholder="Your answer"
+                  value={formState[sections[currentSectionIndex].title][question.question]}
+                  onChange={(e) => handleAnswerChange(sections[currentSectionIndex].title, question.question, e.target.value, false
+                  )}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  />
+                  )}
+                  </div>
+                  ))}
+                  </div>
+                  <div className="flex justify-between w-full mt-6">
+      <button
+        onClick={handleBackSection}
+        className={`px-4 py-2 bg-gray-300 rounded ${currentSectionIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+        disabled={currentSectionIndex === 0}
+      >
+        Back
+      </button>
+      <button
+        onClick={handleNextSection}
+        className="px-4 py-2 bg-blue-600 text-white rounded"
+      >
+        {currentSectionIndex === sections.length - 1 ? "Submit" : "Next"}
+      </button>
     </div>
-    </>
-  );
-};
-  
-  export default Assessment;
+  </div>
+  </div>
+  )
+}
 
+export default Assessment;
