@@ -8,12 +8,12 @@ const sections = [
   {
     title: "Personal Information",
     questions: [
-      { question: "What is your Full Name?", type: "text" },
-      { question: "What is your Height in Feet?", type: "text" },
-      { question: "What is your Weight in kg?", type: "text" },
-      { question: "What is your Email address?", type: "text" },
-      { question: "What is your Age?", type: "text" },
-      { question: "What is your Gender?", type: "single-choice", options: ["Male", "Female", "Other"] },
+      { question: "Full Name", type: "text" },
+      { question: "Height in Feet", type: "text" },
+      { question: "Weight in kg", type: "text" },
+      { question: "Email address", type: "text" },
+      { question: "Age", type: "text" },
+      { question: "Gender", type: "single-choice", options: ["Male", "Female", "Other"] },
     ]
   },
   {
